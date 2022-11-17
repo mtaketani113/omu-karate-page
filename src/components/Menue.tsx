@@ -41,6 +41,14 @@ const Menue = () => {
             <ListItemText primary="練習予定" />
           </ListItemButton>
         </ListItem>
+        <ListItem key="練習場所・時間" disablePadding component="a" href={BASE_CONTEXT + '/place'}>
+          <ListItemButton>
+            <ListItemIcon>
+              <CalendarMonthIcon />
+            </ListItemIcon>
+            <ListItemText primary="練習場所・時間" />
+          </ListItemButton>
+        </ListItem>{' '}
       </List>
       <Divider />
       <List>

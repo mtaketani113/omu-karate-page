@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import Image from "./headerIcon.jpg";
+import Image from './headerIcon.jpg';
 
 const Home = () => {
   return (
