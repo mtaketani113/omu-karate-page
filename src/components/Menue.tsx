@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';

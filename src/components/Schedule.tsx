@@ -1,13 +1,9 @@
-import FullCalendar, {DayCellContentArg} from '@fullcalendar/react';
+import FullCalendar, { DayCellContentArg } from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import jaLocale from '@fullcalendar/core/locales/ja';
+import Events from './events.json';
 
 const Schedule = () => {
-  const events = [
-    { title: '杉本町', start: '2022-11-19 10:00', end: '2022-11-19 12:00' },
-    { title: '中百舌鳥', start: '2022-11-24 17:00', end: '2022-11-24 19:00' },
-  ];
-  
 
   return (
     <div>
@@ -16,9 +12,9 @@ const Schedule = () => {
         initialView="dayGridMonth"
         locales={[jaLocale]}
         locale="ja"
-        events={events}
+        events={Events}
         dayCellContent={(event: DayCellContentArg) =>
-          (event.dayNumberText = event.dayNumberText.replace("日", ""))
+          (event.dayNumberText = event.dayNumberText.replace('日', ''))
         }
       />
     </div>
