@@ -9,6 +9,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PeopleIcon from '@mui/icons-material/People';
 import LinkIcon from '@mui/icons-material/Link';
+import RoomIcon from '@mui/icons-material/Room';
 import { BASE_CONTEXT } from './constants';
 
 const Menue = () => {
@@ -44,7 +45,7 @@ const Menue = () => {
         <ListItem key="練習場所・時間" disablePadding component="a" href={BASE_CONTEXT + '/place'}>
           <ListItemButton>
             <ListItemIcon>
-              <CalendarMonthIcon />
+              <RoomIcon />
             </ListItemIcon>
             <ListItemText primary="練習場所・時間" />
           </ListItemButton>
