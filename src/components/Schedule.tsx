@@ -4,7 +4,6 @@ import jaLocale from '@fullcalendar/core/locales/ja';
 import Events from './events.json';
 
 const Schedule = () => {
-
   return (
     <div>
       <FullCalendar
