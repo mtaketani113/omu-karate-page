@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import { BASE_CONTEXT } from './constants';
 
 const Place = () => {
   return (
@@ -32,6 +33,10 @@ const Place = () => {
       <Typography paragraph>
         中百舌鳥キャンパス
         <li>木曜日・・・17:00~19:00 ※不定期</li>
+      </Typography>
+
+      <Typography paragraph>
+        【重要】不定期のため、<a href={BASE_CONTEXT +"/schedule"}>練習予定</a>をご確認ください
       </Typography>
     </>
   );
