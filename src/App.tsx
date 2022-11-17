@@ -3,10 +3,9 @@ import './App.css';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
-import Menue from './components/Menue';
-import Header from './components/Header';
-import Home from './components/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Header, Home, Links, Member, Menue, Schedule } from './components/index';
+import { BASE_CONTEXT } from './components/constants';
 
 const drawerWidth = 240;
 
@@ -68,9 +67,12 @@ function App(props: Props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <BrowserRouter>
+        <BrowserRouter basename={BASE_CONTEXT}>
           <Routes>
             <Route path="/" element={<Home />} /> {/* ホーム */}
+            <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
+            <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
+            <Route path="/links" element={<Links />} /> {/* リンク集 */}
           </Routes>
         </BrowserRouter>
       </Box>

@@ -10,6 +10,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PeopleIcon from '@mui/icons-material/People';
 import LinkIcon from '@mui/icons-material/Link';
+import { BASE_CONTEXT } from './constants';
 
 const Menue = () => {
   return (
@@ -17,7 +18,7 @@ const Menue = () => {
       <Toolbar />
       <Divider />
       <List>
-        <ListItem key="ホーム" disablePadding>
+        <ListItem key="ホーム" disablePadding component="a" href={BASE_CONTEXT}>
           <ListItemButton>
             <ListItemIcon>
               <HomeIcon />
@@ -25,7 +26,7 @@ const Menue = () => {
             <ListItemText primary="ホーム" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="部員紹介" disablePadding>
+        <ListItem key="部員紹介" disablePadding component="a" href={BASE_CONTEXT + '/member'}>
           <ListItemButton>
             <ListItemIcon>
               <PeopleIcon />
@@ -33,7 +34,7 @@ const Menue = () => {
             <ListItemText primary="部員紹介" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="練習予定" disablePadding>
+        <ListItem key="練習予定" disablePadding component="a" href={BASE_CONTEXT + '/schedule'}>
           <ListItemButton>
             <ListItemIcon>
               <CalendarMonthIcon />
@@ -44,7 +45,7 @@ const Menue = () => {
       </List>
       <Divider />
       <List>
-        <ListItem key="リンク集" disablePadding>
+        <ListItem key="リンク集" disablePadding component="a" href={BASE_CONTEXT + '/links'}>
           <ListItemButton>
             <ListItemIcon>
               <LinkIcon />
