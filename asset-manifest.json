@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/omu-karate-page/static/css/main.268f9bf5.css",
-    "main.js": "/omu-karate-page/static/js/main.b6167ef8.js",
+    "main.js": "/omu-karate-page/static/js/main.4d2f6bad.js",
     "static/js/787.2c82dcba.chunk.js": "/omu-karate-page/static/js/787.2c82dcba.chunk.js",
     "index.html": "/omu-karate-page/index.html",
     "main.268f9bf5.css.map": "/omu-karate-page/static/css/main.268f9bf5.css.map",
-    "main.b6167ef8.js.map": "/omu-karate-page/static/js/main.b6167ef8.js.map",
+    "main.4d2f6bad.js.map": "/omu-karate-page/static/js/main.4d2f6bad.js.map",
     "787.2c82dcba.chunk.js.map": "/omu-karate-page/static/js/787.2c82dcba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.268f9bf5.css",
-    "static/js/main.b6167ef8.js"
+    "static/js/main.4d2f6bad.js"
   ]
 }
