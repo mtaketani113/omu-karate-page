@@ -16,6 +16,7 @@ const Member = () => {
 
   return (
     <>
+      <h1>部員紹介</h1>
       <Typography paragraph>4回生1名、1回生3名で頑張っています。</Typography>
       <h2>四回生</h2>
       <TableContainer component={Paper}>
