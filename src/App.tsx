@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header, Home, Links, Member, Menue, Place, Schedule } from './components/index';
+import { DummyHeader, Header, Home, Links, Member, Menue, Place, Schedule } from './components/index';
 import { BASE_CONTEXT } from './components/constants';
 
 const drawerWidth = 240;
@@ -68,6 +68,7 @@ function App(props: Props) {
       >
         <Toolbar />
         <BrowserRouter basename={BASE_CONTEXT}>
+          <DummyHeader />
           <Routes>
             <Route path="/" element={<Home />} /> {/* ホーム */}
             <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
