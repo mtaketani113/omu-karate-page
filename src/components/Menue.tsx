@@ -10,6 +10,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PeopleIcon from '@mui/icons-material/People';
 import LinkIcon from '@mui/icons-material/Link';
 import RoomIcon from '@mui/icons-material/Room';
+import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
 import { BASE_CONTEXT } from './constants';
 
 const Menue = () => {
@@ -59,6 +60,15 @@ const Menue = () => {
               <LinkIcon />
             </ListItemIcon>
             <ListItemText primary="リンク集" />
+          </ListItemButton>
+        </ListItem>
+        <Divider />
+        <ListItem key="プライバシーポリシー" disablePadding component="a" href={BASE_CONTEXT + '/privacyPolicy'}>
+          <ListItemButton>
+            <ListItemIcon>
+              <PrivacyTipIcon />
+            </ListItemIcon>
+            <ListItemText primary="プライバシーポリシー" />
           </ListItemButton>
         </ListItem>
       </List>

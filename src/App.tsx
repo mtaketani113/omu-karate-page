@@ -4,7 +4,17 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { DummyHeader, Header, Home, Links, Member, Menue, Place, Schedule } from './components/index';
+import {
+  DummyHeader,
+  Header,
+  Home,
+  Links,
+  Member,
+  Menue,
+  Place,
+  PrivacyPolicy,
+  Schedule,
+} from './components/index';
 import { BASE_CONTEXT } from './components/constants';
 
 const drawerWidth = 240;
@@ -75,6 +85,7 @@ function App(props: Props) {
             <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
             <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
             <Route path="/links" element={<Links />} /> {/* リンク集 */}
+            <Route path="/privacyPolicy" element={<PrivacyPolicy />} /> {/* プライバシーポリシー */}
           </Routes>
         </BrowserRouter>
       </Box>

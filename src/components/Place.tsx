@@ -36,7 +36,7 @@ const Place = () => {
       </Typography>
 
       <Typography paragraph>
-        【重要】不定期のため、<a href={BASE_CONTEXT +"/schedule"}>練習予定</a>をご確認ください
+        【重要】不定期のため、<a href={BASE_CONTEXT + '/schedule'}>練習予定</a>をご確認ください
       </Typography>
     </>
   );
