@@ -14,13 +14,24 @@ export const AdsDisplay = () => {
     window.adsbygoogle.push({});
   }, []);
   return (
-    <ins
-      className={'adsbygoogle'} //''はバッククォートに置き換えてください。$直後のスペースは不要です。
-      style={{ display: 'block' }}
-      data-ad-client="ca-pub-7157586794981334"
-      data-ad-slot="7436630218"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
+    <>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        広告
+      </div>
+      <ins
+        className={'adsbygoogle'} //''はバッククォートに置き換えてください。$直後のスペースは不要です。
+        style={{ display: 'block' }}
+        data-ad-client="ca-pub-7157586794981334"
+        data-ad-slot="7436630218"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+    </>
   );
 };
