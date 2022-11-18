@@ -7,8 +7,14 @@ const Schedule = () => {
   return (
     <div>
       <h2>練習予定</h2>
-      <div className='fc-daygrid-event fc-daygrid-dot-event fc-event fc-event-start fc-event-end fc-event-future'><div className="fc-daygrid-event-dot" />杉本キャンパス</div>
-      <div className='fc-daygrid-event fc-daygrid-dot-event fc-event fc-event-start fc-event-end fc-event-future'><div className="fc-daygrid-event-dot" style={{borderColor: 'green'}}/>中百舌鳥キャンパス</div>
+      <div className="fc-daygrid-event fc-daygrid-dot-event fc-event fc-event-start fc-event-end fc-event-future">
+        <div className="fc-daygrid-event-dot" />
+        杉本キャンパス
+      </div>
+      <div className="fc-daygrid-event fc-daygrid-dot-event fc-event fc-event-start fc-event-end fc-event-future">
+        <div className="fc-daygrid-event-dot" style={{ borderColor: 'green' }} />
+        中百舌鳥キャンパス
+      </div>
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"

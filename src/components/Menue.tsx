@@ -63,7 +63,12 @@ const Menue = () => {
           </ListItemButton>
         </ListItem>
         <Divider />
-        <ListItem key="プライバシーポリシー" disablePadding component="a" href={BASE_CONTEXT + '/privacyPolicy'}>
+        <ListItem
+          key="プライバシーポリシー"
+          disablePadding
+          component="a"
+          href={BASE_CONTEXT + '/privacyPolicy'}
+        >
           <ListItemButton>
             <ListItemIcon>
               <PrivacyTipIcon />
