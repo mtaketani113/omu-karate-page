@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.fc-toolbar-title {
+  font-size: 1.5em !important;
+}
