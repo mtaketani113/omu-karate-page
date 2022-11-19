@@ -14,6 +14,7 @@ import {
   Place,
   PrivacyPolicy,
   Schedule,
+  ScrollTop,
 } from './components/index';
 import { BASE_CONTEXT } from './components/parts/constants';
 import { IconButton } from '@mui/material';
@@ -94,7 +95,7 @@ function App(props: Props) {
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar />
+        <Toolbar id="top-anchor" />
         <BrowserRouter basename={BASE_CONTEXT}>
           <DummyHeader />
           <Routes>
@@ -106,6 +107,7 @@ function App(props: Props) {
             <Route path="/privacyPolicy" element={<PrivacyPolicy />} /> {/* プライバシーポリシー */}
           </Routes>
         </BrowserRouter>
+        <ScrollTop />
       </Box>
     </Box>
   );

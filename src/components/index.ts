@@ -7,3 +7,4 @@ export { default as Links } from './Links';
 export { default as Place } from './Place';
 export { default as DummyHeader } from './parts/DummyHeader';
 export { default as PrivacyPolicy } from './PrivacyPolicy';
+export { default as ScrollTop } from './parts/ScrollTop';
