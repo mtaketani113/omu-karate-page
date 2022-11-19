@@ -15,6 +15,10 @@ const Schedule = () => {
         <div className="fc-daygrid-event-dot" style={{ borderColor: 'green' }} />
         中百舌鳥キャンパス
       </div>
+      <div className="fc-daygrid-event fc-daygrid-dot-event fc-event fc-event-start fc-event-end fc-event-future">
+        <div className="fc-daygrid-event-dot" style={{ borderColor: 'orange' }} />
+        イベント
+      </div>
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"

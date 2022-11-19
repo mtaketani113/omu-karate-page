@@ -11,6 +11,10 @@ const Home = () => {
       </Typography>
       <Typography paragraph>そんな大阪公立大学の空手道部を応援するページです。</Typography>
 
+      <h2>イベント情報</h2>
+
+      <li>22年12月3日　神戸大学にて三商戦</li>
+
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName="omu_karatedo"

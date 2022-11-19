@@ -12,12 +12,15 @@ const Member = () => {
     return { name, department, former, comment };
   }
 
-  const rows = [createData('', '', '', ''), createData('', '', '', ''), createData('', '', '', '')];
+  const rows = [createData('Coming soon', '', '', '')
+  , createData('Coming soon', '', '', '')
+  , createData('Coming soon', '', '', '')];
 
   return (
     <>
       <h1>部員紹介</h1>
       <Typography paragraph>4回生1名、1回生3名で頑張っています。</Typography>
+      <Typography paragraph>↓作成中</Typography>
       <h2>四回生</h2>
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
@@ -33,7 +36,7 @@ const Member = () => {
           <TableBody>
             <TableRow key="" sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell component="th" scope="row"></TableCell>
-              <TableCell align="center"></TableCell>
+              <TableCell align="center">Coming soon</TableCell>
               <TableCell align="center"></TableCell>
               <TableCell align="center"></TableCell>
               <TableCell align="left"></TableCell>
