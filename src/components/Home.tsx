@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import Image from './headerIcon.jpg';
+import Image from './images/headerIcon.jpg';
 
 const Home = () => {
   return (

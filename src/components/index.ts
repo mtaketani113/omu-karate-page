@@ -1,9 +1,9 @@
-export { default as Header } from './Header';
-export { default as Menue } from './Menue';
+export { default as Header } from './parts/Header';
+export { default as Menue } from './parts/Menue';
 export { default as Home } from './Home';
 export { default as Schedule } from './Schedule';
 export { default as Member } from './Member';
 export { default as Links } from './Links';
 export { default as Place } from './Place';
-export { default as DummyHeader } from './DummyHeader';
+export { default as DummyHeader } from './parts/DummyHeader';
 export { default as PrivacyPolicy } from './PrivacyPolicy';

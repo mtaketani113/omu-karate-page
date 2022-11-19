@@ -15,7 +15,7 @@ import {
   PrivacyPolicy,
   Schedule,
 } from './components/index';
-import { BASE_CONTEXT } from './components/constants';
+import { BASE_CONTEXT } from './components/parts/constants';
 
 const drawerWidth = 240;
 

@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import { BASE_CONTEXT } from './constants';
+import { BASE_CONTEXT } from './parts/constants';
 
 const Place = () => {
   return (

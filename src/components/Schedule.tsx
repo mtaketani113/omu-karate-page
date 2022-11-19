@@ -1,7 +1,7 @@
 import FullCalendar, { DayCellContentArg } from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import jaLocale from '@fullcalendar/core/locales/ja';
-import Events from './events.json';
+import Events from './data/events.json';
 
 const Schedule = () => {
   return (
