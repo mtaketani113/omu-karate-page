@@ -17,7 +17,7 @@ const Menue = () => {
     <div>
       <Divider />
       <List>
-        <ListItem key="ホーム" disablePadding component="a" href={BASE_CONTEXT}>
+        <ListItem key="home" disablePadding component="a" href={BASE_CONTEXT}>
           <ListItemButton>
             <ListItemIcon>
               <HomeIcon />
@@ -25,7 +25,7 @@ const Menue = () => {
             <ListItemText primary="ホーム" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="部員紹介" disablePadding component="a" href={BASE_CONTEXT + '/member'}>
+        <ListItem key="member" disablePadding component="a" href={BASE_CONTEXT + '/member'}>
           <ListItemButton>
             <ListItemIcon>
               <PeopleIcon />
@@ -33,7 +33,7 @@ const Menue = () => {
             <ListItemText primary="部員紹介" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="練習予定" disablePadding component="a" href={BASE_CONTEXT + '/schedule'}>
+        <ListItem key="schedule" disablePadding component="a" href={BASE_CONTEXT + '/schedule'}>
           <ListItemButton>
             <ListItemIcon>
               <CalendarMonthIcon />
@@ -41,18 +41,18 @@ const Menue = () => {
             <ListItemText primary="練習予定" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="練習場所・時間" disablePadding component="a" href={BASE_CONTEXT + '/place'}>
+        <ListItem key="place" disablePadding component="a" href={BASE_CONTEXT + '/place'}>
           <ListItemButton>
             <ListItemIcon>
               <RoomIcon />
             </ListItemIcon>
             <ListItemText primary="練習場所・時間" />
           </ListItemButton>
-        </ListItem>{' '}
+        </ListItem>
       </List>
       <Divider />
       <List>
-        <ListItem key="リンク集" disablePadding component="a" href={BASE_CONTEXT + '/links'}>
+        <ListItem key="links" disablePadding component="a" href={BASE_CONTEXT + '/links'}>
           <ListItemButton>
             <ListItemIcon>
               <LinkIcon />
@@ -62,7 +62,7 @@ const Menue = () => {
         </ListItem>
         <Divider />
         <ListItem
-          key="プライバシーポリシー"
+          key="privacyPolicy"
           disablePadding
           component="a"
           href={BASE_CONTEXT + '/privacyPolicy'}
