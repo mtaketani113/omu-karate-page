@@ -1,4 +1,3 @@
-import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -16,7 +15,6 @@ import { BASE_CONTEXT } from './constants';
 const Menue = () => {
   return (
     <div>
-      <Toolbar />
       <Divider />
       <List>
         <ListItem key="ホーム" disablePadding component="a" href={BASE_CONTEXT}>

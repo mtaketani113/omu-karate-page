@@ -16,8 +16,20 @@ import {
   Schedule,
 } from './components/index';
 import { BASE_CONTEXT } from './components/parts/constants';
+import { IconButton } from '@mui/material';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { styled } from '@mui/material/styles';
 
 const drawerWidth = 240;
+
+const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-end',
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+}));
 
 interface Props {
   /**
@@ -59,6 +71,11 @@ function App(props: Props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
+          <DrawerHeader>
+            <IconButton onClick={() => setMobileOpen(false)}>
+              <ChevronLeftIcon />
+            </IconButton>
+          </DrawerHeader>
           <Menue />
         </Drawer>
         <Drawer
@@ -69,6 +86,7 @@ function App(props: Props) {
           }}
           open
         >
+          <Toolbar />
           <Menue />
         </Drawer>
       </Box>

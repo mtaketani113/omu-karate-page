@@ -12,9 +12,11 @@ const Member = () => {
     return { name, department, former, comment };
   }
 
-  const rows = [createData('Coming soon', '', '', '')
-  , createData('Coming soon', '', '', '')
-  , createData('Coming soon', '', '', '')];
+  const rows = [
+    createData('Coming soon', '', '', ''),
+    createData('Coming soon', '', '', ''),
+    createData('Coming soon', '', '', ''),
+  ];
 
   return (
     <>
