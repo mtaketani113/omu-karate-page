@@ -15,6 +15,7 @@ import {
   PrivacyPolicy,
   Schedule,
   ScrollTop,
+  TrainingMenue,
 } from './components/index';
 import { BASE_CONTEXT } from './components/parts/constants';
 import { IconButton } from '@mui/material';
@@ -105,6 +106,8 @@ function App(props: Props) {
             <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
             <Route path="/links" element={<Links />} /> {/* リンク集 */}
             <Route path="/privacyPolicy" element={<PrivacyPolicy />} /> {/* プライバシーポリシー */}
+            <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
+            {/* 練習メニュー */}
           </Routes>
         </BrowserRouter>
         <ScrollTop />
