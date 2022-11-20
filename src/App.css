@@ -40,3 +40,10 @@
 .fc-toolbar-title {
   font-size: 1.5em !important;
 }
+
+td.fc-day-sat {
+  background-color: #eaf4ff;
+}
+td.fc-day-sun {
+  background-color: #ffeaea;
+}

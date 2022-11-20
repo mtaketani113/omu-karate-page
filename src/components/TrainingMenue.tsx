@@ -14,7 +14,7 @@ const TrainingMenue = (props: any) => {
       let menue = menues[i];
       tmpRow.push(
         <TableRow key={menue.title} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell component="th" scope="row" style={{ whiteSpace: 'nowrap'}}>
+          <TableCell component="th" scope="row" style={{ whiteSpace: 'nowrap' }}>
             {menue.title}
           </TableCell>
           <TableCell align="left">{menue.detail}</TableCell>
