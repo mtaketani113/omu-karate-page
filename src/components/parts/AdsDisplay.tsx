@@ -14,16 +14,7 @@ export const AdsDisplay = () => {
     window.adsbygoogle.push({});
   }, []);
   return (
-    <div style ={{ zIndex: '2 !important' }}>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        広告
-      </div>
+    <div style ={{ zIndex: 2 }}>
       <ins
         className={'adsbygoogle'} //''はバッククォートに置き換えてください。$直後のスペースは不要です。
         style={{ display: 'block' }}
