@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import Training from './data/training.json';
 import { ReactNode, useEffect, useState } from 'react';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
 
 const TrainingMenue = (props: any) => {
   const { date } = useParams<{ date: string }>();
@@ -12,9 +13,18 @@ const TrainingMenue = (props: any) => {
     for (var i = 0; i < menues.length; i++) {
       let menue = menues[i];
       tmpRow.push(
-        <li>
-          {menue.title}・・・{menue.detail}
-        </li>,
+        <TableRow
+        key={menue.title}
+        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+      >
+        <TableCell component="th" scope="row">
+          {menue.title}
+        </TableCell>
+
+        <TableCell align="left">{menue.detail}</TableCell>
+
+      </TableRow>
+,
       );
     }
 
@@ -24,8 +34,16 @@ const TrainingMenue = (props: any) => {
 
   return (
     <>
-      <h1>練習メニュー {date}</h1>
+      <h1>練習メニュー</h1>
+      <h3> {date}</h3>
+      <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <TableBody>
       {rows}
+      </TableBody>
+      </Table>
+      </TableContainer>
+
     </>
   );
 };
