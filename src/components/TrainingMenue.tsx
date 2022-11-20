@@ -13,21 +13,14 @@ const TrainingMenue = (props: any) => {
     for (var i = 0; i < menues.length; i++) {
       let menue = menues[i];
       tmpRow.push(
-        <TableRow
-        key={menue.title}
-        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-      >
-        <TableCell component="th" scope="row">
-          {menue.title}
-        </TableCell>
-
-        <TableCell align="left">{menue.detail}</TableCell>
-
-      </TableRow>
-,
+        <TableRow key={menue.title} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+          <TableCell component="th" scope="row" style={{ whiteSpace: 'nowrap'}}>
+            {menue.title}
+          </TableCell>
+          <TableCell align="left">{menue.detail}</TableCell>
+        </TableRow>,
       );
     }
-
     setRows(tmpRow);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -37,13 +30,10 @@ const TrainingMenue = (props: any) => {
       <h1>練習メニュー</h1>
       <h3> {date}</h3>
       <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-      <TableBody>
-      {rows}
-      </TableBody>
-      </Table>
+        <Table aria-label="simple table">
+          <TableBody>{rows}</TableBody>
+        </Table>
       </TableContainer>
-
     </>
   );
 };
