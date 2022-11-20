@@ -14,7 +14,7 @@ export const AdsDisplay = () => {
     window.adsbygoogle.push({});
   }, []);
   return (
-    <div style ={{ zIndex: 2 }}>
+    <>
       <ins
         className={'adsbygoogle'} //''はバッククォートに置き換えてください。$直後のスペースは不要です。
         style={{ display: 'block' }}
@@ -23,6 +23,6 @@ export const AdsDisplay = () => {
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
-    </div>
+    </>
   );
 };
