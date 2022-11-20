@@ -14,7 +14,7 @@ export const AdsDisplay = () => {
     window.adsbygoogle.push({});
   }, []);
   return (
-    <>
+    <div style ={{ zIndex: '2 !important' }}>
       <div
         style={{
           display: 'flex',
@@ -32,6 +32,6 @@ export const AdsDisplay = () => {
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
-    </>
+    </div>
   );
 };

@@ -30,7 +30,7 @@ const ScrollTop = () => {
              position: "fixed",
              bottom: 32,
              right: 32,
-             zIndex: 0,
+             zIndex: 1,
            }}
          >
            <Fab
