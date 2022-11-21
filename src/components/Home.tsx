@@ -12,8 +12,16 @@ const Home = () => {
       <Typography paragraph>そんな大阪公立大学の空手道部を応援するページです。</Typography>
 
       <h2>イベント情報</h2>
-
-      <li>22年12月3日　神戸大学にて三商戦</li>
+      <Typography paragraph color="green">
+        22年11月19日 更新
+      </Typography>
+      <li>
+        22年12月3日{' '}
+        <a href="https://kobe-karatedobu.webnode.jp/%e3%81%8a%e5%95%8f%e3%81%84%e5%90%88%e3%82%8f%e3%81%9b/">
+          神戸大学
+        </a>
+        にて三商戦
+      </li>
 
       <TwitterTimelineEmbed
         sourceType="profile"
