@@ -60,7 +60,10 @@ const Member = () => {
           </TableHead>
           <TableBody>
             {rows.map((row, i) => (
-              <TableRow key={row.name + i} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              <TableRow
+                key={row.name + i}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
                 <TableCell component="th" scope="row"></TableCell>
                 <TableCell align="center">{row.name}</TableCell>
                 <TableCell align="center">{row.department}</TableCell>

@@ -47,3 +47,8 @@ td.fc-day-sat {
 td.fc-day-sun {
   background-color: #ffeaea;
 }
+
+.anchor {
+  padding-top: 70px;
+  margin-top: -70px;
+}

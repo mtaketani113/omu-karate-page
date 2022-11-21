@@ -53,51 +53,51 @@ function App(props: Props) {
 
   return (
     <Box sx={{ display: 'flex' }}>
-              <BrowserRouter basename={BASE_CONTEXT}>
-      <Header handleDrawerToggle={handleDrawerToggle} />
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
+      <BrowserRouter basename={BASE_CONTEXT}>
+        <Header handleDrawerToggle={handleDrawerToggle} />
+        <Box
+          component="nav"
+          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          aria-label="mailbox folders"
         >
-          <DrawerHeader>
-            <IconButton onClick={() => setMobileOpen(false)}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </DrawerHeader>
-          <Menue setMobileOpen={setMobileOpen}/>
-        </Drawer>
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-          open
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
+          >
+            <DrawerHeader>
+              <IconButton onClick={() => setMobileOpen(false)}>
+                <ChevronLeftIcon />
+              </IconButton>
+            </DrawerHeader>
+            <Menue setMobileOpen={setMobileOpen} />
+          </Drawer>
+          <Drawer
+            variant="permanent"
+            sx={{
+              display: { xs: 'none', sm: 'block' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
+            open
+          >
+            <Toolbar />
+            <Menue setMobileOpen={setMobileOpen} />
+          </Drawer>
+        </Box>
+        <Box
+          component="main"
+          sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
         >
-          <Toolbar />
-          <Menue setMobileOpen={setMobileOpen}/>
-        </Drawer>
-      </Box>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-      >
-        <Toolbar id="top-anchor" />
+          <Toolbar id="top-anchor" />
 
           <DummyHeader />
           <Routes>
@@ -111,8 +111,8 @@ function App(props: Props) {
             {/* 練習メニュー */}
           </Routes>
 
-        <ScrollTop />
-      </Box>
+          <ScrollTop />
+        </Box>
       </BrowserRouter>
     </Box>
   );
