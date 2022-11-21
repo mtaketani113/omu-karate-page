@@ -53,6 +53,7 @@ function App(props: Props) {
 
   return (
     <Box sx={{ display: 'flex' }}>
+              <BrowserRouter basename={BASE_CONTEXT}>
       <Header handleDrawerToggle={handleDrawerToggle} />
       <Box
         component="nav"
@@ -78,7 +79,7 @@ function App(props: Props) {
               <ChevronLeftIcon />
             </IconButton>
           </DrawerHeader>
-          <Menue />
+          <Menue setMobileOpen={setMobileOpen}/>
         </Drawer>
         <Drawer
           variant="permanent"
@@ -89,7 +90,7 @@ function App(props: Props) {
           open
         >
           <Toolbar />
-          <Menue />
+          <Menue setMobileOpen={setMobileOpen}/>
         </Drawer>
       </Box>
       <Box
@@ -97,7 +98,7 @@ function App(props: Props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar id="top-anchor" />
-        <BrowserRouter basename={BASE_CONTEXT}>
+
           <DummyHeader />
           <Routes>
             <Route path="/" element={<Home />} /> {/* ホーム */}
@@ -109,9 +110,10 @@ function App(props: Props) {
             <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
             {/* 練習メニュー */}
           </Routes>
-        </BrowserRouter>
+
         <ScrollTop />
       </Box>
+      </BrowserRouter>
     </Box>
   );
 }

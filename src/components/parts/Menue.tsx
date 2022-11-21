@@ -10,14 +10,23 @@ import PeopleIcon from '@mui/icons-material/People';
 import LinkIcon from '@mui/icons-material/Link';
 import RoomIcon from '@mui/icons-material/Room';
 import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
-import { BASE_CONTEXT } from './constants';
+import { Link } from 'react-router-dom';
 
-const Menue = () => {
+interface Props {
+  setMobileOpen?: (open: boolean) => void;
+}
+
+
+const Menue = ({setMobileOpen}: Props) => {
+  
+  const doNottiong = (open: boolean) => {};
+  const setOpen = setMobileOpen ?? doNottiong;
+
   return (
     <div>
       <Divider />
-      <List>
-        <ListItem key="home" disablePadding component="a" href={BASE_CONTEXT}>
+      <List onClick={() => setOpen(false)}>
+        <ListItem key="home" disablePadding component={Link} to={'/'} >
           <ListItemButton>
             <ListItemIcon>
               <HomeIcon />
@@ -25,7 +34,7 @@ const Menue = () => {
             <ListItemText primary="ホーム" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="member" disablePadding component="a" href={BASE_CONTEXT + '/member'}>
+        <ListItem key="member" disablePadding component={Link} to={'/member'}>
           <ListItemButton>
             <ListItemIcon>
               <PeopleIcon />
@@ -33,7 +42,7 @@ const Menue = () => {
             <ListItemText primary="部員紹介" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="schedule" disablePadding component="a" href={BASE_CONTEXT + '/schedule'}>
+        <ListItem key="schedule" disablePadding component={Link} to={'/schedule'}>
           <ListItemButton>
             <ListItemIcon>
               <CalendarMonthIcon />
@@ -41,7 +50,7 @@ const Menue = () => {
             <ListItemText primary="練習予定" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="place" disablePadding component="a" href={BASE_CONTEXT + '/place'}>
+        <ListItem key="place" disablePadding component={Link} to={'/place'}>
           <ListItemButton>
             <ListItemIcon>
               <RoomIcon />
@@ -51,8 +60,8 @@ const Menue = () => {
         </ListItem>
       </List>
       <Divider />
-      <List>
-        <ListItem key="links" disablePadding component="a" href={BASE_CONTEXT + '/links'}>
+      <List onClick={() => setOpen(false)}>
+        <ListItem key="links" disablePadding component={Link} to={'/links'}>
           <ListItemButton>
             <ListItemIcon>
               <LinkIcon />
@@ -64,8 +73,8 @@ const Menue = () => {
         <ListItem
           key="privacyPolicy"
           disablePadding
-          component="a"
-          href={BASE_CONTEXT + '/privacyPolicy'}
+          component={Link}
+          to={'/privacyPolicy'}
         >
           <ListItemButton>
             <ListItemIcon>
