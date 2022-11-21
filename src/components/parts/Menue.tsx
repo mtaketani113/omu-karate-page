@@ -9,7 +9,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import LinkIcon from '@mui/icons-material/Link';
 import RoomIcon from '@mui/icons-material/Room';
 import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
@@ -27,6 +27,8 @@ const Menue = ({ setMobileOpen }: Props) => {
 
   const [openPlace, setOpenPlace] = useState(false);
 
+  const location = useLocation();
+
   const handleClick = () => {
     setOpenPlace((prevState) => !prevState);
   };
@@ -35,28 +37,44 @@ const Menue = ({ setMobileOpen }: Props) => {
     <div>
       <Divider />
       <List onClick={() => setOpen(false)}>
-        <ListItemButton key="home" component={Link} to={'/'}>
+        <ListItemButton key="home" component={Link} to={'/'} selected={location.pathname === '/'}>
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
           <ListItemText primary="ホーム" />
         </ListItemButton>
 
-        <ListItemButton key="member" component={Link} to={'/member'}>
+        <ListItemButton
+          key="member"
+          component={Link}
+          to={'/member'}
+          selected={location.pathname === '/member'}
+        >
           <ListItemIcon>
             <PeopleIcon />
           </ListItemIcon>
           <ListItemText primary="部員紹介" />
         </ListItemButton>
 
-        <ListItemButton key="schedule" component={Link} to={'/schedule'}>
+        <ListItemButton
+          key="schedule"
+          component={Link}
+          to={'/schedule'}
+          selected={location.pathname === '/schedule'}
+        >
           <ListItemIcon>
             <CalendarMonthIcon />
           </ListItemIcon>
           <ListItemText primary="練習予定" />
         </ListItemButton>
 
-        <ListItemButton key="place" component={Link} to={'/place'} onClick={handleClick}>
+        <ListItemButton
+          key="place"
+          component={Link}
+          to={'/place'}
+          onClick={handleClick}
+          selected={location.pathname === '/place'}
+        >
           <ListItemIcon>
             <RoomIcon />
           </ListItemIcon>
@@ -100,10 +118,15 @@ const Menue = ({ setMobileOpen }: Props) => {
             </HashLink>
           </List>
         </Collapse>
-      </List>
-      <Divider />
-      <List onClick={() => setOpen(false)}>
-        <ListItemButton key="links" component={Link} to={'/links'}>
+
+        <Divider />
+
+        <ListItemButton
+          key="links"
+          component={Link}
+          to={'/links'}
+          selected={location.pathname === '/links'}
+        >
           <ListItemIcon>
             <LinkIcon />
           </ListItemIcon>
@@ -112,7 +135,12 @@ const Menue = ({ setMobileOpen }: Props) => {
 
         <Divider />
 
-        <ListItemButton key="privacyPolicy" component={Link} to={'/privacyPolicy'}>
+        <ListItemButton
+          key="privacyPolicy"
+          component={Link}
+          to={'/privacyPolicy'}
+          selected={location.pathname === '/privacyPolicy'}
+        >
           <ListItemIcon>
             <PrivacyTipIcon />
           </ListItemIcon>
