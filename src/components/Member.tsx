@@ -67,7 +67,7 @@ const Member = () => {
   const rowsCoach = [
     createCoachData('師範', 'Coming soon', '', ImageComingSoon, '0% 50%'),
     createCoachData('師範', 'Coming soon', '', ImageComingSoon, '0% 50%'),
-    createCoachData('監督', '竹谷 匡玄', '平成18年度 大阪府立大学卒業', ImageTaketani, '0% 15%'),
+    createCoachData('監督', '竹谷 匡玄', '平成18年 大阪府立大学卒業', ImageTaketani, '0% 15%'),
   ];
 
   return (
