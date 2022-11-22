@@ -101,7 +101,7 @@ function App(props: Props) {
           <Toolbar id="top-anchor" />
 
           <DummyHeader />
-          <Container sx={{ py: 2 }} maxWidth="xl">
+          <Container disableGutters maxWidth="xl">
             <Routes>
               <Route path="/" element={<Home />} /> {/* ホーム */}
               <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
