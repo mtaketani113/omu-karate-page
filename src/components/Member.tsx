@@ -1,13 +1,17 @@
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import { Box, Button, Card, CardContent, CardMedia, Fade, Modal, Typography } from '@mui/material';
-import Paper from '@mui/material/Paper';
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Fade,
+  Grid,
+  Modal,
+  Typography,
+} from '@mui/material';
 import { useState } from 'react';
 import ImageTaketani from './images/taketani.jpg';
+import ImageComingSoon from './images/pop_coming_soon.png';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -33,14 +37,37 @@ const Member = () => {
     setOpen(true);
   };
 
-  function createData(name: string, department: string, former: string, comment: string) {
-    return { name, department, former, comment };
+  function createData(
+    name: string,
+    department: string,
+    former: string,
+    comment: string,
+    image: any,
+    imagePosition: string,
+  ) {
+    return { name, department, former, comment, image, imagePosition };
   }
 
   const rows = [
-    createData('Coming soon', '', '', ''),
-    createData('Coming soon', '', '', ''),
-    createData('Coming soon', '', '', ''),
+    createData('Coming soon', '', '', '', ImageComingSoon, '0% 50%'),
+    createData('Coming soon', '', '', '', ImageComingSoon, '0% 50%'),
+    createData('Coming soon', '', '', '', ImageComingSoon, '0% 50%'),
+  ];
+
+  function createCoachData(
+    position: string,
+    name: string,
+    comment: string,
+    image: any,
+    imagePosition: string,
+  ) {
+    return { position, name, comment, image, imagePosition };
+  }
+
+  const rowsCoach = [
+    createCoachData('師範', 'Coming soon', '', ImageComingSoon, '0% 50%'),
+    createCoachData('師範', 'Coming soon', '', ImageComingSoon, '0% 50%'),
+    createCoachData('監督', '竹谷 匡玄', '平成18年度 大阪府立大学卒業', ImageTaketani, '0% 15%'),
   ];
 
   return (
@@ -49,79 +76,95 @@ const Member = () => {
       <Typography paragraph>4回生1名、1回生3名で頑張っています。</Typography>
       <Typography paragraph>↓作成中</Typography>
       <h2>四回生</h2>
-      <TableContainer component={Paper}>
-        <Table aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="center">名前</TableCell>
-              <TableCell align="center">学域</TableCell>
-              <TableCell align="center">出身校</TableCell>
-              <TableCell align="center">一言</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow key="4-1" sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell component="th" scope="row"></TableCell>
-              <TableCell align="center">Coming soon</TableCell>
-              <TableCell align="center"></TableCell>
-              <TableCell align="center"></TableCell>
-              <TableCell align="left"></TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <Grid container spacing={4}>
+        <Grid item key="4" xs={12} sm={6} md={4}>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+              className="cardImage"
+              component="img"
+              height="140"
+              src={ImageComingSoon}
+              alt="Comming soon"
+              style={{ objectPosition: '0% 50%' }}
+              onClick={(e) => handleImage(ImageComingSoon)}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Comming soon
+              </Typography>
+              <Typography gutterBottom variant="h6" component="div"></Typography>
+              <Typography gutterBottom variant="h6" component="div"></Typography>
+              <Typography variant="body2" color="text.secondary"></Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
       <h2>一回生</h2>
-      <TableContainer component={Paper}>
-        <Table aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="center">名前</TableCell>
-              <TableCell align="center">学域</TableCell>
-              <TableCell align="center">出身校</TableCell>
-              <TableCell align="center">一言</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row, i) => (
-              <TableRow
-                key={row.name + i}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-                <TableCell component="th" scope="row"></TableCell>
-                <TableCell align="center">{row.name}</TableCell>
-                <TableCell align="center">{row.department}</TableCell>
-                <TableCell align="center">{row.former}</TableCell>
-                <TableCell align="left">{row.comment}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+
+      <Grid container spacing={4}>
+        {rows.map((row, i) => (
+          <Grid item key={row.name + i} xs={12} sm={6} md={4}>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia
+                className="cardImage"
+                component="img"
+                height="140"
+                src={row.image}
+                alt={row.name}
+                style={{ objectPosition: row.imagePosition }}
+                onClick={(e) => handleImage(row.image)}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {row.name}
+                </Typography>
+                <Typography gutterBottom variant="h6" component="div">
+                  {row.department}
+                </Typography>
+                <Typography gutterBottom variant="h6" component="div">
+                  {row.former}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {row.comment}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+        ;
+      </Grid>
+
       <h1>指導者紹介</h1>
 
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          component="img"
-          height="140"
-          src={ImageTaketani}
-          alt="taketani"
-          style={{ objectPosition: '0% 15%' }}
-          onClick={(e) => handleImage(ImageTaketani)}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            監督
-          </Typography>
-          <Typography gutterBottom variant="h6" component="div">
-            竹谷 匡玄
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            平成18年度 大阪府立大学卒業
-          </Typography>
-        </CardContent>
-      </Card>
+      <Grid container spacing={4}>
+        {rowsCoach.map((row, i) => (
+          <Grid item key={row.name + i} xs={12} sm={6} md={4}>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia
+                className="cardImage"
+                component="img"
+                height="140"
+                src={row.image}
+                alt={row.name}
+                style={{ objectPosition: row.imagePosition }}
+                onClick={(e) => handleImage(ImageTaketani)}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {row.position}
+                </Typography>
+                <Typography gutterBottom variant="h6" component="div">
+                  {row.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {row.comment}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+        ;
+      </Grid>
 
       <h1>OB紹介</h1>
       <Typography paragraph>よく来ていただいてるOBを紹介します。</Typography>

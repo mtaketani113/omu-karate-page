@@ -17,6 +17,7 @@ import {
   ScrollTop,
   TrainingMenue,
 } from './components/index';
+import Container from '@mui/material/Container';
 import { BASE_CONTEXT } from './components/parts/constants';
 import { IconButton } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -100,16 +101,19 @@ function App(props: Props) {
           <Toolbar id="top-anchor" />
 
           <DummyHeader />
-          <Routes>
-            <Route path="/" element={<Home />} /> {/* ホーム */}
-            <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
-            <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
-            <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
-            <Route path="/links" element={<Links />} /> {/* リンク集 */}
-            <Route path="/privacyPolicy" element={<PrivacyPolicy />} /> {/* プライバシーポリシー */}
-            <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
-            {/* 練習メニュー */}
-          </Routes>
+          <Container sx={{ py: 2 }} maxWidth="xl">
+            <Routes>
+              <Route path="/" element={<Home />} /> {/* ホーム */}
+              <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
+              <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
+              <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
+              <Route path="/links" element={<Links />} /> {/* リンク集 */}
+              <Route path="/privacyPolicy" element={<PrivacyPolicy />} />{' '}
+              {/* プライバシーポリシー */}
+              <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
+              {/* 練習メニュー */}
+            </Routes>
+          </Container>
 
           <ScrollTop />
         </Box>

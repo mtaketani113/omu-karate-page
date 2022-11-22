@@ -52,3 +52,8 @@ td.fc-day-sun {
   padding-top: 70px;
   margin-top: -70px;
 }
+
+.cardImage:hover {
+  cursor: pointer; /* マウスカーソルを手の形にする */
+  opacity: 0.6; /* ボタンの透明度を60%にする */
+}
