@@ -4,7 +4,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import { Box, Button, Fade, Link, Modal, Typography } from '@mui/material';
+import { Box, Button, Card, CardContent, CardMedia, Fade, Modal, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import { useState } from 'react';
 import ImageTaketani from './images/taketani.jpg';
@@ -100,26 +100,28 @@ const Member = () => {
         </Table>
       </TableContainer>
       <h1>指導者紹介</h1>
-      <TableContainer component={Paper}>
-        <Table aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell component="th" scope="row"></TableCell>
-              <TableCell align="left">名前</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell component="th" scope="row">
-                監督
-              </TableCell>
-              <TableCell align="left">
-                <Link onClick={(e) => handleImage(ImageTaketani)}>竹谷 匡玄</Link>
-              </TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </TableContainer>
+
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+          component="img"
+          height="140"
+          src={ImageTaketani}
+          alt="taketani"
+          style={{ objectPosition: '0% 15%' }}
+          onClick={(e) => handleImage(ImageTaketani)}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            監督
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div">
+            竹谷 匡玄
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            平成18年度 大阪府立大学卒業
+          </Typography>
+        </CardContent>
+      </Card>
 
       <h1>OB紹介</h1>
       <Typography paragraph>よく来ていただいてるOBを紹介します。</Typography>
