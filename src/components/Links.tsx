@@ -7,10 +7,10 @@ const Links = () => {
       </li>
       <h2>合併前のホームページ</h2>
       <li>
-        <a href="http://ocukaratedo.web.fc2.com/">大阪市立大学空手道部のホームページ</a>
+        <a href="http://ocukaratedo.web.fc2.com/">大阪市立大学空手道部</a>
       </li>
       <li>
-        <a href="https://opu-karatedo-life.jimdofree.com/">大阪府立大学空手道部のホームページ</a>
+        <a href="https://opu-karatedo-life.jimdofree.com/">大阪府立大学空手道部</a>
       </li>
       <h2>空手道関連</h2>
       <li>
