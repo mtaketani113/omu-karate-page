@@ -90,7 +90,7 @@ function App(props: Props) {
             open
           >
             <Toolbar />
-            <Menue setMobileOpen={setMobileOpen} />
+            <Menue/>
           </Drawer>
         </Box>
         <Box
