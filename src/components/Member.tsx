@@ -147,7 +147,7 @@ const Member = () => {
                 src={row.image}
                 alt={row.name}
                 style={{ objectPosition: row.imagePosition }}
-                onClick={(e) => handleImage(ImageTaketani)}
+                onClick={(e) => handleImage(row.image)}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
