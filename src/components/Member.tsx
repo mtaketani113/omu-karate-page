@@ -90,7 +90,7 @@ const Member = () => {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Comming soon
+                Coming soon
               </Typography>
               <Typography gutterBottom variant="h6" component="div"></Typography>
               <Typography gutterBottom variant="h6" component="div"></Typography>
