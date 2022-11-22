@@ -33,41 +33,41 @@ const Menue = ({ setMobileOpen }: Props) => {
     setOpenPlace((prevState) => !prevState);
   };
 
+  const menues = [
+    {
+      text: 'ホーム',
+      pathname: '/',
+      icon: HomeIcon,
+    },
+    {
+      text: '部員紹介',
+      pathname: '/member',
+      icon: PeopleIcon,
+    },
+    {
+      text: '練習予定',
+      pathname: '/schedule',
+      icon: CalendarMonthIcon,
+    },
+  ];
+
   return (
     <div>
       <Divider />
       <List onClick={() => setOpen(false)}>
-        <ListItemButton key="home" component={Link} to={'/'} selected={location.pathname === '/'}>
-          <ListItemIcon>
-            <HomeIcon />
-          </ListItemIcon>
-          <ListItemText primary="ホーム" />
-        </ListItemButton>
-
-        <ListItemButton
-          key="member"
-          component={Link}
-          to={'/member'}
-          selected={location.pathname === '/member'}
-        >
-          <ListItemIcon>
-            <PeopleIcon />
-          </ListItemIcon>
-          <ListItemText primary="部員紹介" />
-        </ListItemButton>
-
-        <ListItemButton
-          key="schedule"
-          component={Link}
-          to={'/schedule'}
-          selected={location.pathname === '/schedule'}
-        >
-          <ListItemIcon>
-            <CalendarMonthIcon />
-          </ListItemIcon>
-          <ListItemText primary="練習予定" />
-        </ListItemButton>
-
+        {menues.map((menue: any) => (
+          <ListItemButton
+            key={menue.text}
+            component={Link}
+            to={menue.pathname}
+            selected={location.pathname === menue.pathname}
+          >
+            <ListItemIcon>
+              <menue.icon />
+            </ListItemIcon>
+            <ListItemText primary={menue.text} />
+          </ListItemButton>
+        ))}
         <ListItemButton
           key="place"
           component={Link}
