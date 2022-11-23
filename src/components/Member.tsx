@@ -75,9 +75,7 @@ const Member = () => {
     return { name, comment, image, imagePosition };
   }
 
-  const rowsOB = [
-    createOBhData('梅景 康平', '平成25年 大阪府立大学卒業', ImageUmekage, '0% 50%'),
-  ];
+  const rowsOB = [createOBhData('梅景 康平', '平成25年 大阪府立大学卒業', ImageUmekage, '0% 50%')];
 
   return (
     <>
