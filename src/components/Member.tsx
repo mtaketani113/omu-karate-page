@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 import ImageTaketani from './images/taketani.jpg';
+import ImageUmekage from './images/umekage.jpg';
 import ImageComingSoon from './images/pop_coming_soon.png';
 
 const style = {
@@ -70,17 +71,12 @@ const Member = () => {
     createCoachData('監督', '竹谷 匡玄', '平成18年 大阪府立大学卒業', ImageTaketani, '0% 15%'),
   ];
 
-  function createOBhData(
-    name: string,
-    comment: string,
-    image: any,
-    imagePosition: string,
-  ) {
+  function createOBhData(name: string, comment: string, image: any, imagePosition: string) {
     return { name, comment, image, imagePosition };
   }
 
   const rowsOB = [
-    createOBhData('梅景 康平', '平成25年 大阪府立大学卒業', ImageComingSoon, '0% 50%'),
+    createOBhData('梅景 康平', '平成25年 大阪府立大学卒業', ImageUmekage, '0% 50%'),
   ];
 
   return (
