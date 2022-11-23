@@ -70,6 +70,19 @@ const Member = () => {
     createCoachData('監督', '竹谷 匡玄', '平成18年 大阪府立大学卒業', ImageTaketani, '0% 15%'),
   ];
 
+  function createOBhData(
+    name: string,
+    comment: string,
+    image: any,
+    imagePosition: string,
+  ) {
+    return { name, comment, image, imagePosition };
+  }
+
+  const rowsOB = [
+    createOBhData('梅景 康平', '平成25年 大阪府立大学卒業', ImageComingSoon, '0% 50%'),
+  ];
+
   return (
     <>
       <h1>現役紹介</h1>
@@ -78,7 +91,7 @@ const Member = () => {
       <h2>四回生</h2>
       <Grid container spacing={4}>
         <Grid item key="4" xs={12} sm={6} md={4}>
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 445 }}>
             <CardMedia
               className="cardImage"
               component="img"
@@ -104,7 +117,7 @@ const Member = () => {
       <Grid container spacing={4}>
         {rows.map((row, i) => (
           <Grid item key={row.name + i} xs={12} sm={6} md={4}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 445 }}>
               <CardMedia
                 className="cardImage"
                 component="img"
@@ -168,6 +181,33 @@ const Member = () => {
 
       <h1>OB紹介</h1>
       <Typography paragraph>よく来ていただいてるOBを紹介します。</Typography>
+
+      <Grid container spacing={4}>
+        {rowsOB.map((row, i) => (
+          <Grid item key={row.name + i} xs={12} sm={6} md={4}>
+            <Card sx={{ maxWidth: 445 }}>
+              <CardMedia
+                className="cardImage"
+                component="img"
+                height="140"
+                src={row.image}
+                alt={row.name}
+                style={{ objectPosition: row.imagePosition }}
+                onClick={(e) => handleImage(row.image)}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {row.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {row.comment}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+        ;
+      </Grid>
 
       <Modal
         open={open}
