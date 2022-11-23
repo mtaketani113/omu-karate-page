@@ -55,13 +55,14 @@ const Menue = ({ setMobileOpen }: Props) => {
   return (
     <div>
       <Divider />
-      <List onClick={() => setOpen(false)}>
+      <List>
         {menues.map((menue: any) => (
           <ListItemButton
             key={menue.text}
             component={Link}
             to={menue.pathname}
             selected={location.pathname === menue.pathname}
+            onClick={() => setOpen(false)}
           >
             <ListItemIcon>
               <menue.icon />
@@ -76,15 +77,15 @@ const Menue = ({ setMobileOpen }: Props) => {
           onClick={handleClick}
           selected={location.pathname === '/place'}
         >
-          <ListItemIcon>
+          <ListItemIcon onClick={() => setOpen(false)}>
             <RoomIcon />
           </ListItemIcon>
-          <ListItemText primary="練習場所・時間" />
+          <ListItemText primary="練習場所・時間" onClick={() => setOpen(false)} />
           {openPlace ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
 
         <Collapse in={openPlace} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
+          <List component="div" disablePadding onClick={() => setOpen(false)}>
             <HashLink
               smooth
               to="/place#sugimoto"
@@ -121,43 +122,44 @@ const Menue = ({ setMobileOpen }: Props) => {
         </Collapse>
 
         <Divider />
+        <span onClick={() => setOpen(false)}>
+          <ListItemButton
+            key="links"
+            component={Link}
+            to={'/links'}
+            selected={location.pathname === '/links'}
+          >
+            <ListItemIcon>
+              <LinkIcon />
+            </ListItemIcon>
+            <ListItemText primary="リンク集" />
+          </ListItemButton>
+          <ListItemButton
+            key="inquiry"
+            component={Link}
+            to={'/inquiry'}
+            selected={location.pathname === '/inquiry'}
+          >
+            <ListItemIcon>
+              <EmailIcon />
+            </ListItemIcon>
+            <ListItemText primary="お問い合わせ" />
+          </ListItemButton>
 
-        <ListItemButton
-          key="links"
-          component={Link}
-          to={'/links'}
-          selected={location.pathname === '/links'}
-        >
-          <ListItemIcon>
-            <LinkIcon />
-          </ListItemIcon>
-          <ListItemText primary="リンク集" />
-        </ListItemButton>
-        <ListItemButton
-          key="inquiry"
-          component={Link}
-          to={'/inquiry'}
-          selected={location.pathname === '/inquiry'}
-        >
-          <ListItemIcon>
-            <EmailIcon />
-          </ListItemIcon>
-          <ListItemText primary="お問い合わせ" />
-        </ListItemButton>
+          <Divider />
 
-        <Divider />
-
-        <ListItemButton
-          key="privacyPolicy"
-          component={Link}
-          to={'/privacyPolicy'}
-          selected={location.pathname === '/privacyPolicy'}
-        >
-          <ListItemIcon>
-            <PrivacyTipIcon />
-          </ListItemIcon>
-          <ListItemText primary="プライバシーポリシー" />
-        </ListItemButton>
+          <ListItemButton
+            key="privacyPolicy"
+            component={Link}
+            to={'/privacyPolicy'}
+            selected={location.pathname === '/privacyPolicy'}
+          >
+            <ListItemIcon>
+              <PrivacyTipIcon />
+            </ListItemIcon>
+            <ListItemText primary="プライバシーポリシー" />
+          </ListItemButton>
+        </span>
       </List>
     </div>
   );
