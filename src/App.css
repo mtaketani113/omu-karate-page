@@ -37,12 +37,12 @@
   }
 }
 
-@media screen and (max-width:780px){
+@media screen and (max-width: 780px) {
   .fc-toolbar-title {
     font-size: 1.2em !important;
   }
 }
-@media screen and (min-width:781px){
+@media screen and (min-width: 781px) {
   .fc-toolbar-title {
     font-size: 1.5em !important;
   }
