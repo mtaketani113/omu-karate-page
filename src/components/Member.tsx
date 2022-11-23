@@ -139,7 +139,7 @@ const Member = () => {
       <Grid container spacing={4}>
         {rowsCoach.map((row, i) => (
           <Grid item key={row.name + i} xs={12} sm={6} md={4}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 445 }}>
               <CardMedia
                 className="cardImage"
                 component="img"
