@@ -8,6 +8,7 @@ import {
   DummyHeader,
   Header,
   Home,
+  Inquiry,
   Links,
   Member,
   Menue,
@@ -108,7 +109,9 @@ function App(props: Props) {
               <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
               <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
               <Route path="/links" element={<Links />} /> {/* リンク集 */}
-              <Route path="/privacyPolicy" element={<PrivacyPolicy />} />{' '}
+              <Route path="/inquiry" element={<Inquiry />} />
+              {/* お問い合わせ */}
+              <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
               {/* プライバシーポリシー */}
               <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
               {/* 練習メニュー */}

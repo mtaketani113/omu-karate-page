@@ -9,6 +9,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import LinkIcon from '@mui/icons-material/Link';
 import RoomIcon from '@mui/icons-material/Room';
 import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
+import EmailIcon from '@mui/icons-material/Email';
 import { Link, useLocation } from 'react-router-dom';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
@@ -131,6 +132,17 @@ const Menue = ({ setMobileOpen }: Props) => {
             <LinkIcon />
           </ListItemIcon>
           <ListItemText primary="リンク集" />
+        </ListItemButton>
+        <ListItemButton
+          key="inquiry"
+          component={Link}
+          to={'/inquiry'}
+          selected={location.pathname === '/inquiry'}
+        >
+          <ListItemIcon>
+            <EmailIcon />
+          </ListItemIcon>
+          <ListItemText primary="お問い合わせ" />
         </ListItemButton>
 
         <Divider />
