@@ -1,4 +1,5 @@
 import { Table, TableBody, TableCell, TableRow } from '@mui/material';
+import { Helmet } from 'react-helmet';
 
 const Inquiry = () => {
   const titleStyle = {
@@ -12,6 +13,9 @@ const Inquiry = () => {
 
   return (
     <>
+      <Helmet>
+        <title>お問い合わせ | 大阪公立大学空手道部 応援ページ</title>
+      </Helmet>
       <h1>お問い合わせ</h1>
       <Table style={{ maxWidth: 500, borderWidth: 1, borderStyle: 'solid' }}>
         <TableBody>

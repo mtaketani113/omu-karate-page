@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import Training from './data/training.json';
 import { ReactNode, useEffect, useState } from 'react';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
+import { Helmet } from 'react-helmet';
 
 const TrainingMenue = (props: any) => {
   const { date } = useParams<{ date: string }>();
@@ -27,6 +28,9 @@ const TrainingMenue = (props: any) => {
 
   return (
     <>
+      <Helmet>
+        <title>練習メニュー | 大阪公立大学空手道部 応援ページ</title>
+      </Helmet>
       <h1>練習メニュー</h1>
       <h3> {date}</h3>
       <TableContainer component={Paper}>

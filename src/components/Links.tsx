@@ -1,6 +1,11 @@
+import { Helmet } from 'react-helmet';
+
 const Links = () => {
   return (
     <>
+      <Helmet>
+        <title>リンク集 | 大阪公立大学空手道部 応援ページ</title>
+      </Helmet>
       <h2>Twitter</h2>
       <li>
         <a href="https://twitter.com/omu_karatedo">大阪公立大学のTwitter</a>
