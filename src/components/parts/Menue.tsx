@@ -37,7 +37,7 @@ const Menue = ({ setMobileOpen }: Props) => {
   const menues = [
     {
       text: 'ホーム',
-      pathname: '/',
+      pathname: '//',
       icon: HomeIcon,
     },
     {
