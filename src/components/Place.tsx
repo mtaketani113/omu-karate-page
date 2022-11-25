@@ -31,6 +31,7 @@ const Place = () => {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
+      <img src="https://omu-karate-org.github.io/images/place/nakamozu.jpg" width="100%" alt="トップアイコン" />
       <h2 className="anchor" id="time">
         練習時間
       </h2>
