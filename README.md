@@ -47,4 +47,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Github Pages Link
 
-https://mtaketani113.github.io/omu-karate-page/schedule
+https://mtaketani113.github.io/omu-karate-page/
