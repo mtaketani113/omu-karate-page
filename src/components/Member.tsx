@@ -109,7 +109,9 @@ const Member = () => {
               <Typography variant="body2" color="text.secondary"></Typography>
             </CardContent>
             <CardActions>
-              <Button size="medium" onClick={(e) => handleImage(ImageComingSoon)}>開く</Button>
+              <Button size="medium" onClick={(e) => handleImage(ImageComingSoon)}>
+                開く
+              </Button>
             </CardActions>
           </Card>
         </Grid>
@@ -144,7 +146,9 @@ const Member = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="medium" onClick={(e) => handleImage(row.image)}>開く</Button>
+                <Button size="medium" onClick={(e) => handleImage(row.image)}>
+                  開く
+                </Button>
               </CardActions>
             </Card>
           </Grid>
@@ -179,7 +183,9 @@ const Member = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="medium" onClick={(e) => handleImage(row.image)}>開く</Button>
+                <Button size="medium" onClick={(e) => handleImage(row.image)}>
+                  開く
+                </Button>
               </CardActions>
             </Card>
           </Grid>
@@ -212,7 +218,9 @@ const Member = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="medium" onClick={(e) => handleImage(row.image)}>開く</Button>
+                <Button size="medium" onClick={(e) => handleImage(row.image)}>
+                  開く
+                </Button>
               </CardActions>
             </Card>
           </Grid>
