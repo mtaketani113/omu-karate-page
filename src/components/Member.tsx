@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   CardContent,
+  CardActions,
   CardMedia,
   Fade,
   Grid,
@@ -107,6 +108,9 @@ const Member = () => {
               <Typography gutterBottom variant="h6" component="div"></Typography>
               <Typography variant="body2" color="text.secondary"></Typography>
             </CardContent>
+            <CardActions>
+              <Button size="medium" onClick={(e) => handleImage(ImageComingSoon)}>開く</Button>
+            </CardActions>
           </Card>
         </Grid>
       </Grid>
@@ -139,6 +143,9 @@ const Member = () => {
                   {row.comment}
                 </Typography>
               </CardContent>
+              <CardActions>
+                <Button size="medium" onClick={(e) => handleImage(row.image)}>開く</Button>
+              </CardActions>
             </Card>
           </Grid>
         ))}
@@ -171,6 +178,9 @@ const Member = () => {
                   {row.comment}
                 </Typography>
               </CardContent>
+              <CardActions>
+                <Button size="medium" onClick={(e) => handleImage(row.image)}>開く</Button>
+              </CardActions>
             </Card>
           </Grid>
         ))}
@@ -201,6 +211,9 @@ const Member = () => {
                   {row.comment}
                 </Typography>
               </CardContent>
+              <CardActions>
+                <Button size="medium" onClick={(e) => handleImage(row.image)}>開く</Button>
+              </CardActions>
             </Card>
           </Grid>
         ))}
