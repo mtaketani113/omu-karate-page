@@ -1,15 +1,38 @@
 {
-  "2022-11-19": [
-    { "title": "準備運動", "detail": "柔軟" },
-    { "title": "アップ", "detail": "ラダー、ステップ" },
-    { "title": "基本", "detail": "前屈、四股立ちにて突きの練習　受けの練習" },
-    { "title": "組手", "detail": "時間で区切って刻み・中段・ワンツーの練習　自由組手" },
-    { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
-  ],
-  "2022-11-24": [
-    { "title": "準備運動", "detail": "柔軟" },
-    { "title": "基本", "detail": "前屈、四股立ちにて突きの練習　蹴りの練習　受けの練習" },
-    { "title": "組手", "detail": "刻み突きの特訓" },
-    { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
-  ]
+  "2022-11-19": {
+    "practice": [
+      { "title": "準備運動", "detail": "柔軟" },
+      { "title": "アップ", "detail": "ラダー、ステップ" },
+      { "title": "基本", "detail": "前屈、四股立ちにて突きの練習　受けの練習" },
+      { "title": "組手", "detail": "時間で区切って刻み・中段・ワンツーの練習　自由組手" },
+      { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
+    ],
+    "images": []
+  },
+  "2022-11-24": {
+    "practice": [
+      { "title": "準備運動", "detail": "柔軟" },
+      { "title": "基本", "detail": "前屈、四股立ちにて突きの練習　蹴りの練習　受けの練習" },
+      { "title": "組手", "detail": "刻み突きの特訓" },
+      { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
+    ],
+    "images": []
+  },
+  "2022-11-26": {
+    "practice": [
+      { "title": "準備運動", "detail": "柔軟" },
+      { "title": "基本", "detail": "平行立ちにて突きの練習　閉塞立ちにて蹴りの練習　受けの練習" },
+      {
+        "title": "組手",
+        "detail": "刻み突き時間で区切って刻み・中段・ワンツーの練習　自由組手の特訓"
+      },
+      { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
+    ],
+    "images": [
+      "https://omu-karate-org.github.io/images/practice/20221126/pinan_tsuki.jpg",
+      "https://omu-karate-org.github.io/images/practice/20221126/pinan_gedanuke.jpg",
+      "https://omu-karate-org.github.io/images/practice/20221126/pinan_ageuke.jpg",
+      "https://omu-karate-org.github.io/images/practice/20221126/pinan_shiko.jpg"
+    ]
+  }
 }

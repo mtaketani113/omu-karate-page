@@ -12,7 +12,12 @@
     "backgroundColor": "green",
     "url": "/omu-karate-page/trainingMenue/2022-11-24"
   },
-  { "title": "杉本町", "start": "2022-11-26 10:00", "end": "2022-11-26 12:00" },
+  {
+    "title": "杉本町",
+    "start": "2022-11-26 10:00",
+    "end": "2022-11-26 12:00",
+    "url": "/omu-karate-page/trainingMenue/2022-11-26"
+  },
   { "title": "杉本町", "start": "2022-11-30 17:00", "end": "2022-11-30 19:00" },
   {
     "title": "中百舌鳥",
