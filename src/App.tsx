@@ -16,6 +16,7 @@ import {
   PrivacyPolicy,
   Schedule,
   ScrollTop,
+  ScrollTopForPathChange,
   TrainingMenue,
 } from './components/index';
 import Container from '@mui/material/Container';
@@ -56,6 +57,7 @@ function App(props: Props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <BrowserRouter basename={BASE_CONTEXT}>
+        <ScrollTopForPathChange />
         <Header handleDrawerToggle={handleDrawerToggle} />
         <Box
           component="nav"
