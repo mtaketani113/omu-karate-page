@@ -14,7 +14,7 @@ import {
   const ShareButton = () => {
     return (
       <>
-<Grid container spacing={2} style={{paddingTop:'15px'}}>
+<Grid container spacing={10} style={{paddingTop:'15px'}}>
   <Grid item xs={1}>
   <FacebookShareButton url={URL} quote={QUOTE}>
           <FacebookIcon size={48} round />
