@@ -19,6 +19,7 @@ import {
   ScrollTopForPathChange,
   TrainingMenue,
   GalleryLinks,
+  ShareButton,
 } from './components/index';
 import Container from '@mui/material/Container';
 import { BASE_CONTEXT } from './components/parts/constants';
@@ -121,6 +122,7 @@ function App(props: Props) {
               <Route path="/galleryLinks" element={<GalleryLinks />} />
               {/* 練習メニュー・風景 */}
             </Routes>
+            <ShareButton />
           </Container>
 
           <ScrollTop />
