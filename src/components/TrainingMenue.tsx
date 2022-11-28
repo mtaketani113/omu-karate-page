@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Training from './data/training.json';
 import { ReactNode, useEffect, useState } from 'react';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
@@ -41,8 +41,9 @@ const TrainingMenue = () => {
           <title>練習メニュー | 大阪公立大学空手道部 応援ページ</title>
         </Helmet>
       </HelmetProvider>
-      <h1>練習メニュー</h1>
-      <h3> {date}</h3>
+      <h3>
+        <Link to="/galleryLinks">練習メニュー・風景</Link>&nbsp; &gt; &nbsp; {date}
+      </h3>
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
           <TableBody>{rows}</TableBody>
