@@ -9,5 +9,6 @@ export { default as DummyHeader } from './parts/DummyHeader';
 export { default as PrivacyPolicy } from './PrivacyPolicy';
 export { default as ScrollTop } from './parts/ScrollTop';
 export { default as TrainingMenue } from './TrainingMenue';
+export { default as TrainingLink } from './TrainingLink';
 export { default as Inquiry } from './Inquiry';
 export { default as ScrollTopForPathChange } from './parts/ScrollTopForPathChange';

@@ -4,7 +4,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
 import { Helmet } from 'react-helmet';
 
-const TrainingMenue = (props: any) => {
+const TrainingMenue = () => {
   const { date } = useParams<{ date: string }>();
   const [rows, setRows] = useState<ReactNode>([]);
   const [images, setImages] = useState<ReactNode>([]);
