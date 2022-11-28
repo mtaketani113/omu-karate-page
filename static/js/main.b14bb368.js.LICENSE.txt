@@ -1,9 +1,3 @@
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
 /*!
   * $script.js JS loader & dependency manager
   * https://github.com/ded/script.js
