@@ -2,14 +2,16 @@ import FullCalendar, { DayCellContentArg } from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import jaLocale from '@fullcalendar/core/locales/ja';
 import Events from './data/events.json';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Schedule = () => {
   return (
     <>
-      <Helmet>
-        <title>練習予定 | 大阪公立大学空手道部 応援ページ</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>練習予定 | 大阪公立大学空手道部 応援ページ</title>
+        </Helmet>
+      </HelmetProvider>
       <div>
         <h2>練習予定</h2>
         <div className="fc-daygrid-event fc-daygrid-dot-event fc-event fc-event-start fc-event-end fc-event-future">

@@ -18,6 +18,7 @@ import { useState } from 'react';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { HashLink } from 'react-router-hash-link';
+import CollectionsIcon from '@mui/icons-material/Collections';
 
 interface Props {
   setMobileOpen?: (open: boolean) => void;
@@ -49,6 +50,11 @@ const Menue = ({ setMobileOpen }: Props) => {
       text: '練習予定',
       pathname: '/schedule',
       icon: CalendarMonthIcon,
+    },
+    {
+      text: '練習メニュー・風景',
+      pathname: '/galleryLinks',
+      icon: CollectionsIcon,
     },
   ];
 

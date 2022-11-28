@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ScrollTopForPathChange = () => {
   const { pathname } = useLocation();
@@ -9,6 +9,6 @@ const ScrollTopForPathChange = () => {
   }, [pathname]);
 
   return null;
-}
+};
 
 export default ScrollTopForPathChange;

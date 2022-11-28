@@ -14,7 +14,7 @@ import { useState } from 'react';
 import ImageTaketani from './images/taketani.jpg';
 import ImageUmekage from './images/umekage.jpg';
 import ImageComingSoon from './images/pop_coming_soon.png';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -81,9 +81,11 @@ const Member = () => {
 
   return (
     <>
-      <Helmet>
-        <title>部員紹介 | 大阪公立大学空手道部 応援ページ</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>部員紹介 | 大阪公立大学空手道部 応援ページ</title>
+        </Helmet>
+      </HelmetProvider>
       <h1>現役紹介</h1>
       <Typography paragraph>4回生1名、1回生3名で頑張っています。</Typography>
       <Typography paragraph>↓作成中</Typography>

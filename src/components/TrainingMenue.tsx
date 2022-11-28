@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import Training from './data/training.json';
 import { ReactNode, useEffect, useState } from 'react';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const TrainingMenue = () => {
   const { date } = useParams<{ date: string }>();
@@ -28,7 +28,7 @@ const TrainingMenue = () => {
     let tmpImages: Array<ReactNode> = [];
     for (let i = 0; i < images.length; i++) {
       let image = images[i];
-      tmpImages.push(<img src={image} width="100%" alt="練習" />);
+      tmpImages.push(<img key={i} src={image} width="100%" alt="練習" />);
     }
     setImages(tmpImages);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -36,9 +36,11 @@ const TrainingMenue = () => {
 
   return (
     <>
-      <Helmet>
-        <title>練習メニュー | 大阪公立大学空手道部 応援ページ</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>練習メニュー | 大阪公立大学空手道部 応援ページ</title>
+        </Helmet>
+      </HelmetProvider>
       <h1>練習メニュー</h1>
       <h3> {date}</h3>
       <TableContainer component={Paper}>

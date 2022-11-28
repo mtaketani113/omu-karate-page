@@ -1,11 +1,13 @@
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Helmet>
-        <title>プライバシーポリシー | 大阪公立大学空手道部 応援ページ</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>プライバシーポリシー | 大阪公立大学空手道部 応援ページ</title>
+        </Helmet>
+      </HelmetProvider>
       <h2>個人情報とは</h2>
       本サイトで内のプライバシーポリシーにおいて、個人情報とは個人に関する情報を意味します。具体的には、氏名、生年月日、住所、電話番号、メールアドレス等、特定の個人を識別できるものをいいます。
       <h2>個人情報の管理</h2>

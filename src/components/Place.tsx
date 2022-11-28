@@ -1,13 +1,15 @@
 import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Place = () => {
   return (
     <>
-      <Helmet>
-        <title>練習場所・時間 | 大阪公立大学空手道部 応援ページ</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>練習場所・時間 | 大阪公立大学空手道部 応援ページ</title>
+        </Helmet>
+      </HelmetProvider>
       <h2>練習場所</h2>
       <h3 className="anchor" id="sugimoto">
         杉本キャンパス 新武道場

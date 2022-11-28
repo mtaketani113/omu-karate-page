@@ -18,7 +18,7 @@ import {
   ScrollTop,
   ScrollTopForPathChange,
   TrainingMenue,
-  TrainingLink,
+  GalleryLinks,
 } from './components/index';
 import Container from '@mui/material/Container';
 import { BASE_CONTEXT } from './components/parts/constants';
@@ -118,8 +118,8 @@ function App(props: Props) {
               {/* プライバシーポリシー */}
               <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
               {/* 練習メニュー */}
-              <Route path="/trainingLink" element={<TrainingLink />} />
-              {/* 練習一覧 */}
+              <Route path="/galleryLinks" element={<GalleryLinks />} />
+              {/* 練習メニュー・風景 */}
             </Routes>
           </Container>
 
