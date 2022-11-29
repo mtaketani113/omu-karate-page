@@ -70,7 +70,7 @@ const Menue = ({ setMobileOpen }: Props) => {
             selected={location.pathname === menue.pathname}
             onClick={() => setOpen(false)}
           >
-            <ListItemIcon>
+            <ListItemIcon sx={{ minWidth: 40 }}>
               <menue.icon />
             </ListItemIcon>
             <ListItemText primary={menue.text} />
@@ -83,7 +83,7 @@ const Menue = ({ setMobileOpen }: Props) => {
           onClick={handleClick}
           selected={location.pathname === '/place'}
         >
-          <ListItemIcon onClick={() => setOpen(false)}>
+          <ListItemIcon onClick={() => setOpen(false)} sx={{ minWidth: 40 }}>
             <RoomIcon />
           </ListItemIcon>
           <ListItemText primary="練習場所・時間" onClick={() => setOpen(false)} />
@@ -98,7 +98,7 @@ const Menue = ({ setMobileOpen }: Props) => {
               style={{ textDecoration: 'none', color: 'black' }}
             >
               <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
+                <ListItemIcon sx={{ minWidth: 40 }}>
                   <LocationCityIcon />
                 </ListItemIcon>
                 <ListItemText primary="杉本町" />
@@ -110,7 +110,7 @@ const Menue = ({ setMobileOpen }: Props) => {
               style={{ textDecoration: 'none', color: 'black' }}
             >
               <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
+                <ListItemIcon sx={{ minWidth: 40 }}>
                   <LocationCityIcon />
                 </ListItemIcon>
                 <ListItemText primary="中百舌鳥" />
@@ -118,7 +118,7 @@ const Menue = ({ setMobileOpen }: Props) => {
             </HashLink>
             <HashLink smooth to="/place#time" style={{ textDecoration: 'none', color: 'black' }}>
               <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
+                <ListItemIcon sx={{ minWidth: 40 }}>
                   <AccessTimeIcon />
                 </ListItemIcon>
                 <ListItemText primary="練習時間" />
@@ -135,7 +135,7 @@ const Menue = ({ setMobileOpen }: Props) => {
             to={'/links'}
             selected={location.pathname === '/links'}
           >
-            <ListItemIcon>
+            <ListItemIcon sx={{ minWidth: 40 }}>
               <LinkIcon />
             </ListItemIcon>
             <ListItemText primary="リンク集" />
@@ -146,7 +146,7 @@ const Menue = ({ setMobileOpen }: Props) => {
             to={'/inquiry'}
             selected={location.pathname === '/inquiry'}
           >
-            <ListItemIcon>
+            <ListItemIcon sx={{ minWidth: 40 }}>
               <EmailIcon />
             </ListItemIcon>
             <ListItemText primary="お問い合わせ" />
@@ -160,7 +160,7 @@ const Menue = ({ setMobileOpen }: Props) => {
             to={'/privacyPolicy'}
             selected={location.pathname === '/privacyPolicy'}
           >
-            <ListItemIcon>
+            <ListItemIcon sx={{ minWidth: 40 }}>
               <PrivacyTipIcon />
             </ListItemIcon>
             <ListItemText primary="プライバシーポリシー" />
