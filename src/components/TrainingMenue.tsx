@@ -8,6 +8,7 @@ const TrainingMenue = () => {
   const { date } = useParams<{ date: string }>();
   const [rows, setRows] = useState<ReactNode>([]);
   const [images, setImages] = useState<ReactNode>([]);
+  const [videos, setVideos] = useState<ReactNode>([]);
   useEffect(() => {
     const training: any = Training;
     const menues: Array<any> = date != null ? training[date].practice : [];
@@ -31,6 +32,21 @@ const TrainingMenue = () => {
       tmpImages.push(<img key={i} src={image} width="100%" alt="練習" />);
     }
     setImages(tmpImages);
+
+    const videos: Array<any> = date != null ? training[date].videos : [];
+    let tmpVideos: Array<ReactNode> = [];
+    for (let i = 0; i < videos.length; i++) {
+      let video = videos[i];
+      tmpVideos.push(
+      <div style={{width: '100%', aspectRatio: '16/9'}}>
+      <iframe width="100%" height="100%"
+        src={video} title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen></iframe></div>);
+    }
+    setVideos(tmpVideos);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -50,6 +66,7 @@ const TrainingMenue = () => {
         </Table>
       </TableContainer>
       {images}
+      {videos}
     </>
   );
 };

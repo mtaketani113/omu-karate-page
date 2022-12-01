@@ -8,7 +8,8 @@
       { "title": "組手", "detail": "時間で区切って刻み・中段・ワンツーの練習　自由組手" },
       { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
     ],
-    "images": []
+    "images": [],
+    "videos": []
   },
   "2022-11-24": {
     "description": "22年11月24日の練習",
@@ -18,7 +19,8 @@
       { "title": "組手", "detail": "刻み突きの特訓" },
       { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
     ],
-    "images": []
+    "images": [],
+    "videos": []
   },
   "2022-11-26": {
     "description": "22年11月26日の練習",
@@ -36,7 +38,8 @@
       "https://omu-karate-org.github.io/images/practice/20221126/pinan_gedanuke.jpg",
       "https://omu-karate-org.github.io/images/practice/20221126/pinan_ageuke.jpg",
       "https://omu-karate-org.github.io/images/practice/20221126/pinan_shiko.jpg"
-    ]
+    ],
+    "videos": []
   },
   "2022-12-01": {
     "description": "22年12月1日の練習",
@@ -44,6 +47,10 @@
       { "title": "組手", "detail": "三商戦に向けて刻み、中段、ワンツーの特訓" },
       { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
     ],
-    "images": []
+    "images": [
+      "https://omu-karate-org.github.io/images/practice/20221201/mat.jpg",
+      "https://omu-karate-org.github.io/images/practice/20221201/pinan.jpg"
+    ],
+    "videos": ["https://www.youtube.com/embed/TQLsgQtqVsk"]
   }
 }
