@@ -37,5 +37,13 @@
       "https://omu-karate-org.github.io/images/practice/20221126/pinan_ageuke.jpg",
       "https://omu-karate-org.github.io/images/practice/20221126/pinan_shiko.jpg"
     ]
+  },
+  "2022-12-01": {
+    "description": "22年12月1日の練習",
+    "practice": [
+      { "title": "組手", "detail": "三商戦に向けて刻み、中段、ワンツーの特訓" },
+      { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
+    ],
+    "images": []
   }
 }
