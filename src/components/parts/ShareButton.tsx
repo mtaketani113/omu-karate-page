@@ -7,13 +7,12 @@ import {
   LineIcon,
   TwitterIcon,
 } from 'react-share';
-import { useLocation } from "react-router-dom"
+import { useLocation } from 'react-router-dom';
 
 const URL = 'https://mtaketani113.github.io/omu-karate-page';
 const QUOTE = '大阪公立大学空手道部 応援ページ';
 
 const ShareButton = () => {
-
   const location = useLocation();
 
   return (
