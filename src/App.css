@@ -41,6 +41,10 @@
   .fc-toolbar-title {
     font-size: 1.2em !important;
   }
+  .image-gallery-slide img {
+    width: 100%;
+    height: 200px;
+  }
 }
 @media screen and (min-width: 781px) {
   .fc-toolbar-title {
@@ -63,4 +67,11 @@ td.fc-day-sun {
 .cardImage:hover {
   cursor: pointer; /* マウスカーソルを手の形にする */
   opacity: 0.6; /* ボタンの透明度を60%にする */
+}
+
+@media screen and (min-width: 1200px) {
+  .image-gallery-slide img {
+    width: 100%;
+    height: 600px;
+  }
 }

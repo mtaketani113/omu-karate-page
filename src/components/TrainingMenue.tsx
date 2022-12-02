@@ -3,12 +3,21 @@ import Training from './data/training.json';
 import { ReactNode, useEffect, useState } from 'react';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 const TrainingMenue = () => {
   const { date } = useParams<{ date: string }>();
   const [rows, setRows] = useState<ReactNode>([]);
-  const [images, setImages] = useState<ReactNode>([]);
   const [videos, setVideos] = useState<ReactNode>([]);
+  const [galleryImages, setGrallyImages] = useState<any>([]);
+
+  const style = {
+    width: '100%',
+    margin: '0 auto',
+    marginTop: 10,
+  };
+
   useEffect(() => {
     const training: any = Training;
     const menues: Array<any> = date != null ? training[date].practice : [];
@@ -26,12 +35,15 @@ const TrainingMenue = () => {
     }
     setRows(tmpRow);
     const images: Array<any> = date != null ? training[date].images : [];
-    let tmpImages: Array<ReactNode> = [];
+    let tmpGalleryImages: Array<any> = [];
     for (let i = 0; i < images.length; i++) {
       let image = images[i];
-      tmpImages.push(<img key={i} src={image} width="100%" alt="練習" />);
+      tmpGalleryImages.push({
+        original: image,
+        thumbnail: image,
+      });
     }
-    setImages(tmpImages);
+    setGrallyImages(tmpGalleryImages);
 
     const videos: Array<any> = date != null ? training[date].videos : [];
     let tmpVideos: Array<ReactNode> = [];
@@ -71,7 +83,16 @@ const TrainingMenue = () => {
           <TableBody>{rows}</TableBody>
         </Table>
       </TableContainer>
-      {images}
+      <div style={style}>
+        <ImageGallery
+          items={galleryImages}
+          showNav={true}
+          autoPlay={false}
+          showFullscreenButton={false}
+          useBrowserFullscreen={false}
+          showPlayButton={true}
+        />
+      </div>
       {videos}
     </>
   );
