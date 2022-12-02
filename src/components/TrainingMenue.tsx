@@ -87,7 +87,7 @@ const TrainingMenue = () => {
         <ImageGallery
           items={galleryImages}
           showNav={true}
-          autoPlay={false}
+          autoPlay={true}
           showFullscreenButton={false}
           useBrowserFullscreen={false}
           showPlayButton={true}
