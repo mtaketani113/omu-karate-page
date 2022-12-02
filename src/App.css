@@ -50,6 +50,10 @@
   .fc-toolbar-title {
     font-size: 1.5em !important;
   }
+  .image-gallery-slide img {
+    width: 100%;
+    height: 400px;
+  }
 }
 
 td.fc-day-sat {
