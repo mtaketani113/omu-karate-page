@@ -2,6 +2,7 @@ import Typography from '@mui/material/Typography';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import Image from './images/headerIcon.jpg';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -19,15 +20,26 @@ const Home = () => {
 
       <h2>イベント情報</h2>
       <Typography paragraph color="green">
+        22年12月3日 更新
+      </Typography>
+      <Typography paragraph>
+        <li>
+          22年12月3日
+          <Link to="/trainingMenue/2022-12-03">三商戦</Link> 頑張りました。
+        </li>
+      </Typography>
+      <Typography paragraph color="green">
         22年11月19日 更新
       </Typography>
-      <li>
-        22年12月3日{' '}
-        <a href="https://kobe-karatedobu.webnode.jp/%e3%81%8a%e5%95%8f%e3%81%84%e5%90%88%e3%82%8f%e3%81%9b/">
-          神戸大学
-        </a>
-        にて三商戦
-      </li>
+      <Typography paragraph>
+        <li>
+          22年12月3日
+          <a href="https://kobe-karatedobu.webnode.jp/%e3%81%8a%e5%95%8f%e3%81%84%e5%90%88%e3%82%8f%e3%81%9b/">
+            神戸大学
+          </a>
+          にて三商戦
+        </li>
+      </Typography>
 
       <TwitterTimelineEmbed
         sourceType="profile"
