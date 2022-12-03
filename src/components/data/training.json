@@ -53,5 +53,26 @@
       "https://img.youtube.com/vi/TQLsgQtqVsk/0.jpg"
     ],
     "videos": ["https://www.youtube.com/embed/TQLsgQtqVsk"]
+  },
+  "2022-12-03": {
+    "description": "22年12月3日 三商戦 ※動画あり",
+    "practice": [
+      { "title": "男子新人戦", "detail": "3位" },
+      { "title": "女子新人戦", "detail": "2位" },
+      { "title": "男子団体戦 vs 神戸大", "detail": "1対5で負け" },
+      { "title": "男子団体戦 vs 一橋大", "detail": "0対6で負け" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/dyrPp08vuuQ/0.jpg",
+      "https://img.youtube.com/vi/XbOXrNYgL5o/0.jpg",
+      "https://img.youtube.com/vi/4AZidbQMyws/0.jpg",
+      "https://img.youtube.com/vi/RPxgY35zGRY/0.jpg"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/dyrPp08vuuQ",
+      "https://www.youtube.com/embed/XbOXrNYgL5o",
+      "https://www.youtube.com/embed/4AZidbQMyws",
+      "https://www.youtube.com/embed/RPxgY35zGRY"
+    ]
   }
 }
