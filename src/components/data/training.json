@@ -74,5 +74,15 @@
       "https://www.youtube.com/embed/4AZidbQMyws",
       "https://www.youtube.com/embed/RPxgY35zGRY"
     ]
+  },
+  "2022-12-08": {
+    "description": "22年12月8日の練習",
+    "practice": [
+      { "title": "準備運動", "detail": "柔軟" },
+      { "title": "基本", "detail": "突き、蹴りの練習" },
+      { "title": "組手", "detail": "刻み突きの練習" }
+    ],
+    "images": [],
+    "videos": []
   }
 }
