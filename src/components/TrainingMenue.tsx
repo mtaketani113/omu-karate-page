@@ -83,16 +83,18 @@ const TrainingMenue = () => {
           <TableBody>{rows}</TableBody>
         </Table>
       </TableContainer>
-      <div style={style}>
-        <ImageGallery
-          items={galleryImages}
-          showNav={true}
-          autoPlay={true}
-          showFullscreenButton={false}
-          useBrowserFullscreen={false}
-          showPlayButton={true}
-        />
-      </div>
+      {galleryImages.length > 0 && (
+        <div style={style}>
+          <ImageGallery
+            items={galleryImages}
+            showNav={true}
+            autoPlay={true}
+            showFullscreenButton={false}
+            useBrowserFullscreen={false}
+            showPlayButton={true}
+          />
+        </div>
+      )}
       {videos}
     </>
   );
