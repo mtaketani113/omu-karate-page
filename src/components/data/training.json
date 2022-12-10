@@ -84,5 +84,21 @@
     ],
     "images": [],
     "videos": []
+  },
+  "2022-12-10": {
+    "description": "22年12月10日の練習",
+    "practice": [
+      { "title": "準備運動", "detail": "柔軟" },
+      { "title": "基本", "detail": "突き、蹴り、受けの練習" },
+      { "title": "組手", "detail": "時間で区切って刻み・中段の練習　自由組手" },
+      { "title": "型", "detail": "基本型の練習" },
+      { "title": "一本組手", "detail": "下段払い、横打からの反撃" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/tSXJXJ-wG3w/0.jpg"
+    ],
+    "videos": [
+      "https://youtu.be/tSXJXJ-wG3w"
+    ]
   }
 }
