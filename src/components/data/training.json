@@ -94,11 +94,7 @@
       { "title": "型", "detail": "基本型の練習" },
       { "title": "一本組手", "detail": "下段払い、横打からの反撃" }
     ],
-    "images": [
-      "https://img.youtube.com/vi/tSXJXJ-wG3w/0.jpg"
-    ],
-    "videos": [
-      "https://www.youtube.com/embed/tSXJXJ-wG3w"
-    ]
+    "images": ["https://img.youtube.com/vi/tSXJXJ-wG3w/0.jpg"],
+    "videos": ["https://www.youtube.com/embed/tSXJXJ-wG3w"]
   }
 }
