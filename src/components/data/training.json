@@ -96,5 +96,20 @@
     ],
     "images": ["https://img.youtube.com/vi/tSXJXJ-wG3w/0.jpg"],
     "videos": ["https://www.youtube.com/embed/tSXJXJ-wG3w"]
+  },
+  "2022-12-15": {
+    "description": "22年12月15日の練習",
+    "practice": [
+      { "title": "準備運動", "detail": "柔軟" },
+      { "title": "基本", "detail": "突き、蹴り" },
+      { "title": "組手", "detail": "中段カウンター、刻み突きのあわせの練習" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/dtqvKpP3S4M/0.jpg",
+      "https://img.youtube.com/vi/Na72dyaFA5I/0.jpg",
+      "https://omu-karate-org.github.io/images/practice/20221215/new_building.jpg",
+      "https://omu-karate-org.github.io/images/practice/20221215/kumite.jpg"
+    ],
+    "videos": []
   }
 }
