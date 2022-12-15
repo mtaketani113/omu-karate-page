@@ -20,6 +20,14 @@ const Home = () => {
 
       <h2>イベント情報</h2>
       <Typography paragraph color="green">
+        22年12月16日 更新
+      </Typography>
+      <Typography paragraph>
+        <li>
+          22年12月17日 審査会
+        </li>
+      </Typography>      
+      <Typography paragraph color="green">
         22年12月3日 更新
       </Typography>
       <Typography paragraph>
