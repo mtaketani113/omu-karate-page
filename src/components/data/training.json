@@ -111,5 +111,12 @@
       "https://omu-karate-org.github.io/images/practice/20221215/new_building.jpg"
     ],
     "videos": []
+  },
+  "2022-12-17": {
+    "description": "審査会",
+    "practice": [
+      { "title": "3回生", "detail": "初段合格" },
+      { "title": "1回生3名", "detail": "5級昇級" }
+    ]
   }
 }
