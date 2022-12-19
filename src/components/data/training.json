@@ -9,7 +9,9 @@
       { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
     ],
     "images": [],
-    "videos": []
+    "videos": [],
+    "pre": null,
+    "next": "2022-11-24"
   },
   "2022-11-24": {
     "description": "22年11月24日の練習",
@@ -20,7 +22,9 @@
       { "title": "型", "detail": "三商戦の型交換の練習（ピンアン二段）" }
     ],
     "images": [],
-    "videos": []
+    "videos": [],
+    "pre": "2022-11-19",
+    "next": "2022-11-26"
   },
   "2022-11-26": {
     "description": "22年11月26日の練習",
@@ -39,7 +43,9 @@
       "https://omu-karate-org.github.io/images/practice/20221126/pinan_ageuke.jpg",
       "https://omu-karate-org.github.io/images/practice/20221126/pinan_shiko.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "pre": "2022-11-19",
+    "next": "2022-12-01"
   },
   "2022-12-01": {
     "description": "22年12月1日の練習 ※動画あり",
@@ -52,7 +58,9 @@
       "https://omu-karate-org.github.io/images/practice/20221201/pinan.jpg",
       "https://img.youtube.com/vi/TQLsgQtqVsk/0.jpg"
     ],
-    "videos": ["https://www.youtube.com/embed/TQLsgQtqVsk"]
+    "videos": ["https://www.youtube.com/embed/TQLsgQtqVsk"],
+    "pre": "2022-11-26",
+    "next": "2022-12-03"
   },
   "2022-12-03": {
     "description": "22年12月3日 三商戦 ※動画あり",
@@ -73,7 +81,9 @@
       "https://www.youtube.com/embed/XbOXrNYgL5o",
       "https://www.youtube.com/embed/4AZidbQMyws",
       "https://www.youtube.com/embed/RPxgY35zGRY"
-    ]
+    ],
+    "pre": "2022-12-01",
+    "next": "2022-12-08"
   },
   "2022-12-08": {
     "description": "22年12月8日の練習",
@@ -83,7 +93,9 @@
       { "title": "組手", "detail": "刻み突きの練習" }
     ],
     "images": [],
-    "videos": []
+    "videos": [],
+    "pre": "2022-12-03",
+    "next": "2022-12-10"
   },
   "2022-12-10": {
     "description": "22年12月10日の練習",
@@ -95,7 +107,9 @@
       { "title": "一本組手", "detail": "下段払い、横打からの反撃" }
     ],
     "images": ["https://img.youtube.com/vi/tSXJXJ-wG3w/0.jpg"],
-    "videos": ["https://www.youtube.com/embed/tSXJXJ-wG3w"]
+    "videos": ["https://www.youtube.com/embed/tSXJXJ-wG3w"],
+    "pre": "2022-12-08",
+    "next": "2022-12-15"
   },
   "2022-12-15": {
     "description": "22年12月15日の練習",
@@ -110,7 +124,9 @@
       "https://omu-karate-org.github.io/images/practice/20221215/kumite.jpg",
       "https://omu-karate-org.github.io/images/practice/20221215/new_building.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "pre": "2022-12-10",
+    "next": "2022-12-17"
   },
   "2022-12-17": {
     "description": "審査会",
@@ -120,6 +136,8 @@
       { "title": "1回生3名", "detail": "5級昇級" }
     ],
     "images": ["https://omu-karate-org.github.io/images/practice/20221217/bunkai.jpg"],
-    "videos": []
+    "videos": [],
+    "pre": "2022-12-15",
+    "next": null
   }
 }
