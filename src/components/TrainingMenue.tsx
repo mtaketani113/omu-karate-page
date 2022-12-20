@@ -88,7 +88,7 @@ const TrainingMenue = () => {
           <title>練習メニュー | 大阪公立大学空手道部 応援ページ</title>
         </Helmet>
       </HelmetProvider>
-      <h3>
+      <h3 data-testid="breadcrumbs">
         <Link to="/galleryLinks">練習メニュー・風景</Link>&nbsp; &gt; &nbsp; {date}
       </h3>
       <TableContainer component={Paper}>
@@ -116,6 +116,7 @@ const TrainingMenue = () => {
             color="primary"
             component={Link}
             to={'/trainingMenue/' + nextPage}
+            data-testid="next_button"
           >
             &lt; 次の練習
           </Button>
@@ -127,6 +128,7 @@ const TrainingMenue = () => {
             color="success"
             component={Link}
             to={'/trainingMenue/' + prePage}
+            data-testid="pre_button"
           >
             前の練習 &gt;
           </Button>
