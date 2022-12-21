@@ -13,7 +13,7 @@ const Schedule = () => {
         </Helmet>
       </HelmetProvider>
       <div>
-        <h2>練習予定</h2>
+        <h2 data-testid="schedule_title">練習予定</h2>
         <div className="fc-daygrid-event fc-daygrid-dot-event fc-event fc-event-start fc-event-end fc-event-future">
           <div className="fc-daygrid-event-dot" />
           杉本キャンパス

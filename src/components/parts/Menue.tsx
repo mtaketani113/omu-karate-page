@@ -167,6 +167,7 @@ const Menue = ({ setMobileOpen }: Props) => {
             component={Link}
             to={'/privacyPolicy'}
             selected={location.pathname === '/privacyPolicy'}
+            data-testid="privacy_policy"
           >
             <ListItemIcon sx={{ minWidth: 40 }}>
               <PrivacyTipIcon />

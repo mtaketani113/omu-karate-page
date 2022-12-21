@@ -18,7 +18,7 @@ const Inquiry = () => {
           <title>お問い合わせ | 大阪公立大学空手道部 応援ページ</title>
         </Helmet>
       </HelmetProvider>
-      <h1>お問い合わせ</h1>
+      <h1 data-testid="inquiry_title">お問い合わせ</h1>
       <Table style={{ maxWidth: 500, borderWidth: 1, borderStyle: 'solid' }}>
         <TableBody>
           <TableRow>

@@ -18,7 +18,7 @@ const Home = () => {
       </Typography>
       <Typography paragraph>そんな大阪公立大学の空手道部を応援するページです。</Typography>
 
-      <h2>イベント情報</h2>
+      <h2 data-testid="event_title">イベント情報</h2>
       <Typography paragraph color="green">
         22年12月19日 更新
       </Typography>

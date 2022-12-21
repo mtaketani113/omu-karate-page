@@ -10,7 +10,7 @@ const Place = () => {
           <title>練習場所・時間 | 大阪公立大学空手道部 応援ページ</title>
         </Helmet>
       </HelmetProvider>
-      <h2>練習場所</h2>
+      <h2 data-testid="place_title">練習場所</h2>
       <h3 className="anchor" id="sugimoto">
         杉本キャンパス 新武道場
       </h3>

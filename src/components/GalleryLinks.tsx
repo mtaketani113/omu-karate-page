@@ -58,7 +58,7 @@ const TrainingLink = () => {
           <title>練習メニュー・風景 | 大阪公立大学空手道部 応援ページ</title>
         </Helmet>
       </HelmetProvider>
-      <h1>練習メニュー・風景</h1>
+      <h1 data-testid="practice_title">練習メニュー・風景</h1>
       <Grid container spacing={4}>
         {rows}
       </Grid>

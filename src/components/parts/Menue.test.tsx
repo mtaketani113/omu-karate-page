@@ -1,6 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-import Menue from './Menue';
+import { BrowserRouter, MemoryRouter, Route, Routes } from 'react-router-dom';
+import {
+  Home,
+  Inquiry,
+  Links,
+  Member,
+  Menue,
+  Place,
+  PrivacyPolicy,
+  Schedule,
+  GalleryLinks,
+} from '../index';
 import userEvent from '@testing-library/user-event';
 
 describe('Menue', () => {
@@ -14,11 +24,11 @@ describe('Menue', () => {
     expect(screen.getByTestId('home')).toBeInTheDocument();
     expect(screen.getByTestId('member')).toBeInTheDocument();
     expect(screen.getByTestId('schedule')).toBeInTheDocument();
-    expect(screen.getByTestId('schedule')).toBeInTheDocument();
     expect(screen.getByTestId('galleryLinks')).toBeInTheDocument();
     expect(screen.getByTestId('place')).toBeInTheDocument();
     expect(screen.getByTestId('links')).toBeInTheDocument();
     expect(screen.getByTestId('inquiry')).toBeInTheDocument();
+    expect(screen.getByTestId('privacy_policy')).toBeInTheDocument();
     expect(screen.queryByTestId('sugimoto')).toBeNull();
     expect(screen.queryByTestId('nakamozu')).toBeNull();
     expect(screen.queryByTestId('time')).toBeNull();
@@ -36,5 +46,58 @@ describe('Menue', () => {
     expect(screen.getByTestId('sugimoto')).toBeInTheDocument();
     expect(screen.getByTestId('nakamozu')).toBeInTheDocument();
     expect(screen.getByTestId('time')).toBeInTheDocument();
+  });
+
+  it('transition', async () => {
+    const route= "/";
+    render(
+      <MemoryRouter initialEntries={[route]}>
+        <Menue />
+        <Routes>
+        <Route path="/" element={<Home />} /> {/* ホーム */}
+              <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
+              <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
+              <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
+              <Route path="/links" element={<Links />} /> {/* リンク集 */}
+              <Route path="/inquiry" element={<Inquiry />} />
+              {/* お問い合わせ */}
+              <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+              {/* 練習メニュー */}
+              <Route path="/galleryLinks" element={<GalleryLinks />} />
+              {/* 練習メニュー・風景 */}
+        </Routes>
+      </MemoryRouter>,
+    );
+    // 部員紹介をクリック
+    userEvent.click(screen.getByTestId('member'));
+    expect(screen.getByTestId('player')).toBeInTheDocument();
+    
+    // 練習予定をクリック
+    userEvent.click(screen.getByTestId('schedule'));
+    expect(screen.getByTestId('schedule_title')).toBeInTheDocument();
+
+    // 練習場所・時間をクリック
+    userEvent.click(screen.getByTestId('place'));
+    expect(screen.getByTestId('place_title')).toBeInTheDocument();
+
+    // リンク集をクリック
+    userEvent.click(screen.getByTestId('links'));
+    expect(screen.getByTestId('omu_karate_twitter')).toBeInTheDocument();
+
+    // お問い合わせをクリック
+    userEvent.click(screen.getByTestId('inquiry'));
+    expect(screen.getByTestId('inquiry_title')).toBeInTheDocument();
+
+    // プライバシーポリシー
+    userEvent.click(screen.getByTestId('privacy_policy'));
+    expect(screen.getByTestId('privacy_policy_title')).toBeInTheDocument();
+
+    // 練習メニュー・風景をクリック
+    userEvent.click(screen.getByTestId('galleryLinks'));
+    expect(screen.getByTestId('practice_title')).toBeInTheDocument();
+
+    // ホームをクリック
+    userEvent.click(screen.getByTestId('home'));
+    expect(screen.getByTestId('event_title')).toBeInTheDocument();
   });
 });
