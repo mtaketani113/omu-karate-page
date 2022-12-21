@@ -11,14 +11,14 @@ describe('Menue', () => {
       </BrowserRouter>,
     );
     // メニューの項目が存在するか確認
-    screen.getByTestId('home');
-    screen.getByTestId('member');
-    screen.getByTestId('schedule');
-    screen.getByTestId('schedule');
-    screen.getByTestId('galleryLinks');
-    screen.getByTestId('place');
-    screen.getByTestId('links');
-    screen.getByTestId('inquiry');
+    expect(screen.getByTestId('home')).toBeInTheDocument();
+    expect(screen.getByTestId('member')).toBeInTheDocument();
+    expect(screen.getByTestId('schedule')).toBeInTheDocument();
+    expect(screen.getByTestId('schedule')).toBeInTheDocument();
+    expect(screen.getByTestId('galleryLinks')).toBeInTheDocument();
+    expect(screen.getByTestId('place')).toBeInTheDocument();
+    expect(screen.getByTestId('links')).toBeInTheDocument();
+    expect(screen.getByTestId('inquiry')).toBeInTheDocument();
     expect(screen.queryByTestId('sugimoto')).toBeNull()
     expect(screen.queryByTestId('nakamozu')).toBeNull()
     expect(screen.queryByTestId('time')).toBeNull()
@@ -33,8 +33,8 @@ describe('Menue', () => {
     // 練習場所をクリックすると練習場所と時間のリンクが表示される
     const placeButton = screen.getByTestId('place');
     userEvent.click(placeButton);
-    screen.getByTestId('sugimoto');
-    screen.getByTestId('nakamozu');
-    screen.getByTestId('time');
+    expect(screen.getByTestId('sugimoto')).toBeInTheDocument();
+    expect(screen.getByTestId('nakamozu')).toBeInTheDocument();
+    expect(screen.getByTestId('time')).toBeInTheDocument();
   });
 });
