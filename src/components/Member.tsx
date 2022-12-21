@@ -185,7 +185,11 @@ const Member = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="medium" onClick={(e) => handleImage(row.image)} data-testid={"open_coach" + i}>
+                <Button
+                  size="medium"
+                  onClick={(e) => handleImage(row.image)}
+                  data-testid={'open_coach' + i}
+                >
                   開く
                 </Button>
               </CardActions>
@@ -239,7 +243,9 @@ const Member = () => {
         <Fade in={open} timeout={500}>
           <Box sx={style} data-testid="open_image">
             <img src={image} alt="asd" style={{ maxHeight: '90%', maxWidth: '90%' }} />
-            <Button onClick={handleClose} data-testid="close">閉じる</Button>
+            <Button onClick={handleClose} data-testid="close">
+              閉じる
+            </Button>
           </Box>
         </Fade>
       </Modal>

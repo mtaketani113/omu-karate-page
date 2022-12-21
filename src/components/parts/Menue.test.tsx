@@ -19,9 +19,9 @@ describe('Menue', () => {
     expect(screen.getByTestId('place')).toBeInTheDocument();
     expect(screen.getByTestId('links')).toBeInTheDocument();
     expect(screen.getByTestId('inquiry')).toBeInTheDocument();
-    expect(screen.queryByTestId('sugimoto')).toBeNull()
-    expect(screen.queryByTestId('nakamozu')).toBeNull()
-    expect(screen.queryByTestId('time')).toBeNull()
+    expect(screen.queryByTestId('sugimoto')).toBeNull();
+    expect(screen.queryByTestId('nakamozu')).toBeNull();
+    expect(screen.queryByTestId('time')).toBeNull();
   });
 
   it('open places', async () => {
