@@ -86,7 +86,7 @@ const Member = () => {
           <title>部員紹介 | 大阪公立大学空手道部 応援ページ</title>
         </Helmet>
       </HelmetProvider>
-      <h1>現役紹介</h1>
+      <h1 data-testid="player">現役紹介</h1>
       <Typography paragraph>4回生1名、1回生3名で頑張っています。</Typography>
       <Typography paragraph>↓作成中</Typography>
       <h2>四回生</h2>
@@ -158,7 +158,7 @@ const Member = () => {
         ;
       </Grid>
 
-      <h1>指導者紹介</h1>
+      <h1 data-testid="coach">指導者紹介</h1>
 
       <Grid container spacing={4}>
         {rowsCoach.map((row, i) => (
@@ -185,7 +185,7 @@ const Member = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="medium" onClick={(e) => handleImage(row.image)}>
+                <Button size="medium" onClick={(e) => handleImage(row.image)} data-testid={"open_coach" + i}>
                   開く
                 </Button>
               </CardActions>
@@ -195,7 +195,7 @@ const Member = () => {
         ;
       </Grid>
 
-      <h1>OB紹介</h1>
+      <h1 data-testid="ob">OB紹介</h1>
       <Typography paragraph>よく来ていただいてるOBを紹介します。</Typography>
 
       <Grid container spacing={4}>
@@ -237,9 +237,9 @@ const Member = () => {
         aria-describedby="modal-modal-description"
       >
         <Fade in={open} timeout={500}>
-          <Box sx={style}>
+          <Box sx={style} data-testid="open_image">
             <img src={image} alt="asd" style={{ maxHeight: '90%', maxWidth: '90%' }} />
-            <Button onClick={handleClose}>閉じる</Button>
+            <Button onClick={handleClose} data-testid="close">閉じる</Button>
           </Box>
         </Fade>
       </Modal>
