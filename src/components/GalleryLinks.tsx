@@ -35,7 +35,11 @@ const TrainingLink = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button component={Link} to={'/trainingMenue/' + date}>
+              <Button
+                component={Link}
+                to={'/trainingMenue/' + date}
+                data-testid={'open_training_menue' + i}
+              >
                 開く
               </Button>
             </CardActions>
