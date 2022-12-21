@@ -49,29 +49,29 @@ describe('Menue', () => {
   });
 
   it('transition', async () => {
-    const route= "/";
+    const route = '/';
     render(
       <MemoryRouter initialEntries={[route]}>
         <Menue />
         <Routes>
-        <Route path="/" element={<Home />} /> {/* ホーム */}
-              <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
-              <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
-              <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
-              <Route path="/links" element={<Links />} /> {/* リンク集 */}
-              <Route path="/inquiry" element={<Inquiry />} />
-              {/* お問い合わせ */}
-              <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-              {/* 練習メニュー */}
-              <Route path="/galleryLinks" element={<GalleryLinks />} />
-              {/* 練習メニュー・風景 */}
+          <Route path="/" element={<Home />} /> {/* ホーム */}
+          <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
+          <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
+          <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
+          <Route path="/links" element={<Links />} /> {/* リンク集 */}
+          <Route path="/inquiry" element={<Inquiry />} />
+          {/* お問い合わせ */}
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+          {/* 練習メニュー */}
+          <Route path="/galleryLinks" element={<GalleryLinks />} />
+          {/* 練習メニュー・風景 */}
         </Routes>
       </MemoryRouter>,
     );
     // 部員紹介をクリック
     userEvent.click(screen.getByTestId('member'));
     expect(screen.getByTestId('player')).toBeInTheDocument();
-    
+
     // 練習予定をクリック
     userEvent.click(screen.getByTestId('schedule'));
     expect(screen.getByTestId('schedule_title')).toBeInTheDocument();
