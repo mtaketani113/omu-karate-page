@@ -110,17 +110,6 @@ const TrainingMenue = () => {
       )}
       {videos}
       <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center">
-        {nextPage != null && (
-          <Button
-            variant="contained"
-            color="primary"
-            component={Link}
-            to={'/trainingMenue/' + nextPage}
-            data-testid="next_button"
-          >
-            &lt; 次の練習
-          </Button>
-        )}
 
         {prePage != null && (
           <Button
@@ -130,7 +119,19 @@ const TrainingMenue = () => {
             to={'/trainingMenue/' + prePage}
             data-testid="pre_button"
           >
-            前の練習 &gt;
+            &lt; {prePage}
+          </Button>
+        )}
+        
+        {nextPage != null && (
+          <Button
+            variant="contained"
+            color="primary"
+            component={Link}
+            to={'/trainingMenue/' + nextPage}
+            data-testid="next_button"
+          >
+            {nextPage} &gt;
           </Button>
         )}
       </Box>
