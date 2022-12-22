@@ -3,22 +3,13 @@ import './App.css';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import {
   DummyHeader,
   Header,
-  Home,
-  Inquiry,
-  Links,
-  Member,
   Menue,
-  Place,
-  PrivacyPolicy,
-  Schedule,
   ScrollTop,
   ScrollTopForPathChange,
-  TrainingMenue,
-  GalleryLinks,
   ShareButton,
 } from './components/index';
 import Container from '@mui/material/Container';
@@ -26,6 +17,7 @@ import { BASE_CONTEXT } from './components/parts/constants';
 import { IconButton } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { styled } from '@mui/material/styles';
+import MainPageRoutes from './MainPageRoutes';
 
 const drawerWidth = 240;
 
@@ -107,21 +99,7 @@ function App(props: Props) {
 
           <DummyHeader />
           <Container disableGutters maxWidth="xl">
-            <Routes>
-              <Route path="/" element={<Home />} /> {/* ホーム */}
-              <Route path="/member" element={<Member />} /> {/* 部員紹介 */}
-              <Route path="/schedule" element={<Schedule />} /> {/* 練習予定 */}
-              <Route path="/place" element={<Place />} /> {/* 練習場所・時間 */}
-              <Route path="/links" element={<Links />} /> {/* リンク集 */}
-              <Route path="/inquiry" element={<Inquiry />} />
-              {/* お問い合わせ */}
-              <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-              {/* プライバシーポリシー */}
-              <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
-              {/* 練習メニュー */}
-              <Route path="/galleryLinks" element={<GalleryLinks />} />
-              {/* 練習メニュー・風景 */}
-            </Routes>
+            <MainPageRoutes />
             <ShareButton />
           </Container>
 
