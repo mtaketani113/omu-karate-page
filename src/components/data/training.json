@@ -138,6 +138,18 @@
     "images": ["https://omu-karate-org.github.io/images/practice/20221217/bunkai.jpg"],
     "videos": [],
     "pre": "2022-12-15",
+    "next": "2022-12-22"
+  },
+  "2022-12-22": {
+    "description": "22年12月22日 稽古納め",
+    "practice": [
+      { "title": "準備運動", "detail": "柔軟" },
+      { "title": "基本", "detail": "突き、蹴り" },
+      { "title": "組手", "detail": "ワンツーのバリエーションの練習" }
+    ],
+    "images": ["https://img.youtube.com/vi/23nRx10GtEk/0.jpg"],
+    "videos": [],
+    "pre": "2022-12-17",
     "next": null
   }
 }
