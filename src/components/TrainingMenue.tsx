@@ -110,7 +110,6 @@ const TrainingMenue = () => {
       )}
       {videos}
       <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center">
-
         {prePage != null && (
           <Button
             variant="contained"
@@ -122,7 +121,7 @@ const TrainingMenue = () => {
             &lt; {prePage}
           </Button>
         )}
-        
+
         {nextPage != null && (
           <Button
             variant="contained"
