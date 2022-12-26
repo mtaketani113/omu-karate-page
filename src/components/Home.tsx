@@ -27,6 +27,10 @@ const Home = () => {
           初稽古は
           <Link to="/schedule">1月7日</Link>です。
         </li>
+        <li>
+          22年度、後期の試験期間を
+          <Link to="/schedule">練習予定</Link>に追記しました。
+        </li>
       </Typography>
       <Typography paragraph color="green">
         22年12月18日 更新
