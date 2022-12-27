@@ -16,6 +16,15 @@ describe('GalleryLinks init', () => {
   });
 
   it('open training menue', async () => {
+    window.matchMedia =
+      window.matchMedia ||
+      function () {
+        return {
+          matches: false,
+          addListener: function () {},
+          removeListener: function () {},
+        };
+      };
     const route = '/galleryLinks';
     render(
       <MemoryRouter initialEntries={[route]}>

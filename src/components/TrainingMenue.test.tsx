@@ -5,6 +5,17 @@ import userEvent from '@testing-library/user-event';
 import MainPageRoutes from '../MainPageRoutes';
 
 describe('TrainingMenue init', () => {
+  beforeAll(() => {
+    window.matchMedia =
+      window.matchMedia ||
+      function () {
+        return {
+          matches: false,
+          addListener: function () {},
+          removeListener: function () {},
+        };
+      };
+  });
   it('init', async () => {
     const route = '/trainingMenue/2022-12-10';
     render(

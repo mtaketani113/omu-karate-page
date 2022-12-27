@@ -26,6 +26,15 @@ describe('Menue', () => {
   });
 
   it('open places', async () => {
+    window.matchMedia =
+      window.matchMedia ||
+      function () {
+        return {
+          matches: false,
+          addListener: function () {},
+          removeListener: function () {},
+        };
+      };
     render(
       <BrowserRouter>
         <Menue />
