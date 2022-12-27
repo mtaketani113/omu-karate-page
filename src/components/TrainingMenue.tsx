@@ -18,8 +18,8 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 
 /**
  * 練習メニュー・風景の画面
- * 
- * @returns 
+ *
+ * @returns
  */
 const TrainingMenue = () => {
   const { date } = useParams<{ date: string }>();
@@ -42,9 +42,9 @@ const TrainingMenue = () => {
 
   /**
    * 動画のuseStateを設定
-   * 
+   *
    * 動画の初期表示とサイズ変更時に利用
-   * @param videos 
+   * @param videos
    */
   const setVideosFunc = (videos: Array<any>) => {
     let tmpVideos: Array<ReactNode> = [];
@@ -64,7 +64,7 @@ const TrainingMenue = () => {
       );
     }
     setVideos(tmpVideos);
-  }
+  };
 
   // 初期表示、日付切り替え時に動作
   useEffect(() => {
@@ -108,8 +108,8 @@ const TrainingMenue = () => {
     const training: any = date != null ? trainings[date] : {};
     const videos: Array<any> = training.videos;
     setVideosFunc(videos);
-// eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isWide])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isWide]);
 
   return (
     <>
