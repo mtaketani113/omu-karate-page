@@ -29,7 +29,7 @@ const Place = () => {
       </Box>
       <h3 className="anchor" id="nakamozu">
         中百舌鳥キャンパス 体育館剣道場
-      </h3>{' '}
+      </h3>
       <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
         <iframe
           title="中百舌鳥道場"
@@ -38,7 +38,7 @@ const Place = () => {
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>{' '}
+        ></iframe>
       </Box>
       <Box display="flex" justifyContent="center" alignItems="center">
         <img
