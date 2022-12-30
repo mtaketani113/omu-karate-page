@@ -57,6 +57,7 @@ function App(props: Props) {
     <Box sx={{ display: 'flex' }}>
       <BrowserRouter basename={BASE_CONTEXT}>
         <ScrollTopForPathChange />
+        {/* モバイルのメニュー */}
         <Box
           component='span'
           sx={{
@@ -65,6 +66,7 @@ function App(props: Props) {
         >
           <Header handleDrawerToggle={handleDrawerToggle} openMenu={pcOpen} />
         </Box>
+        {/* PCのメニュー */}
         <Box
           component='span'
           sx={{
@@ -78,6 +80,7 @@ function App(props: Props) {
           sx={{ width: { sm: !pcOpen ? 0 : drawerWidth }, flexShrink: { sm: 0 } }}
           aria-label="mailbox folders"
         >
+          {/* モバイルのメニュー */}
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Drawer
             container={container}
@@ -99,6 +102,7 @@ function App(props: Props) {
             </DrawerHeader>
             <Menue setMobileOpen={setMobileOpen} />
           </Drawer>
+          {/* PCのメニュー */}
           <Drawer
             sx={{
               display: { xs: 'none', sm: 'block' },
@@ -121,6 +125,7 @@ function App(props: Props) {
             <Menue />
           </Drawer>
         </Box>
+        {/* メインコンテンツ */}
         <Box
           component="main"
           sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
