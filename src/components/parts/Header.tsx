@@ -10,16 +10,17 @@ const drawerWidth = 240;
 
 interface Props {
   handleDrawerToggle: () => void;
+  openMenu: boolean;
 }
 
-const Header = ({ handleDrawerToggle }: Props) => {
+const Header = ({ handleDrawerToggle, openMenu }: Props) => {
   return (
     <>
       <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: { sm: openMenu ? `calc(100% - ${drawerWidth}px)` : `calc(100%)` },
           ml: { sm: `${drawerWidth}px` },
         }}
       >
@@ -29,7 +30,7 @@ const Header = ({ handleDrawerToggle }: Props) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={openMenu ? { mr: 2, display: { sm: 'none' } } : { mr: 2 }}
           >
             <MenuIcon />
           </IconButton>

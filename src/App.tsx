@@ -41,9 +41,14 @@ interface Props {
 function App(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [pcOpen, setPcOpen] = React.useState(true);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleDrawerPcToggle = () => {
+    setPcOpen(!pcOpen);
   };
 
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -52,10 +57,25 @@ function App(props: Props) {
     <Box sx={{ display: 'flex' }}>
       <BrowserRouter basename={BASE_CONTEXT}>
         <ScrollTopForPathChange />
-        <Header handleDrawerToggle={handleDrawerToggle} />
+        <Box
+          component='span'
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+          }}
+        >
+          <Header handleDrawerToggle={handleDrawerToggle} openMenu={pcOpen} />
+        </Box>
+        <Box
+          component='span'
+          sx={{
+            display: { xs: 'none', sm: 'block' },
+          }}
+        >
+          <Header handleDrawerToggle={handleDrawerPcToggle} openMenu={pcOpen} />
+        </Box>
         <Box
           component="nav"
-          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          sx={{ width: { sm: !pcOpen ? 0 : drawerWidth }, flexShrink: { sm: 0 } }}
           aria-label="mailbox folders"
         >
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -80,14 +100,24 @@ function App(props: Props) {
             <Menue setMobileOpen={setMobileOpen} />
           </Drawer>
           <Drawer
-            variant="permanent"
             sx={{
               display: { xs: 'none', sm: 'block' },
-              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              width: drawerWidth,
+              flexShrink: 0,
+              '& .MuiDrawer-paper': {
+                width: drawerWidth,
+                boxSizing: 'border-box',
+              },
             }}
-            open
+            variant="persistent"
+            anchor="left"
+            open={pcOpen}
           >
-            <Toolbar />
+            <DrawerHeader>
+              <IconButton onClick={() => setPcOpen(false)}>
+                <ChevronLeftIcon />
+              </IconButton>
+            </DrawerHeader>
             <Menue />
           </Drawer>
         </Box>
