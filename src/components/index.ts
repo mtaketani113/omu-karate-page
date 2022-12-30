@@ -1,5 +1,5 @@
 export { default as Header } from './parts/Header';
-export { default as Menue } from './parts/Menue';
+export { default as Menu } from './parts/Menu';
 export { default as Home } from './Home';
 export { default as Schedule } from './Schedule';
 export { default as Member } from './Member';

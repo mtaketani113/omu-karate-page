@@ -1,14 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
-import { Menue } from '../index';
+import { Menu } from '../index';
 import userEvent from '@testing-library/user-event';
 import MainPageRoutes from '../../MainPageRoutes';
 
-describe('Menue', () => {
+describe('Menu', () => {
   it('init', async () => {
     render(
       <BrowserRouter>
-        <Menue />
+        <Menu />
       </BrowserRouter>,
     );
     // メニューの項目が存在するか確認
@@ -37,7 +37,7 @@ describe('Menue', () => {
       };
     render(
       <BrowserRouter>
-        <Menue />
+        <Menu />
       </BrowserRouter>,
     );
     // 練習場所をクリックすると練習場所と時間のリンクが表示される
@@ -52,7 +52,7 @@ describe('Menue', () => {
     const route = '/';
     render(
       <MemoryRouter initialEntries={[route]}>
-        <Menue />
+        <Menu />
         <MainPageRoutes />
       </MemoryRouter>,
     );

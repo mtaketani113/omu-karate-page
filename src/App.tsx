@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {
   DummyHeader,
   Header,
-  Menue,
+  Menu,
   ScrollTop,
   ScrollTopForPathChange,
   ShareButton,
@@ -100,7 +100,7 @@ function App(props: Props) {
                 <ChevronLeftIcon />
               </IconButton>
             </DrawerHeader>
-            <Menue setMobileOpen={setMobileOpen} />
+            <Menu setMobileOpen={setMobileOpen} />
           </Drawer>
           {/* PCのメニュー */}
           <Drawer
@@ -122,7 +122,7 @@ function App(props: Props) {
                 <ChevronLeftIcon />
               </IconButton>
             </DrawerHeader>
-            <Menue />
+            <Menu />
           </Drawer>
         </Box>
         {/* メインコンテンツ */}
