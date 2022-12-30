@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { BrowserRouter, MemoryRouter, Route, Routes } from 'react-router-dom';
 import GalleryLinks from './GalleryLinks';
-import TrainingMenue from './TrainingMenue';
+import TrainingMenu from './TrainingMenu';
 
 describe('GalleryLinks init', () => {
   it('init', async () => {
@@ -12,10 +12,10 @@ describe('GalleryLinks init', () => {
       </BrowserRouter>,
     );
 
-    expect(screen.getByTestId('open_training_menue0')).toBeInTheDocument();
+    expect(screen.getByTestId('open_training_menu0')).toBeInTheDocument();
   });
 
-  it('open training menue', async () => {
+  it('open training menu', async () => {
     window.matchMedia =
       window.matchMedia ||
       function () {
@@ -30,14 +30,14 @@ describe('GalleryLinks init', () => {
       <MemoryRouter initialEntries={[route]}>
         <Routes>
           <Route path="/galleryLinks" element={<GalleryLinks />} />
-          <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
+          <Route path="/TrainingMenu/:date" element={<TrainingMenu />} />
         </Routes>
       </MemoryRouter>,
     );
 
     // 開くボタンを押した場合にトレーニングメニューに遷移すること
-    userEvent.click(screen.getByTestId('open_training_menue0'));
-    expect(screen.queryByTestId('open_training_menue0')).not.toBeInTheDocument();
+    userEvent.click(screen.getByTestId('open_training_menu0'));
+    expect(screen.queryByTestId('open_training_menu0')).not.toBeInTheDocument();
     expect(screen.getByTestId('breadcrumbs')).toBeInTheDocument();
     // 最新の練習を開いているため、前へのリンクはあるが次へのリンクはない。
     expect(screen.getByTestId('pre_button')).toBeInTheDocument();

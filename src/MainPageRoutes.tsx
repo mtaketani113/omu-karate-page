@@ -9,7 +9,7 @@ import {
   Place,
   PrivacyPolicy,
   Schedule,
-  TrainingMenue,
+  TrainingMenu,
   GalleryLinks,
 } from './components/index';
 
@@ -25,7 +25,7 @@ const MainPageRoutes = () => {
       {/* お問い合わせ */}
       <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
       {/* プライバシーポリシー */}
-      <Route path="/trainingMenue/:date" element={<TrainingMenue />} />
+      <Route path="/trainingMenu/:date" element={<TrainingMenu />} />
       {/* 練習メニュー */}
       <Route path="/galleryLinks" element={<GalleryLinks />} />
       {/* 練習メニュー・風景 */}

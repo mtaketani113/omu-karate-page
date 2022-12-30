@@ -21,7 +21,7 @@ import 'react-image-gallery/styles/css/image-gallery.css';
  *
  * @returns
  */
-const TrainingMenue = () => {
+const TrainingMenu = () => {
   const { date } = useParams<{ date: string }>();
   const [rows, setRows] = useState<ReactNode>([]);
   const [videos, setVideos] = useState<ReactNode>([]);
@@ -70,16 +70,16 @@ const TrainingMenue = () => {
   useEffect(() => {
     const trainings: any = Training;
     const training: any = date != null ? trainings[date] : {};
-    const menues: Array<any> = training.practice;
+    const menus: Array<any> = training.practice;
     let tmpRow: Array<ReactNode> = [];
-    for (let i = 0; i < menues.length; i++) {
-      let menue = menues[i];
+    for (let i = 0; i < menus.length; i++) {
+      let menu = menus[i];
       tmpRow.push(
-        <TableRow key={menue.title} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+        <TableRow key={menu.title} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
           <TableCell component="th" scope="row" style={{ whiteSpace: 'nowrap' }}>
-            {menue.title}
+            {menu.title}
           </TableCell>
-          <TableCell align="left">{menue.detail}</TableCell>
+          <TableCell align="left">{menu.detail}</TableCell>
         </TableRow>,
       );
     }
@@ -146,7 +146,7 @@ const TrainingMenue = () => {
             variant="contained"
             color="success"
             component={Link}
-            to={'/trainingMenue/' + prePage}
+            to={'/trainingMenu/' + prePage}
             data-testid="pre_button"
           >
             &lt; {prePage}
@@ -158,7 +158,7 @@ const TrainingMenue = () => {
             variant="contained"
             color="primary"
             component={Link}
-            to={'/trainingMenue/' + nextPage}
+            to={'/trainingMenu/' + nextPage}
             data-testid="next_button"
           >
             {nextPage} &gt;
@@ -169,4 +169,4 @@ const TrainingMenue = () => {
   );
 };
 
-export default TrainingMenue;
+export default TrainingMenu;

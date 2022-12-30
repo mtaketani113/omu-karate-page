@@ -3,20 +3,20 @@
     "title": "杉本町",
     "start": "2022-11-19 10:00",
     "end": "2022-11-19 12:00",
-    "url": "/omu-karate-page/trainingMenue/2022-11-19"
+    "url": "/omu-karate-page/trainingMenu/2022-11-19"
   },
   {
     "title": "中百舌鳥",
     "start": "2022-11-24 17:00",
     "end": "2022-11-24 19:00",
     "backgroundColor": "green",
-    "url": "/omu-karate-page/trainingMenue/2022-11-24"
+    "url": "/omu-karate-page/trainingMenu/2022-11-24"
   },
   {
     "title": "杉本町",
     "start": "2022-11-26 10:00",
     "end": "2022-11-26 12:00",
-    "url": "/omu-karate-page/trainingMenue/2022-11-26"
+    "url": "/omu-karate-page/trainingMenu/2022-11-26"
   },
   { "title": "杉本町", "start": "2022-11-30 17:00", "end": "2022-11-30 19:00" },
   {
@@ -24,13 +24,13 @@
     "start": "2022-12-01 17:00",
     "end": "2022-12-01 19:00",
     "backgroundColor": "green",
-    "url": "/omu-karate-page/trainingMenue/2022-12-01"
+    "url": "/omu-karate-page/trainingMenu/2022-12-01"
   },
   {
     "title": "三商戦 神戸大",
     "start": "2022-12-03 13:00",
     "backgroundColor": "orange",
-    "url": "/omu-karate-page/trainingMenue/2022-12-03"
+    "url": "/omu-karate-page/trainingMenu/2022-12-03"
   },
   { "title": "杉本町", "start": "2022-12-07 17:00", "end": "2022-12-07 19:00" },
   {
@@ -38,13 +38,13 @@
     "start": "2022-12-08 17:00",
     "end": "2022-12-08 19:00",
     "backgroundColor": "green",
-    "url": "/omu-karate-page/trainingMenue/2022-12-08"
+    "url": "/omu-karate-page/trainingMenu/2022-12-08"
   },
   {
     "title": "杉本町",
     "start": "2022-12-10 10:00",
     "end": "2022-12-10 12:00",
-    "url": "/omu-karate-page/trainingMenue/2022-12-10"
+    "url": "/omu-karate-page/trainingMenu/2022-12-10"
   },
   { "title": "杉本町", "start": "2022-12-14 17:00", "end": "2022-12-14 19:00" },
   {
@@ -52,13 +52,13 @@
     "start": "2022-12-15 17:00",
     "end": "2022-12-15 19:00",
     "backgroundColor": "green",
-    "url": "/omu-karate-page/trainingMenue/2022-12-15"
+    "url": "/omu-karate-page/trainingMenu/2022-12-15"
   },
   {
     "title": "杉本町",
     "start": "2022-12-17 10:00",
     "end": "2022-12-17 12:00",
-    "url": "/omu-karate-page/trainingMenue/2022-12-17"
+    "url": "/omu-karate-page/trainingMenu/2022-12-17"
   },
   { "title": "杉本町", "start": "2022-12-21 17:00", "end": "2022-12-21 19:00" },
   {
@@ -66,7 +66,7 @@
     "start": "2022-12-22 17:00",
     "end": "2022-12-22 19:00",
     "backgroundColor": "green",
-    "url": "/omu-karate-page/trainingMenue/2022-12-22"
+    "url": "/omu-karate-page/trainingMenu/2022-12-22"
   },
   { "title": "OFF", "start": "2022-12-23", "end": "2023-01-07", "backgroundColor": "red" },
   { "title": "杉本町", "start": "2023-01-07 10:00", "end": "2023-01-07 12:00" },

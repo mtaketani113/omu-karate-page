@@ -38,7 +38,7 @@ const Home = () => {
       <Typography paragraph>
         <li>
           22年12月17日
-          <Link to="/trainingMenue/2022-12-17">審査会</Link> 頑張りました。
+          <Link to="/trainingMenu/2022-12-17">審査会</Link> 頑張りました。
         </li>
       </Typography>
       <Typography paragraph color="green">
@@ -53,7 +53,7 @@ const Home = () => {
       <Typography paragraph>
         <li>
           22年12月3日
-          <Link to="/trainingMenue/2022-12-03">三商戦</Link> 頑張りました。
+          <Link to="/trainingMenu/2022-12-03">三商戦</Link> 頑張りました。
         </li>
       </Typography>
       <Typography paragraph color="green">

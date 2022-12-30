@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import TrainingMenue from './TrainingMenue';
+import TrainingMenu from './TrainingMenu';
 import userEvent from '@testing-library/user-event';
 import MainPageRoutes from '../MainPageRoutes';
 
-describe('TrainingMenue init', () => {
+describe('TrainingMenu init', () => {
   beforeAll(() => {
     window.matchMedia =
       window.matchMedia ||
@@ -17,7 +17,7 @@ describe('TrainingMenue init', () => {
       };
   });
   it('init', async () => {
-    const route = '/trainingMenue/2022-12-10';
+    const route = '/trainingMenu/2022-12-10';
     render(
       <MemoryRouter initialEntries={[route]}>
         <MainPageRoutes />
@@ -30,11 +30,11 @@ describe('TrainingMenue init', () => {
   });
 
   it('pre', async () => {
-    const route = '/trainingMenue/2022-12-10';
+    const route = '/trainingMenu/2022-12-10';
     render(
       <MemoryRouter initialEntries={[route]}>
         <Routes>
-          <Route path="/trainingMenue/:date" element={<TrainingMenue />}></Route>
+          <Route path="/trainingMenu/:date" element={<TrainingMenu />}></Route>
         </Routes>
       </MemoryRouter>,
     );
@@ -45,7 +45,7 @@ describe('TrainingMenue init', () => {
   });
 
   it('next', async () => {
-    const route = '/trainingMenue/2022-12-10';
+    const route = '/trainingMenu/2022-12-10';
     render(
       <MemoryRouter initialEntries={[route]}>
         <MainPageRoutes />

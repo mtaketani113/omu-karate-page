@@ -17,7 +17,7 @@ const TrainingLink = () => {
       tmpRow.push(
         <Grid item key={date} xs={12} sm={6} md={4}>
           <Card sx={{ maxWidth: 445 }}>
-            <Link to={'/trainingMenue/' + date}>
+            <Link to={'/trainingMenu/' + date}>
               <CardMedia
                 className="cardImage"
                 component="img"
@@ -37,8 +37,8 @@ const TrainingLink = () => {
             <CardActions>
               <Button
                 component={Link}
-                to={'/trainingMenue/' + date}
-                data-testid={'open_training_menue' + i}
+                to={'/trainingMenu/' + date}
+                data-testid={'open_training_menu' + i}
               >
                 開く
               </Button>

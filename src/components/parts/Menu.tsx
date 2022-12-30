@@ -23,7 +23,7 @@ import CollectionsIcon from '@mui/icons-material/Collections';
 interface Props {
   setMobileOpen?: (open: boolean) => void;
 }
-const Menue = ({ setMobileOpen }: Props) => {
+const Menu = ({ setMobileOpen }: Props) => {
   const doNottiong = (open: boolean) => {};
   const setOpen = setMobileOpen ?? doNottiong;
 
@@ -35,7 +35,7 @@ const Menue = ({ setMobileOpen }: Props) => {
     setOpenPlace((prevState) => !prevState);
   };
 
-  const menues = [
+  const menus = [
     {
       text: 'ホーム',
       pathname: '//',
@@ -66,19 +66,19 @@ const Menue = ({ setMobileOpen }: Props) => {
     <div>
       <Divider />
       <List>
-        {menues.map((menue: any) => (
+        {menus.map((menu: any) => (
           <ListItemButton
-            key={menue.text}
+            key={menu.text}
             component={Link}
-            to={menue.pathname}
-            selected={location.pathname === menue.pathname}
+            to={menu.pathname}
+            selected={location.pathname === menu.pathname}
             onClick={() => setOpen(false)}
-            data-testid={menue.testid}
+            data-testid={menu.testid}
           >
             <ListItemIcon sx={{ minWidth: 40 }}>
-              <menue.icon />
+              <menu.icon />
             </ListItemIcon>
-            <ListItemText primary={menue.text} />
+            <ListItemText primary={menu.text} />
           </ListItemButton>
         ))}
         <ListItemButton
@@ -180,4 +180,4 @@ const Menue = ({ setMobileOpen }: Props) => {
   );
 };
 
-export default Menue;
+export default Menu;
