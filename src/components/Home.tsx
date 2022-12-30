@@ -25,11 +25,11 @@ const Home = () => {
       <Typography paragraph>
         <li>
           初稽古は
-          <Link to="/schedule">1月7日</Link>です。
+          <Link to="/schedule?initDate=2023-01-07">1月7日</Link>です。
         </li>
         <li>
           22年度、後期の試験期間を
-          <Link to="/schedule">練習予定</Link>に追記しました。
+          <Link to="/schedule?initDate=2023-01-23">練習予定</Link>に追記しました。
         </li>
       </Typography>
       <Typography paragraph color="green">
@@ -37,15 +37,15 @@ const Home = () => {
       </Typography>
       <Typography paragraph>
         <li>
-          22年12月17日
-          <Link to="/trainingMenu/2022-12-17">審査会</Link> 頑張りました。
+          22年12月17日{' '}
+          <Link to="/trainingMenu/2022-12-17">審査会の結果</Link> 頑張りました。
         </li>
       </Typography>
       <Typography paragraph color="green">
         22年12月16日 更新
       </Typography>
       <Typography paragraph>
-        <li>22年12月17日 審査会</li>
+        <li>22年12月17日 <Link to="/schedule?initDate=2022-12-17">審査会</Link></li>
       </Typography>
       <Typography paragraph color="green">
         22年12月3日 更新

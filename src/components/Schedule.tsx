@@ -3,8 +3,12 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import jaLocale from '@fullcalendar/core/locales/ja';
 import Events from './data/events.json';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 const Schedule = () => {
+  //初期表示の日付をパラメータから取得
+  const initDate:string | Date = new URLSearchParams(useLocation().search).get('initDate') ?? new Date();
+  
   return (
     <>
       <HelmetProvider>
@@ -32,6 +36,7 @@ const Schedule = () => {
           locales={[jaLocale]}
           locale="ja"
           events={Events}
+          initialDate={initDate}
           dayCellContent={(event: DayCellContentArg) =>
             (event.dayNumberText = event.dayNumberText.replace('日', ''))
           }
