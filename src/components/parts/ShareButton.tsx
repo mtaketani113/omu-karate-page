@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid, IconButton } from '@mui/material';
 import {
   FacebookShareButton,
   LineShareButton,
@@ -8,6 +8,7 @@ import {
   TwitterIcon,
 } from 'react-share';
 import { useLocation } from 'react-router-dom';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const URL = 'https://mtaketani113.github.io/omu-karate-page';
 const QUOTE = '大阪公立大学空手道部 応援ページ';
@@ -32,6 +33,14 @@ const ShareButton = () => {
           <LineShareButton url={URL + location.pathname} title={QUOTE}>
             <LineIcon size={48} round />
           </LineShareButton>
+        </Grid>
+        <Grid item xs={2}>
+          <IconButton
+            href="https://github.com/mtaketani113/omu-karate-page"
+            style={{ padding: '0px', color: 'black' }}
+          >
+            <GitHubIcon sx={{ fontSize: 50 }} />
+          </IconButton>
         </Grid>
       </Grid>
     </>
