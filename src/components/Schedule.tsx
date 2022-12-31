@@ -8,8 +8,9 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 
 const Schedule = () => {
   //初期表示の日付をパラメータから取得
-  const initDate:string | Date = new URLSearchParams(useLocation().search).get('initDate') ?? new Date();
-  
+  const initDate: string | Date =
+    new URLSearchParams(useLocation().search).get('initDate') ?? new Date();
+
   return (
     <>
       <HelmetProvider>
@@ -38,9 +39,9 @@ const Schedule = () => {
           locale="ja"
           events={Events}
           initialDate={initDate}
-          headerToolbar = {{
+          headerToolbar={{
             start: 'title',
-            end: 'dayGridMonth,timeGridWeek,timeGridDay today prev,next'
+            end: 'dayGridMonth,timeGridWeek,timeGridDay today prev,next',
           }}
           dayCellContent={(event: DayCellContentArg) =>
             (event.dayNumberText = event.dayNumberText.replace('日', ''))

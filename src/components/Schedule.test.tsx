@@ -13,10 +13,10 @@ describe('Schedule init', () => {
       </MemoryRouter>,
     );
 
-    var today=new Date(); 
+    var today = new Date();
     //現在の年・月を取得
     var year = today.getFullYear();
-    var month = today.getMonth()+1;
+    var month = today.getMonth() + 1;
 
     // 現在の年・月を表示することを確認
     expect(screen.getByText(year + '年' + month + '月')).toBeInTheDocument();

@@ -59,7 +59,7 @@ function App(props: Props) {
         <ScrollTopForPathChange />
         {/* モバイルのメニュー */}
         <Box
-          component='span'
+          component="span"
           sx={{
             display: { xs: 'block', sm: 'none' },
           }}
@@ -68,7 +68,7 @@ function App(props: Props) {
         </Box>
         {/* PCのメニュー */}
         <Box
-          component='span'
+          component="span"
           sx={{
             display: { xs: 'none', sm: 'block' },
           }}

@@ -14,16 +14,22 @@ const Home = () => {
         </Helmet>
       </HelmetProvider>
       <div id="homeHeaderImages">
-      <ImageGallery
-          items={[{
-            original: 'https://omu-karate-org.github.io/images/header/movingPractice.jpg'
-          },{
-            original: 'https://omu-karate-org.github.io/images/practice/20221126/pinan_ageuke.jpg'
-          },{
-            original: 'https://omu-karate-org.github.io/images/practice/20221126/pinan_shiko.jpg'
-          },{
-            original: 'https://omu-karate-org.github.io/images/practice/20221201/mat.jpg'
-          }]}
+        <ImageGallery
+          items={[
+            {
+              original: 'https://omu-karate-org.github.io/images/header/movingPractice.jpg',
+            },
+            {
+              original:
+                'https://omu-karate-org.github.io/images/practice/20221126/pinan_ageuke.jpg',
+            },
+            {
+              original: 'https://omu-karate-org.github.io/images/practice/20221126/pinan_shiko.jpg',
+            },
+            {
+              original: 'https://omu-karate-org.github.io/images/practice/20221201/mat.jpg',
+            },
+          ]}
           showNav={false}
           autoPlay={true}
           showFullscreenButton={false}
@@ -31,7 +37,7 @@ const Home = () => {
           showPlayButton={false}
           slideInterval={5000}
         />
-        </div>
+      </div>
       <Typography paragraph>
         大阪府立大学、大阪市立大学が合併し大阪公立大学となりました。
       </Typography>
@@ -56,15 +62,16 @@ const Home = () => {
       </Typography>
       <Typography paragraph>
         <li>
-          22年12月17日{' '}
-          <Link to="/trainingMenu/2022-12-17">審査会の結果</Link> 頑張りました。
+          22年12月17日 <Link to="/trainingMenu/2022-12-17">審査会の結果</Link> 頑張りました。
         </li>
       </Typography>
       <Typography paragraph color="green">
         22年12月16日 更新
       </Typography>
       <Typography paragraph>
-        <li>22年12月17日 <Link to="/schedule?initDate=2022-12-17">審査会</Link></li>
+        <li>
+          22年12月17日 <Link to="/schedule?initDate=2022-12-17">審査会</Link>
+        </li>
       </Typography>
       <Typography paragraph color="green">
         22年12月3日 更新
