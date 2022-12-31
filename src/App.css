@@ -45,6 +45,9 @@
     width: 100%;
     height: 200px;
   }
+  .fc-dayGridMonth-button, .fc-timeGridWeek-button ,.fc-timeGridDay-button {
+    display: none !important;
+  }
 }
 @media screen and (min-width: 781px) {
   .fc-toolbar-title {

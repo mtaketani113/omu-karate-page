@@ -4,6 +4,7 @@ import jaLocale from '@fullcalendar/core/locales/ja';
 import Events from './data/events.json';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
+import timeGridPlugin from '@fullcalendar/timegrid';
 
 const Schedule = () => {
   //初期表示の日付をパラメータから取得
@@ -31,12 +32,16 @@ const Schedule = () => {
           イベント
         </div>
         <FullCalendar
-          plugins={[dayGridPlugin]}
+          plugins={[dayGridPlugin, timeGridPlugin]}
           initialView="dayGridMonth"
           locales={[jaLocale]}
           locale="ja"
           events={Events}
           initialDate={initDate}
+          headerToolbar = {{
+            start: 'title',
+            end: 'dayGridMonth,timeGridWeek,timeGridDay today prev,next'
+          }}
           dayCellContent={(event: DayCellContentArg) =>
             (event.dayNumberText = event.dayNumberText.replace('日', ''))
           }
