@@ -55,7 +55,7 @@
   }
   .image-gallery-slide img {
     width: 100%;
-    height: 400px;
+    height: 200px;
   }
 }
 
@@ -76,9 +76,13 @@ td.fc-day-sun {
   opacity: 0.6; /* ボタンの透明度を60%にする */
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
   .image-gallery-slide img {
     width: 100%;
-    height: 600px;
+    height: 400px;
   }
+}
+
+#homeHeaderImages {
+  margin-top: -20px !important;
 }

@@ -1,8 +1,9 @@
 import Typography from '@mui/material/Typography';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import Image from './images/headerIcon.jpg';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 const Home = () => {
   return (
@@ -12,7 +13,25 @@ const Home = () => {
           <title>大阪公立大学空手道部 応援ページ</title>
         </Helmet>
       </HelmetProvider>
-      <img src={Image} width="100%" alt="トップアイコン" />
+      <div id="homeHeaderImages">
+      <ImageGallery
+          items={[{
+            original: 'https://omu-karate-org.github.io/images/header/movingPractice.jpg'
+          },{
+            original: 'https://omu-karate-org.github.io/images/practice/20221126/pinan_ageuke.jpg'
+          },{
+            original: 'https://omu-karate-org.github.io/images/practice/20221126/pinan_shiko.jpg'
+          },{
+            original: 'https://omu-karate-org.github.io/images/practice/20221201/mat.jpg'
+          }]}
+          showNav={false}
+          autoPlay={true}
+          showFullscreenButton={false}
+          useBrowserFullscreen={false}
+          showPlayButton={false}
+          slideInterval={5000}
+        />
+        </div>
       <Typography paragraph>
         大阪府立大学、大阪市立大学が合併し大阪公立大学となりました。
       </Typography>
