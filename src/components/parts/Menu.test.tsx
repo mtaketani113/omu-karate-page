@@ -87,5 +87,26 @@ describe('Menu', () => {
     // ホームをクリック
     userEvent.click(screen.getByTestId('home'));
     expect(screen.getByTestId('event_title')).toBeInTheDocument();
+
+    // 空手道部紹介をクリック
+    userEvent.click(screen.getByTestId('karatedo'));
+    expect(screen.getByTestId('karatedo_title')).toBeInTheDocument();
+    expect(screen.getByTestId('aboutDetails')).not.toBeVisible();
+    expect(screen.getByTestId('annualEventsDetails')).not.toBeVisible();
+    expect(screen.getByTestId('faqDetails')).not.toBeVisible();
+
+    // 空手道部についてをクリック
+    userEvent.click(screen.getByTestId('about'));
+    expect(screen.getByTestId('aboutDetails')).toBeVisible();
+    expect(screen.getByTestId('annualEventsDetails')).not.toBeVisible();
+    expect(screen.getByTestId('faqDetails')).not.toBeVisible();
+
+    // 年間行事をクリック
+    userEvent.click(screen.getByTestId('annualEvents'));
+    expect(screen.getByTestId('annualEventsDetails')).toBeVisible();
+
+    // FAQをクリック
+    userEvent.click(screen.getByTestId('faq'));
+    expect(screen.getByTestId('faqDetails')).toBeVisible();
   });
 });
