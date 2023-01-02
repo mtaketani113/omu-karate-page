@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import {
@@ -11,6 +10,7 @@ import {
   Schedule,
   TrainingMenu,
   GalleryLinks,
+  Karatedo,
 } from './components/index';
 
 const MainPageRoutes = () => {
@@ -29,6 +29,8 @@ const MainPageRoutes = () => {
       {/* 練習メニュー */}
       <Route path="/galleryLinks" element={<GalleryLinks />} />
       {/* 練習メニュー・風景 */}
+      <Route path="/karatedo" element={<Karatedo />} />
+      {/* 空手道部紹介 */}
     </Routes>
   );
 };

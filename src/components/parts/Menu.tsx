@@ -13,12 +13,16 @@ import EmailIcon from '@mui/icons-material/Email';
 import { Link, useLocation } from 'react-router-dom';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
 import Collapse from '@mui/material/Collapse';
 import { useState } from 'react';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { HashLink } from 'react-router-hash-link';
 import CollectionsIcon from '@mui/icons-material/Collections';
+import EventIcon from '@mui/icons-material/Event';
+import LiveHelpIcon from '@mui/icons-material/LiveHelp';
+import InfoIcon from '@mui/icons-material/Info';
 
 interface Props {
   setMobileOpen?: (open: boolean) => void;
@@ -28,11 +32,16 @@ const Menu = ({ setMobileOpen }: Props) => {
   const setOpen = setMobileOpen ?? doNottiong;
 
   const [openPlace, setOpenPlace] = useState(false);
+  const [openKaratedo, setOpenKaratedo] = useState(false);
 
   const location = useLocation();
 
   const handleClick = () => {
     setOpenPlace((prevState) => !prevState);
+  };
+
+  const handleKaratedoClick = () => {
+    setOpenKaratedo((prevState) => !prevState);
   };
 
   const menus = [
@@ -130,6 +139,60 @@ const Menu = ({ setMobileOpen }: Props) => {
                 <ListItemText primary="練習時間" />
               </ListItemButton>
             </HashLink>
+          </List>
+        </Collapse>
+
+        <ListItemButton
+          key="karatedo"
+          component={Link}
+          to={'/karatedo'}
+          onClick={handleKaratedoClick}
+          selected={location.pathname === '/karatedo'}
+          data-testid="karatedo"
+        >
+          <ListItemIcon onClick={() => setOpen(false)} sx={{ minWidth: 40 }}>
+            <SportsMartialArtsIcon />
+          </ListItemIcon>
+          <ListItemText primary="空手道部紹介" onClick={() => setOpen(false)} />
+          {openKaratedo ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={openKaratedo} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding onClick={() => setOpen(false)}>
+            <ListItemButton
+              component={Link}
+              to={'/karatedo?open=about'}
+              sx={{ pl: 4 }}
+              data-testid="about"
+            >
+              <ListItemIcon sx={{ minWidth: 40 }}>
+                <InfoIcon />
+              </ListItemIcon>
+              <ListItemText primary="空手道部について" />
+            </ListItemButton>
+
+            <ListItemButton
+              component={Link}
+              to={'/karatedo?open=annualEvents'}
+              sx={{ pl: 4 }}
+              data-testid="annualEvents"
+            >
+              <ListItemIcon sx={{ minWidth: 40 }}>
+                <EventIcon />
+              </ListItemIcon>
+              <ListItemText primary="年間行事" />
+            </ListItemButton>
+
+            <ListItemButton
+              component={Link}
+              to={'/karatedo?open=faq'}
+              sx={{ pl: 4 }}
+              data-testid="faq"
+            >
+              <ListItemIcon sx={{ minWidth: 40 }}>
+                <LiveHelpIcon />
+              </ListItemIcon>
+              <ListItemText primary="FAQ" />
+            </ListItemButton>
           </List>
         </Collapse>
 

@@ -13,3 +13,4 @@ export { default as GalleryLinks } from './GalleryLinks';
 export { default as Inquiry } from './Inquiry';
 export { default as ScrollTopForPathChange } from './parts/ScrollTopForPathChange';
 export { default as ShareButton } from './parts/ShareButton';
+export { default as Karatedo } from './Karatedo';
