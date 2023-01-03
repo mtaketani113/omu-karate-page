@@ -40,6 +40,7 @@ const Karatedo = () => {
     '& .MuiAccordionSummary-content': {
       marginLeft: theme.spacing(1),
     },
+    borderBottom: '1px solid rgba(0, 0, 0, .125)',
   }));
 
   return (
