@@ -1,5 +1,71 @@
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineOppositeContent, {
+  timelineOppositeContentClasses,
+} from '@mui/lab/TimelineOppositeContent';
+
 const KaratedoAbout = () => {
-  return <>作成中</>;
+  return (
+    <>
+      <h4>競技の種類</h4>
+      組手と型の競技があります。
+      <li>
+      組手は寸止めで、ポイント制です。
+      </li>
+      <li>
+      決められた演武で点数を競います。
+      </li>
+      <h4>大学の流派</h4>
+
+      糸東流
+
+      <h4>大学の沿革</h4>
+      <Timeline
+        sx={{
+          [`& .${timelineOppositeContentClasses.root}`]: {
+            flex: 0.2,
+          },
+        }}
+      >
+        <TimelineItem>
+          <TimelineOppositeContent color="text.success">1949</TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="success" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>大阪市立大学、浪速大学 発足</TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">1955</TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="secondary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>浪速大学から大阪府立大学へ改称</TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">2005</TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="secondary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>大阪府立大学、大阪女子大学、大阪府立看護大学が合併</TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent color="text.secondary">2022</TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot variant="outlined" color="primary" />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>市大、府大が合併し大阪公立大学 発足</TimelineContent>
+        </TimelineItem>
+      </Timeline>
+    </>
+  );
 };
 
 export default KaratedoAbout;
