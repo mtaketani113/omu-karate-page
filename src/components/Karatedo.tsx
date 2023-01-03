@@ -1,8 +1,8 @@
-import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
+import Accordion from '@mui/material/Accordion';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -25,18 +25,6 @@ const Karatedo = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [null, initOpen]);
 
-  const Accordion = styled((props: AccordionProps) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-  ))(({ theme }) => ({
-    border: `1px solid ${theme.palette.divider}`,
-    '&:not(:last-child)': {
-      borderBottom: 0,
-    },
-    '&:before': {
-      display: 'none',
-    },
-  }));
-
   const AccordionSummary = styled((props: AccordionSummaryProps) => (
     <MuiAccordionSummary
       expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
@@ -52,13 +40,6 @@ const Karatedo = () => {
     '& .MuiAccordionSummary-content': {
       marginLeft: theme.spacing(1),
     },
-    borderBottom: '1px solid rgba(0, 0, 0, .125)',
-  }));
-
-  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    borderTop: '1px solid rgba(0, 0, 0, .125)',
-    borderBottom: '1px solid rgba(0, 0, 0, .125)',
   }));
 
   return (
