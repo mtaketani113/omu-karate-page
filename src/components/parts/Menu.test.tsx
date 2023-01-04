@@ -23,6 +23,9 @@ describe('Menu', () => {
     expect(screen.queryByTestId('sugimoto')).toBeNull();
     expect(screen.queryByTestId('nakamozu')).toBeNull();
     expect(screen.queryByTestId('time')).toBeNull();
+    expect(screen.queryByTestId('about')).toBeNull();
+    expect(screen.queryByTestId('annualEvents')).toBeNull();
+    expect(screen.queryByTestId('faq')).toBeNull();
   });
 
   it('open places', async () => {
@@ -46,6 +49,30 @@ describe('Menu', () => {
     expect(screen.getByTestId('sugimoto')).toBeInTheDocument();
     expect(screen.getByTestId('nakamozu')).toBeInTheDocument();
     expect(screen.getByTestId('time')).toBeInTheDocument();
+  });
+
+  it('open introduction', async () => {
+    window.matchMedia =
+      window.matchMedia ||
+      function () {
+        return {
+          matches: false,
+          addListener: function () {},
+          removeListener: function () {},
+        };
+      };
+    render(
+      <BrowserRouter>
+        <Menu />
+      </BrowserRouter>,
+    );
+
+    // 空手道部紹介をクリックしたときにリンクが表示される
+    const karatedoButton = screen.getByTestId('karatedo');
+    userEvent.click(karatedoButton);
+    expect(screen.getByTestId('about')).toBeInTheDocument();
+    expect(screen.getByTestId('annualEvents')).toBeInTheDocument();
+    expect(screen.getByTestId('faq')).toBeInTheDocument();
   });
 
   it('transition', async () => {
