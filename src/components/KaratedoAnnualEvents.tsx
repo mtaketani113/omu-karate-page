@@ -4,7 +4,7 @@ const KaratedoAnnualEvents = () => {
   const titleStyle = {
     backgroundColor: '#eeeeee',
     fontWeight: 'bold',
-    width: 110,
+    width: 90,
     borderColor: 'black',
   };
   const bodyStyle = { maxWidth: 500, borderWidth: 1, borderStyle: 'solid', borderColor: 'black' };

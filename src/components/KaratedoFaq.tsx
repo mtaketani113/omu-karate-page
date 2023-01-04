@@ -16,6 +16,10 @@ const KaratedoFaq = () => {
       <div style={answerStyle}>
         A.始めるための道着は共用のものやOB会がサポートしていただけるのでお金はかかりません。
       </div>
+      <h4>Q.他流派ですが入部できますか？</h4>
+      <div style={answerStyle}>
+        A.できます。OBには松濤館、和道、剛柔流の方やフルコン空手をされていた方もいらっしゃいます。
+      </div>{' '}
     </>
   );
 };

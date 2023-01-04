@@ -9,12 +9,17 @@ import TimelineOppositeContent, {
 } from '@mui/lab/TimelineOppositeContent';
 
 const KaratedoAbout = () => {
+  const answerStyle = {
+    paddingLeft: '1em',
+    textIndent: '-1em',
+    paddingBottom: '1em',
+  };
   return (
     <>
       <h4>競技の種類</h4>
       組手と型の競技があります。
-      <li>組手は寸止めで、ポイント制です。</li>
-      <li>決められた演武で点数を競います。</li>
+      <li style={answerStyle}>組手は寸止めで突きや蹴りでポイントを取り、競います。</li>
+      <li style={answerStyle}>型は決められた演武で点数を競います。</li>
       <h4>大学の流派</h4>
       糸東流
       <h4>大学の沿革</h4>
