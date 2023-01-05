@@ -17,7 +17,7 @@ const KaratedoAbout = () => {
   return (
     <>
       <h4>競技の種類</h4>
-      組手と型の競技があります。
+      伝統派や寸止めと言われている空手で、組手と型の競技があります。
       <li style={answerStyle}>組手は寸止めで突きや蹴りでポイントを取り、競います。</li>
       <li style={answerStyle}>型は決められた演武で点数を競います。</li>
       <h4>大学の流派</h4>
