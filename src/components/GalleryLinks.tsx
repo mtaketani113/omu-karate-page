@@ -2,7 +2,7 @@ import Training from './data/training.json';
 import { ReactNode, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Card, CardContent, Typography, CardMedia, Grid, CardActions, Button } from '@mui/material';
+import { Card, CardContent, Typography, CardMedia, Grid, CardActionArea } from '@mui/material';
 import NoImage from './images/no_image_logo.png';
 
 const TrainingLink = () => {
@@ -17,7 +17,11 @@ const TrainingLink = () => {
       tmpRow.push(
         <Grid item key={date} xs={12} sm={6} md={4}>
           <Card sx={{ maxWidth: 445 }}>
-            <Link to={'/trainingMenu/' + date}>
+            <CardActionArea
+              component={Link}
+              to={'/trainingMenu/' + date}
+              data-testid={'open_training_menu' + i}
+            >
               <CardMedia
                 className="cardImage"
                 component="img"
@@ -25,24 +29,15 @@ const TrainingLink = () => {
                 src={imagePath}
                 alt={date}
               />
-            </Link>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {date}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {training[date].description}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                component={Link}
-                to={'/trainingMenu/' + date}
-                data-testid={'open_training_menu' + i}
-              >
-                開く
-              </Button>
-            </CardActions>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {date}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {training[date].description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>,
       );
