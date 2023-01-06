@@ -111,7 +111,7 @@ const Member = () => {
             </CardContent>
             <CardActions>
               <Button size="medium" onClick={(e) => handleImage(ImageComingSoon)}>
-                開く
+                写真を拡大
               </Button>
             </CardActions>
           </Card>
@@ -148,7 +148,7 @@ const Member = () => {
               </CardContent>
               <CardActions>
                 <Button size="medium" onClick={(e) => handleImage(row.image)}>
-                  開く
+                  写真を拡大
                 </Button>
               </CardActions>
             </Card>
@@ -189,7 +189,7 @@ const Member = () => {
                   onClick={(e) => handleImage(row.image)}
                   data-testid={'open_coach' + i}
                 >
-                  開く
+                  写真を拡大
                 </Button>
               </CardActions>
             </Card>
@@ -224,7 +224,7 @@ const Member = () => {
               </CardContent>
               <CardActions>
                 <Button size="medium" onClick={(e) => handleImage(row.image)}>
-                  開く
+                  写真を拡大
                 </Button>
               </CardActions>
             </Card>
