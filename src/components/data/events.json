@@ -69,7 +69,12 @@
     "url": "/omu-karate-page/trainingMenu/2022-12-22"
   },
   { "title": "OFF", "start": "2022-12-23", "end": "2023-01-07", "backgroundColor": "red" },
-  { "title": "引継ぎ", "start": "2023-01-07 10:00", "end": "2023-01-07 12:00" },
+  {
+    "title": "初稽古",
+    "start": "2023-01-07 10:00",
+    "end": "2023-01-07 12:00",
+    "url": "/omu-karate-page/trainingMenu/2023-01-07"
+  },
   {
     "title": "試験勉強　がんばりましょう(ง๑ •̀_•́)ง",
     "start": "2023-01-08",
