@@ -150,6 +150,17 @@
     "images": ["https://img.youtube.com/vi/23nRx10GtEk/0.jpg"],
     "videos": [],
     "pre": "2022-12-17",
+    "next": "2023-01-07"
+  },
+  "2023-01-07": {
+    "description": "初稽古 道場取れてませんでしたけど剣道部にお願いして少し使わせてもらいました。",
+    "practice": [
+      { "title": "準備運動", "detail": "柔軟" },
+      { "title": "組手", "detail": "フェイントの練習" }
+    ],
+    "images": [],
+    "videos": [],
+    "pre": "2022-12-22",
     "next": null
   }
 }
