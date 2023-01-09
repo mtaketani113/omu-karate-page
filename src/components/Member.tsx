@@ -3,12 +3,12 @@ import {
   Button,
   Card,
   CardContent,
-  CardActions,
   CardMedia,
   Fade,
   Grid,
   Modal,
   Typography,
+  CardActionArea,
 } from '@mui/material';
 import { useState } from 'react';
 import ImageTaketani from './images/taketani.jpg';
@@ -52,9 +52,9 @@ const Member = () => {
   }
 
   const rows = [
-    createData('Coming soon', '', '', '', ImageComingSoon, '0% 50%'),
-    createData('Coming soon', '', '', '', ImageComingSoon, '0% 50%'),
-    createData('Coming soon', '', '', '', ImageComingSoon, '0% 50%'),
+    createData('Coming soon', '理学部', '', '杉本キャンパス', ImageComingSoon, '0% 50%'),
+    createData('Coming soon', '', '', '杉本キャンパス', ImageComingSoon, '0% 50%'),
+    createData('Coming soon', '工学部', '', '中百舌鳥キャンパス', ImageComingSoon, '0% 50%'),
   ];
 
   function createCoachData(
@@ -91,30 +91,28 @@ const Member = () => {
       <h2>四回生</h2>
       <Grid container spacing={4}>
         <Grid item key="4" xs={12} sm={6} md={4}>
-          <Card sx={{ maxWidth: 445 }}>
-            <CardMedia
-              className="cardImage"
-              component="img"
-              height="140"
-              src={ImageComingSoon}
-              alt="Comming soon"
-              style={{ objectPosition: '0% 50%' }}
-              onClick={(e) => handleImage(ImageComingSoon)}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Coming soon
-              </Typography>
-              <Typography gutterBottom variant="h6" component="div"></Typography>
-              <Typography gutterBottom variant="h6" component="div"></Typography>
-              <Typography variant="body2" color="text.secondary"></Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="medium" onClick={(e) => handleImage(ImageComingSoon)}>
-                写真を拡大
-              </Button>
-            </CardActions>
-          </Card>
+          <CardActionArea onClick={(e) => handleImage(ImageComingSoon)}>
+            <Card sx={{ maxWidth: 445 }}>
+              <CardMedia
+                className="cardImage"
+                component="img"
+                height="140"
+                src={ImageComingSoon}
+                alt="Comming soon"
+                style={{ objectPosition: '0% 50%' }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Coming soon
+                </Typography>
+                <Typography gutterBottom variant="h6" component="div"></Typography>
+                <Typography gutterBottom variant="h6" component="div"></Typography>
+                <Typography variant="body2" color="text.secondary">
+                  杉本キャンパス
+                </Typography>
+              </CardContent>
+            </Card>
+          </CardActionArea>
         </Grid>
       </Grid>
       <h2>一回生</h2>
@@ -122,36 +120,32 @@ const Member = () => {
       <Grid container spacing={4}>
         {rows.map((row, i) => (
           <Grid item key={row.name + i} xs={12} sm={6} md={4}>
-            <Card sx={{ maxWidth: 445 }}>
-              <CardMedia
-                className="cardImage"
-                component="img"
-                height="140"
-                src={row.image}
-                alt={row.name}
-                style={{ objectPosition: row.imagePosition }}
-                onClick={(e) => handleImage(row.image)}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {row.name}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                  {row.department}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                  {row.former}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {row.comment}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="medium" onClick={(e) => handleImage(row.image)}>
-                  写真を拡大
-                </Button>
-              </CardActions>
-            </Card>
+            <CardActionArea onClick={(e) => handleImage(row.image)}>
+              <Card sx={{ maxWidth: 445 }}>
+                <CardMedia
+                  className="cardImage"
+                  component="img"
+                  height="140"
+                  src={row.image}
+                  alt={row.name}
+                  style={{ objectPosition: row.imagePosition }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {row.name}
+                  </Typography>
+                  <Typography gutterBottom variant="h6" component="div">
+                    {row.department}
+                  </Typography>
+                  <Typography gutterBottom variant="h6" component="div">
+                    {row.former}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {row.comment}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </CardActionArea>
           </Grid>
         ))}
         ;
@@ -162,37 +156,29 @@ const Member = () => {
       <Grid container spacing={4}>
         {rowsCoach.map((row, i) => (
           <Grid item key={row.name + i} xs={12} sm={6} md={4}>
-            <Card sx={{ maxWidth: 445 }}>
-              <CardMedia
-                className="cardImage"
-                component="img"
-                height="140"
-                src={row.image}
-                alt={row.name}
-                style={{ objectPosition: row.imagePosition }}
-                onClick={(e) => handleImage(row.image)}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {row.position}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                  {row.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {row.comment}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button
-                  size="medium"
-                  onClick={(e) => handleImage(row.image)}
-                  data-testid={'open_coach' + i}
-                >
-                  写真を拡大
-                </Button>
-              </CardActions>
-            </Card>
+            <CardActionArea onClick={(e) => handleImage(row.image)} data-testid={'open_coach' + i}>
+              <Card sx={{ maxWidth: 445 }}>
+                <CardMedia
+                  className="cardImage"
+                  component="img"
+                  height="140"
+                  src={row.image}
+                  alt={row.name}
+                  style={{ objectPosition: row.imagePosition }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {row.position}
+                  </Typography>
+                  <Typography gutterBottom variant="h6" component="div">
+                    {row.name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {row.comment}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </CardActionArea>
           </Grid>
         ))}
         ;
@@ -204,30 +190,26 @@ const Member = () => {
       <Grid container spacing={4}>
         {rowsOB.map((row, i) => (
           <Grid item key={row.name + i} xs={12} sm={6} md={4}>
-            <Card sx={{ maxWidth: 445 }}>
-              <CardMedia
-                className="cardImage"
-                component="img"
-                height="140"
-                src={row.image}
-                alt={row.name}
-                style={{ objectPosition: row.imagePosition }}
-                onClick={(e) => handleImage(row.image)}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {row.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {row.comment}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="medium" onClick={(e) => handleImage(row.image)}>
-                  写真を拡大
-                </Button>
-              </CardActions>
-            </Card>
+            <CardActionArea onClick={(e) => handleImage(row.image)}>
+              <Card sx={{ maxWidth: 445 }}>
+                <CardMedia
+                  className="cardImage"
+                  component="img"
+                  height="140"
+                  src={row.image}
+                  alt={row.name}
+                  style={{ objectPosition: row.imagePosition }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {row.name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {row.comment}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </CardActionArea>
           </Grid>
         ))}
         ;
