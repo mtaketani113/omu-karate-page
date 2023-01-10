@@ -12,6 +12,12 @@ const Links = () => {
       <li>
         <a href="https://twitter.com/omu_karatedo">大阪公立大学のTwitter</a>
       </li>
+      <h2>Facebook</h2>
+      <li>
+        <a href="https://www.facebook.com/%E5%A4%A7%E9%98%AA%E5%B8%82%E7%AB%8B%E5%A4%A7%E5%AD%A6%E7%A9%BA%E6%89%8B%E9%81%93%E9%83%A8-%E7%B7%91%E9%85%92%E4%BC%9A-219030714869828/">
+        大阪市立大学空手道部　＋緑酒会
+        </a>
+      </li>
       <h2>合併前のホームページ</h2>
       <li>
         <a href="http://ocukaratedo.web.fc2.com/">大阪市立大学空手道部</a>
