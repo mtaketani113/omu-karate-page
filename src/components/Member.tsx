@@ -135,10 +135,10 @@ const Member = () => {
                     {row.name}
                   </Typography>
                   <Typography gutterBottom variant="h6" component="div">
-                    {row.department}
+                    学部：{row.department}
                   </Typography>
                   <Typography gutterBottom variant="h6" component="div">
-                    {row.former}
+                    出身校：{row.former}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     {row.comment}
