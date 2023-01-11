@@ -36,7 +36,9 @@ const KaratedoAbout = () => {
             <TimelineDot color="success" />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>大阪商科大学空手道部(旧大阪市立大学)、故斎藤師範のもと、有志5～6名で発足。</TimelineContent>
+          <TimelineContent>
+            大阪商科大学空手道部(旧大阪市立大学)、故斎藤師範のもと、有志5～6名で発足。
+          </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent color="text.success">1949</TimelineOppositeContent>
