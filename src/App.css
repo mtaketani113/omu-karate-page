@@ -61,8 +61,16 @@
   }
 }
 
+td.fc-day-sat,
+th.fc-day-sat {
+  color: blue;
+}
 td.fc-day-sat {
   background-color: #eaf4ff;
+}
+td.fc-day-sun,
+th.fc-day-sun {
+  color: red;
 }
 td.fc-day-sun {
   background-color: #ffeaea;

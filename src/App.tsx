@@ -16,8 +16,9 @@ import Container from '@mui/material/Container';
 import { BASE_CONTEXT } from './components/parts/constants';
 import { IconButton } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { styled } from '@mui/material/styles';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import MainPageRoutes from './MainPageRoutes';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const drawerWidth = 240;
 
@@ -53,95 +54,108 @@ function App(props: Props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode],
+  );
+
   return (
-    <Box sx={{ display: 'flex' }}>
-      <BrowserRouter basename={BASE_CONTEXT}>
-        <ScrollTopForPathChange />
-        {/* モバイルのメニュー */}
-        <Box
-          component="span"
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-          }}
-        >
-          <Header handleDrawerToggle={handleDrawerToggle} openMenu={pcOpen} />
-        </Box>
-        {/* PCのメニュー */}
-        <Box
-          component="span"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-          }}
-        >
-          <Header handleDrawerToggle={handleDrawerPcToggle} openMenu={pcOpen} />
-        </Box>
-        <Box
-          component="nav"
-          sx={{ width: { sm: !pcOpen ? 0 : drawerWidth }, flexShrink: { sm: 0 } }}
-          aria-label="mailbox folders"
-        >
+    <ThemeProvider theme={theme}>
+      <Box sx={{ display: 'flex' }}>
+        <BrowserRouter basename={BASE_CONTEXT}>
+          <ScrollTopForPathChange />
           {/* モバイルのメニュー */}
-          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-          <Drawer
-            container={container}
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
+          <Box
+            component="span"
             sx={{
               display: { xs: 'block', sm: 'none' },
-              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
             }}
           >
-            <DrawerHeader>
-              <IconButton onClick={() => setMobileOpen(false)}>
-                <ChevronLeftIcon />
-              </IconButton>
-            </DrawerHeader>
-            <Menu setMobileOpen={setMobileOpen} />
-          </Drawer>
+            <Header handleDrawerToggle={handleDrawerToggle} openMenu={pcOpen} />
+          </Box>
           {/* PCのメニュー */}
-          <Drawer
+          <Box
+            component="span"
             sx={{
               display: { xs: 'none', sm: 'block' },
-              width: drawerWidth,
-              flexShrink: 0,
-              '& .MuiDrawer-paper': {
-                width: drawerWidth,
-                boxSizing: 'border-box',
-              },
             }}
-            variant="persistent"
-            anchor="left"
-            open={pcOpen}
           >
-            <DrawerHeader>
-              <IconButton onClick={() => setPcOpen(false)}>
-                <ChevronLeftIcon />
-              </IconButton>
-            </DrawerHeader>
-            <Menu />
-          </Drawer>
-        </Box>
-        {/* メインコンテンツ */}
-        <Box
-          component="main"
-          sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-        >
-          <Toolbar id="top-anchor" />
+            <Header handleDrawerToggle={handleDrawerPcToggle} openMenu={pcOpen} />
+          </Box>
+          <Box
+            component="nav"
+            sx={{ width: { sm: !pcOpen ? 0 : drawerWidth }, flexShrink: { sm: 0 } }}
+            aria-label="mailbox folders"
+          >
+            {/* モバイルのメニュー */}
+            {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+            <Drawer
+              container={container}
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              sx={{
+                display: { xs: 'block', sm: 'none' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              }}
+            >
+              <DrawerHeader>
+                <IconButton onClick={() => setMobileOpen(false)}>
+                  <ChevronLeftIcon />
+                </IconButton>
+              </DrawerHeader>
+              <Menu setMobileOpen={setMobileOpen} />
+            </Drawer>
+            {/* PCのメニュー */}
+            <Drawer
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+                width: drawerWidth,
+                flexShrink: 0,
+                '& .MuiDrawer-paper': {
+                  width: drawerWidth,
+                  boxSizing: 'border-box',
+                },
+              }}
+              variant="persistent"
+              anchor="left"
+              open={pcOpen}
+            >
+              <DrawerHeader>
+                <IconButton onClick={() => setPcOpen(false)}>
+                  <ChevronLeftIcon />
+                </IconButton>
+              </DrawerHeader>
+              <Menu />
+            </Drawer>
+          </Box>
+          {/* メインコンテンツ */}
+          <Box
+            component="main"
+            sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+          >
+            <Toolbar id="top-anchor" />
 
-          <DummyHeader />
-          <Container disableGutters maxWidth="xl">
-            <MainPageRoutes />
-            <ShareButton />
-          </Container>
+            <DummyHeader />
+            <Container disableGutters maxWidth="xl">
+              <MainPageRoutes />
+              <ShareButton />
+            </Container>
 
-          <ScrollTop />
-        </Box>
-      </BrowserRouter>
-    </Box>
+            <ScrollTop />
+          </Box>
+        </BrowserRouter>
+      </Box>
+    </ThemeProvider>
   );
 }
 

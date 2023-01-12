@@ -1,15 +1,21 @@
-import { Table, TableBody, TableCell, TableRow } from '@mui/material';
+import { Table, TableBody, TableCell, TableRow, useMediaQuery } from '@mui/material';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Inquiry = () => {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const titleStyle = {
-    backgroundColor: '#eeeeee',
+    backgroundColor: prefersDarkMode ? '#7d7d7d' : '#eeeeee',
     fontWeight: 'bold',
     width: 110,
-    borderColor: 'black',
+    borderColor: prefersDarkMode ? 'white' : 'black',
   };
 
-  const bodyStyle = { maxWidth: 500, borderWidth: 1, borderStyle: 'solid', borderColor: 'black' };
+  const bodyStyle = {
+    maxWidth: 500,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: prefersDarkMode ? 'white' : 'black',
+  };
 
   return (
     <>
@@ -19,7 +25,14 @@ const Inquiry = () => {
         </Helmet>
       </HelmetProvider>
       <h1 data-testid="inquiry_title">お問い合わせ</h1>
-      <Table style={{ maxWidth: 500, borderWidth: 1, borderStyle: 'solid' }}>
+      <Table
+        style={{
+          maxWidth: 500,
+          borderWidth: 1,
+          borderStyle: 'solid',
+          borderColor: prefersDarkMode ? 'white' : 'black',
+        }}
+      >
         <TableBody>
           <TableRow>
             <TableCell style={titleStyle}>管理者</TableCell>

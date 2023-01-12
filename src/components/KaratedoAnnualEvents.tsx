@@ -1,16 +1,29 @@
-import { Table, TableBody, TableCell, TableRow } from '@mui/material';
+import { Table, TableBody, TableCell, TableRow, useMediaQuery } from '@mui/material';
 
 const KaratedoAnnualEvents = () => {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const titleStyle = {
-    backgroundColor: '#eeeeee',
+    backgroundColor: prefersDarkMode ? '#7d7d7d' : '#eeeeee',
     fontWeight: 'bold',
     width: 90,
-    borderColor: 'black',
+    borderColor: prefersDarkMode ? 'white' : 'black',
   };
-  const bodyStyle = { maxWidth: 500, borderWidth: 1, borderStyle: 'solid', borderColor: 'black' };
+  const bodyStyle = {
+    maxWidth: 500,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: prefersDarkMode ? 'white' : 'black',
+  };
 
   return (
-    <Table style={{ maxWidth: 500, borderWidth: 1, borderStyle: 'solid' }}>
+    <Table
+      style={{
+        maxWidth: 500,
+        borderWidth: 1,
+        borderStyle: 'solid',
+        borderColor: prefersDarkMode ? 'white' : 'black',
+      }}
+    >
       <TableBody>
         <TableRow>
           <TableCell style={titleStyle}>4月</TableCell>

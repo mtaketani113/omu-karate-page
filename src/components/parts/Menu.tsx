@@ -110,7 +110,7 @@ const Menu = ({ setMobileOpen }: Props) => {
             <HashLink
               smooth
               to="/place#sugimoto"
-              style={{ textDecoration: 'none', color: 'black' }}
+              style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <ListItemButton sx={{ pl: 4 }} data-testid="sugimoto">
                 <ListItemIcon sx={{ minWidth: 40 }}>
@@ -122,7 +122,7 @@ const Menu = ({ setMobileOpen }: Props) => {
             <HashLink
               smooth
               to="/place#nakamozu"
-              style={{ textDecoration: 'none', color: 'black' }}
+              style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <ListItemButton sx={{ pl: 4 }} data-testid="nakamozu">
                 <ListItemIcon sx={{ minWidth: 40 }}>
@@ -131,7 +131,7 @@ const Menu = ({ setMobileOpen }: Props) => {
                 <ListItemText primary="中百舌鳥" />
               </ListItemButton>
             </HashLink>
-            <HashLink smooth to="/place#time" style={{ textDecoration: 'none', color: 'black' }}>
+            <HashLink smooth to="/place#time" style={{ textDecoration: 'none', color: 'inherit' }}>
               <ListItemButton sx={{ pl: 4 }} data-testid="time">
                 <ListItemIcon sx={{ minWidth: 40 }}>
                   <AccessTimeIcon />
