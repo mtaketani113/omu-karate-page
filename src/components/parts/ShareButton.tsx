@@ -1,4 +1,4 @@
-import { Grid, IconButton } from '@mui/material';
+import { Grid, IconButton, useMediaQuery } from '@mui/material';
 import {
   FacebookShareButton,
   LineShareButton,
@@ -15,6 +15,7 @@ const QUOTE = '大阪公立大学空手道部 応援ページ';
 
 const ShareButton = () => {
   const location = useLocation();
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   return (
     <>
@@ -37,7 +38,7 @@ const ShareButton = () => {
         <Grid item xs={2} lg={1}>
           <IconButton
             href="https://github.com/mtaketani113/omu-karate-page"
-            style={{ padding: '0px', color: 'black' }}
+            style={{ padding: '0px', color: prefersDarkMode? 'white': 'black' }}
           >
             <GitHubIcon sx={{ fontSize: 48 }} />
           </IconButton>
