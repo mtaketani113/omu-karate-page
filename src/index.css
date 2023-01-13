@@ -9,3 +9,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.adsBox {
+  background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .adsBox {
+    background-color: #121212;
+  }
+}

@@ -65,15 +65,19 @@ td.fc-day-sat,
 th.fc-day-sat {
   color: blue;
 }
-td.fc-day-sat {
-  background-color: #eaf4ff;
-}
+
 td.fc-day-sun,
 th.fc-day-sun {
   color: red;
 }
-td.fc-day-sun {
-  background-color: #ffeaea;
+
+@media (prefers-color-scheme: light) {
+  td.fc-day-sat {
+    background-color: #eaf4ff;
+  }
+  td.fc-day-sun {
+    background-color: #ffeaea;
+  }
 }
 
 .anchor {
@@ -95,4 +99,24 @@ td.fc-day-sun {
 
 #homeHeaderImages {
   margin-top: -20px !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  main a:not([class]):link,
+  #fullCalendar a:link {
+    color: #0bd;
+  }
+  main a:not([class]):visited,
+  #fullCalendar a:visited {
+    color: #3399ff;
+  }
+  td.fc-day-sat,
+  th.fc-day-sat {
+    color: #6964FA;
+  }
+
+  td.fc-day-sun,
+  th.fc-day-sun {
+    color: #FA6964;
+  }
 }

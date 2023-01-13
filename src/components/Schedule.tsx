@@ -32,21 +32,23 @@ const Schedule = () => {
           <div className="fc-daygrid-event-dot" style={{ borderColor: 'orange' }} />
           イベント
         </div>
-        <FullCalendar
-          plugins={[dayGridPlugin, timeGridPlugin]}
-          initialView="dayGridMonth"
-          locales={[jaLocale]}
-          locale="ja"
-          events={Events}
-          initialDate={initDate}
-          headerToolbar={{
-            start: 'title',
-            end: 'dayGridMonth,timeGridWeek,timeGridDay today prev,next',
-          }}
-          dayCellContent={(event: DayCellContentArg) =>
-            (event.dayNumberText = event.dayNumberText.replace('日', ''))
-          }
-        />
+        <span id="fullCalendar">
+          <FullCalendar
+            plugins={[dayGridPlugin, timeGridPlugin]}
+            initialView="dayGridMonth"
+            locales={[jaLocale]}
+            locale="ja"
+            events={Events}
+            initialDate={initDate}
+            headerToolbar={{
+              start: 'title',
+              end: 'dayGridMonth,timeGridWeek,timeGridDay today prev,next',
+            }}
+            dayCellContent={(event: DayCellContentArg) =>
+              (event.dayNumberText = event.dayNumberText.replace('日', ''))
+            }
+          />
+        </span>
       </div>
     </>
   );
