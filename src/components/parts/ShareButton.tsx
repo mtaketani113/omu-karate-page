@@ -38,7 +38,7 @@ const ShareButton = () => {
         <Grid item xs={2} lg={1}>
           <IconButton
             href="https://github.com/mtaketani113/omu-karate-page"
-            style={{ padding: '0px', color: prefersDarkMode? 'white': 'black' }}
+            style={{ padding: '0px', color: prefersDarkMode ? 'white' : 'black' }}
           >
             <GitHubIcon sx={{ fontSize: 48 }} />
           </IconButton>
