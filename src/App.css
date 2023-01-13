@@ -61,24 +61,6 @@
   }
 }
 
-td.fc-day-sat,
-th.fc-day-sat {
-  color: blue;
-}
-
-td.fc-day-sun,
-th.fc-day-sun {
-  color: red;
-}
-
-@media (prefers-color-scheme: light) {
-  td.fc-day-sat {
-    background-color: #eaf4ff;
-  }
-  td.fc-day-sun {
-    background-color: #ffeaea;
-  }
-}
 
 .anchor {
   padding-top: 70px;
@@ -101,22 +83,47 @@ th.fc-day-sun {
   margin-top: -20px !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  main a:not([class]):link,
-  #fullCalendar a:link {
-    color: #0bd;
-  }
-  main a:not([class]):visited,
-  #fullCalendar a:visited {
-    color: #3399ff;
-  }
-  td.fc-day-sat,
-  th.fc-day-sat {
-    color: #6964fa;
-  }
+/* ライトモードの時のカラー */
+:root {
+  --sat-color: blue;
+  --sun-color: red;
+  --a-link-color: -webkit-link;
+  --a-link-visited: -webkit-link;
+  --fullCalendar-sat: #eaf4ff;
+  --fullCalendar-sut: #ffeaea;
+}
+/* ダークモードの時のカラー */
+:root[theme="dark"] {
+  --sat-color: #6964fa;
+  --sun-color: #fa6964;
+  --a-link-color: #0bd;
+  --a-link-visited: #3399ff;
+  --fullCalendar-sat: inherit;
+  --fullCalendar-sut: inherit;
+}
 
-  td.fc-day-sun,
-  th.fc-day-sun {
-    color: #fa6964;
-  }
+td.fc-day-sat,
+th.fc-day-sat {
+  color: var(--sat-color);
+}
+
+td.fc-day-sun,
+th.fc-day-sun {
+  color: var(--sun-color);
+}
+
+main a:not([class]):link,
+#fullCalendar a:link {
+  color: var(--a-link-color);
+}
+main a:not([class]):visited,
+#fullCalendar a:visited {
+  color: var( --a-link-visited);
+}
+
+td.fc-day-sat {
+  background-color: var(--fullCalendar-sat);
+}
+td.fc-day-sun {
+  background-color: var(--fullCalendar-sun);
 }

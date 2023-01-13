@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -64,6 +64,7 @@ function App(props: Props) {
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
       },
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   );
   const theme = React.useMemo(
@@ -75,6 +76,10 @@ function App(props: Props) {
       }),
     [mode],
   );
+  useEffect(() => {
+    document.documentElement.setAttribute('theme', mode);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>

@@ -1,3 +1,10 @@
+:root {
+  --background-color: white;
+}
+:root[theme="dark"] {
+  --background-color: #121212;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
@@ -11,11 +18,5 @@ code {
 }
 
 .adsBox {
-  background-color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-  .adsBox {
-    background-color: #121212;
-  }
+  background-color: var(--background-color);
 }
