@@ -5,6 +5,10 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { ColorModeContext } from '../../App';
 
 const drawerWidth = 240;
 
@@ -14,6 +18,8 @@ interface Props {
 }
 
 const Header = ({ handleDrawerToggle, openMenu }: Props) => {
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
   return (
     <>
       <CssBaseline />
@@ -37,6 +43,10 @@ const Header = ({ handleDrawerToggle, openMenu }: Props) => {
           <Typography data-testid="title" variant="h6" noWrap component="div">
             大阪公立大学 空手道部　応援ページ
           </Typography>
+          <div style={{ flexGrow: 1 }}></div>
+          <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
         </Toolbar>
       </AppBar>
     </>
