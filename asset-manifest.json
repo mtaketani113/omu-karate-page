@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/omu-karate-page/static/css/main.6318f7e8.css",
-    "main.js": "/omu-karate-page/static/js/main.7054b380.js",
+    "main.css": "/omu-karate-page/static/css/main.96a78d61.css",
+    "main.js": "/omu-karate-page/static/js/main.5fc8becd.js",
     "static/js/787.2c82dcba.chunk.js": "/omu-karate-page/static/js/787.2c82dcba.chunk.js",
     "static/media/pop_coming_soon.png": "/omu-karate-page/static/media/pop_coming_soon.471b58cbc8bf32872b07.png",
     "static/media/taketani.jpg": "/omu-karate-page/static/media/taketani.865d3941177ad1e3a759.jpg",
     "static/media/no_image_logo.png": "/omu-karate-page/static/media/no_image_logo.95ba2e631fdcf89666d3.png",
     "index.html": "/omu-karate-page/index.html",
-    "main.6318f7e8.css.map": "/omu-karate-page/static/css/main.6318f7e8.css.map",
-    "main.7054b380.js.map": "/omu-karate-page/static/js/main.7054b380.js.map",
+    "main.96a78d61.css.map": "/omu-karate-page/static/css/main.96a78d61.css.map",
+    "main.5fc8becd.js.map": "/omu-karate-page/static/js/main.5fc8becd.js.map",
     "787.2c82dcba.chunk.js.map": "/omu-karate-page/static/js/787.2c82dcba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6318f7e8.css",
-    "static/js/main.7054b380.js"
+    "static/css/main.96a78d61.css",
+    "static/js/main.5fc8becd.js"
   ]
 }
