@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AdsDisplay } from './components/parts/AdsDisplay';
 import { Box } from '@mui/material';
+import { CookiesProvider } from "react-cookie";
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const drawerWidth = 240;
 root.render(
   <>
     <React.StrictMode>
-      <App />
+      <CookiesProvider>
+        <App />
+      </CookiesProvider>
     </React.StrictMode>
     <Box sx={{ display: 'flex' }}>
       <Box

@@ -19,6 +19,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import MainPageRoutes from './MainPageRoutes';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useCookies } from 'react-cookie';
 
 // AppContext が保持する値の型
 export interface ColorModeContextType {
@@ -54,6 +55,7 @@ function App(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [pcOpen, setPcOpen] = React.useState(true);
+  const [cookies, setCookie] = useCookies();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -66,11 +68,13 @@ function App(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const [mode, setMode] = React.useState<'light' | 'dark'>(prefersDarkMode ? 'dark' : 'light');
+  const initMode = cookies.react_mode ?? prefersDarkMode ? 'dark' : 'light';
+  const [mode, setMode] = React.useState<'light' | 'dark'>(initMode);
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+        setCookie("react_mode", mode, {maxAge: 60 * 60 * 12 * 7, path: BASE_CONTEXT })
       },
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
