@@ -41,10 +41,11 @@ const Header = ({ handleDrawerToggle, openMenu }: Props) => {
             <MenuIcon />
           </IconButton>
           <Typography data-testid="title" variant="h6" noWrap component="div">
-            大阪公立大学 空手道部
+            大阪公立大学空手道部 応援ページ
           </Typography>
-          <div style={{ flexGrow: 1 }}></div>
-          <IconButton sx={{ ml: 1 }} onClick={colorMode.colorMode.toggleColorMode} color="inherit">
+          <div style={{ flexGrow: 0.98 }}></div>
+          <IconButton 
+          sx={{ ml: 1 }} onClick={colorMode.colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
         </Toolbar>
