@@ -68,13 +68,12 @@ function App(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const initMode = cookies.react_mode ?? prefersDarkMode ? 'dark' : 'light';
+  const initMode = cookies.react_mode ?? (prefersDarkMode ? 'dark' : 'light');
   const [mode, setMode] = React.useState<'light' | 'dark'>(initMode);
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-        setCookie("react_mode", mode, {maxAge: 60 * 60 * 12 * 7, path: BASE_CONTEXT })
       },
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -91,6 +90,7 @@ function App(props: Props) {
   );
   useEffect(() => {
     document.documentElement.setAttribute('theme', mode);
+    setCookie("react_mode", mode, {maxAge: 60 * 60 * 12 * 7, path: BASE_CONTEXT })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
 
