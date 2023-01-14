@@ -61,7 +61,6 @@
   }
 }
 
-
 .anchor {
   padding-top: 70px;
   margin-top: -70px;
@@ -93,7 +92,7 @@
   --fullCalendar-sut: #ffeaea;
 }
 /* ダークモードの時のカラー */
-:root[theme="dark"] {
+:root[theme='dark'] {
   --sat-color: #6964fa;
   --sun-color: #fa6964;
   --a-link-color: #0bd;
@@ -118,7 +117,7 @@ main a:not([class]):link,
 }
 main a:not([class]):visited,
 #fullCalendar a:visited {
-  color: var( --a-link-visited);
+  color: var(--a-link-visited);
 }
 
 td.fc-day-sat {
