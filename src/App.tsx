@@ -90,7 +90,7 @@ function App(props: Props) {
   );
   useEffect(() => {
     document.documentElement.setAttribute('theme', mode);
-    setCookie("react_mode", mode, {maxAge: 60 * 60 * 12 * 7, path: BASE_CONTEXT })
+    setCookie('react_mode', mode, { maxAge: 60 * 60 * 12 * 7, path: BASE_CONTEXT });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
 
@@ -117,10 +117,7 @@ function App(props: Props) {
                 display: { xs: 'none', sm: 'block' },
               }}
             >
-              <Header
-                handleDrawerToggle={handleDrawerPcToggle}
-                openMenu={pcOpen}
-              />
+              <Header handleDrawerToggle={handleDrawerPcToggle} openMenu={pcOpen} />
             </Box>
             <Box
               component="nav"
