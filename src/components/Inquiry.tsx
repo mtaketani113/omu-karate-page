@@ -1,20 +1,22 @@
-import { Table, TableBody, TableCell, TableRow, useMediaQuery } from '@mui/material';
+import { Table, TableBody, TableCell, TableRow } from '@mui/material';
+import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { ColorModeContext, ColorModeContextType } from '../App';
 
 const Inquiry = () => {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const colorMode: ColorModeContextType = React.useContext(ColorModeContext);
   const titleStyle = {
-    backgroundColor: prefersDarkMode ? '#7d7d7d' : '#eeeeee',
+    backgroundColor: colorMode.mode === 'dark' ? '#7d7d7d' : '#eeeeee',
     fontWeight: 'bold',
     width: 110,
-    borderColor: prefersDarkMode ? 'white' : 'black',
+    borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
   };
 
   const bodyStyle = {
     maxWidth: 500,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: prefersDarkMode ? 'white' : 'black',
+    borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
   };
 
   return (
@@ -30,7 +32,7 @@ const Inquiry = () => {
           maxWidth: 500,
           borderWidth: 1,
           borderStyle: 'solid',
-          borderColor: prefersDarkMode ? 'white' : 'black',
+          borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
         }}
       >
         <TableBody>

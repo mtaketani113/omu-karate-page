@@ -20,7 +20,16 @@ import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import MainPageRoutes from './MainPageRoutes';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+// AppContext が保持する値の型
+export interface ColorModeContextType {
+  colorMode: { toggleColorMode: () => void };
+  mode: 'light' | 'dark';
+}
+
+export const ColorModeContext = React.createContext<ColorModeContextType>({
+  colorMode: { toggleColorMode: () => {} },
+  mode: 'light',
+});
 
 const drawerWidth = 240;
 
@@ -81,8 +90,9 @@ function App(props: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
 
+  const providerValue: ColorModeContextType = { colorMode, mode };
   return (
-    <ColorModeContext.Provider value={colorMode}>
+    <ColorModeContext.Provider value={providerValue}>
       <ThemeProvider theme={theme}>
         <Box sx={{ display: 'flex' }}>
           <BrowserRouter basename={BASE_CONTEXT}>

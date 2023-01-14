@@ -1,4 +1,4 @@
-import { Grid, IconButton, useMediaQuery } from '@mui/material';
+import { Grid, IconButton } from '@mui/material';
 import {
   FacebookShareButton,
   LineShareButton,
@@ -9,13 +9,15 @@ import {
 } from 'react-share';
 import { useLocation } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { ColorModeContext, ColorModeContextType } from '../../App';
+import React from 'react';
 
 const URL = 'https://mtaketani113.github.io/omu-karate-page';
 const QUOTE = '大阪公立大学空手道部 応援ページ';
 
 const ShareButton = () => {
   const location = useLocation();
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const colorMode: ColorModeContextType = React.useContext(ColorModeContext);
 
   return (
     <>
@@ -38,7 +40,7 @@ const ShareButton = () => {
         <Grid item xs={2} lg={1}>
           <IconButton
             href="https://github.com/mtaketani113/omu-karate-page"
-            style={{ padding: '0px', color: prefersDarkMode ? 'white' : 'black' }}
+            style={{ padding: '0px', color: colorMode.mode === 'dark' ? 'white' : 'black' }}
           >
             <GitHubIcon sx={{ fontSize: 48 }} />
           </IconButton>
