@@ -15,9 +15,10 @@ const drawerWidth = 240;
 interface Props {
   handleDrawerToggle: () => void;
   openMenu: boolean;
+  isMobile: boolean;
 }
 
-const Header = ({ handleDrawerToggle, openMenu }: Props) => {
+const Header = ({ handleDrawerToggle, openMenu, isMobile }: Props) => {
   const theme = useTheme();
   const colorMode: ColorModeContextType = React.useContext(ColorModeContext);
   return (
@@ -41,11 +42,10 @@ const Header = ({ handleDrawerToggle, openMenu }: Props) => {
             <MenuIcon />
           </IconButton>
           <Typography data-testid="title" variant="h6" noWrap component="div">
-            大阪公立大学空手道部 応援ページ
+            大阪公立大学 空手道部
           </Typography>
-          <div style={{ flexGrow: 0.98 }}></div>
-          <IconButton 
-          sx={{ ml: 1 }} onClick={colorMode.colorMode.toggleColorMode} color="inherit">
+          <div style={{ flexGrow: isMobile ? 0.9 : 1 }}></div>
+          <IconButton sx={{ ml: 1 }} onClick={colorMode.colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
         </Toolbar>

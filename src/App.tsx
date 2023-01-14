@@ -104,7 +104,7 @@ function App(props: Props) {
                 display: { xs: 'block', sm: 'none' },
               }}
             >
-              <Header handleDrawerToggle={handleDrawerToggle} openMenu={pcOpen} />
+              <Header handleDrawerToggle={handleDrawerToggle} openMenu={pcOpen} isMobile={true} />
             </Box>
             {/* PCのメニュー */}
             <Box
@@ -113,7 +113,11 @@ function App(props: Props) {
                 display: { xs: 'none', sm: 'block' },
               }}
             >
-              <Header handleDrawerToggle={handleDrawerPcToggle} openMenu={pcOpen} />
+              <Header
+                handleDrawerToggle={handleDrawerPcToggle}
+                openMenu={pcOpen}
+                isMobile={false}
+              />
             </Box>
             <Box
               component="nav"
