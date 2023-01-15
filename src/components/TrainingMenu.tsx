@@ -111,6 +111,36 @@ const TrainingMenu = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isWide]);
 
+  const preAndNextButton = (isHead:boolean) => {
+    
+    return <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center">
+      {prePage != null && (
+        <Button
+          variant="contained"
+          color="success"
+          component={Link}
+          to={'/trainingMenu/' + prePage}
+          data-testid={isHead ? "pre_top_button" : "pre_bottom_button"}
+        >
+          &lt; {prePage}
+        </Button>
+      )}
+      {prePage == null && <div />}
+
+      {nextPage != null && (
+        <Button
+          variant="contained"
+          color="primary"
+          component={Link}
+          to={'/trainingMenu/' + nextPage}
+          data-testid={isHead ? "next_top_button" : "next_bottom_button"}
+        >
+          {nextPage} &gt;
+        </Button>
+      )}
+    </Box>
+  };
+
   return (
     <>
       <HelmetProvider>
@@ -121,6 +151,7 @@ const TrainingMenu = () => {
       <h3 data-testid="breadcrumbs">
         <Link to="/galleryLinks">練習メニュー・風景</Link>&nbsp; &gt; &nbsp; {date}
       </h3>
+      {preAndNextButton(true)}
       <div style={style}>
         <TableContainer component={Paper}>
           <Table aria-label="simple table">
@@ -140,31 +171,7 @@ const TrainingMenu = () => {
         />
       )}
       {videos}
-      <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center">
-        {prePage != null && (
-          <Button
-            variant="contained"
-            color="success"
-            component={Link}
-            to={'/trainingMenu/' + prePage}
-            data-testid="pre_button"
-          >
-            &lt; {prePage}
-          </Button>
-        )}
-
-        {nextPage != null && (
-          <Button
-            variant="contained"
-            color="primary"
-            component={Link}
-            to={'/trainingMenu/' + nextPage}
-            data-testid="next_button"
-          >
-            {nextPage} &gt;
-          </Button>
-        )}
-      </Box>
+      {preAndNextButton(false)}
     </>
   );
 };
