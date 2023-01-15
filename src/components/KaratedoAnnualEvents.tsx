@@ -42,7 +42,8 @@ const KaratedoAnnualEvents = () => {
         <TableRow>
           <TableCell style={titleStyle}>7月</TableCell>
           <TableCell style={bodyStyle}>
-            都立戦<br />
+            都立戦
+            <br />
             夏季昇級昇段審査
           </TableCell>
         </TableRow>
@@ -68,7 +69,8 @@ const KaratedoAnnualEvents = () => {
         <TableRow>
           <TableCell style={titleStyle}>12月</TableCell>
           <TableCell style={bodyStyle}>
-            全国公立 団体戦<br />
+            全国公立 団体戦
+            <br />
             冬季昇級昇段審査
           </TableCell>
         </TableRow>
