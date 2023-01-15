@@ -40,7 +40,9 @@ describe('GalleryLinks init', () => {
     expect(screen.queryByTestId('open_training_menu0')).not.toBeInTheDocument();
     expect(screen.getByTestId('breadcrumbs')).toBeInTheDocument();
     // 最新の練習を開いているため、前へのリンクはあるが次へのリンクはない。
-    expect(screen.getByTestId('pre_button')).toBeInTheDocument();
-    expect(screen.queryByTestId('next_button')).not.toBeInTheDocument();
+    expect(screen.getByTestId('pre_top_button')).toBeInTheDocument();
+    expect(screen.queryByTestId('next_top_button')).not.toBeInTheDocument();
+    expect(screen.getByTestId('pre_bottom_button')).toBeInTheDocument();
+    expect(screen.queryByTestId('next_bottom_button')).not.toBeInTheDocument();
   });
 });
