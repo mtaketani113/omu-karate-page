@@ -7,6 +7,11 @@ declare global {
   }
 }
 
+/**
+ * Google AdSense（広告）部分のJSX作成
+ * 
+ * @returns 
+ */
 export const AdsDisplay = () => {
   //in-feedを例にしたためAdsInFeedとしています。
   useEffect(() => {

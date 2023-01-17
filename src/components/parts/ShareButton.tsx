@@ -15,6 +15,11 @@ import React from 'react';
 const URL = 'https://mtaketani113.github.io/omu-karate-page';
 const QUOTE = '大阪公立大学空手道部 応援ページ';
 
+/**
+ * FaceBook、Twitter、Line、Githubなどへのシェア、リンクボタン
+ * 
+ * @returns 
+ */
 const ShareButton = () => {
   const location = useLocation();
   const colorMode: ColorModeContextType = React.useContext(ColorModeContext);

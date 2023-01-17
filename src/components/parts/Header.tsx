@@ -16,7 +16,12 @@ interface Props {
   handleDrawerToggle: () => void;
   openMenu: boolean;
 }
-
+/**
+ * ヘッダー部のJSX
+ * 
+ * @param param0 
+ * @returns 
+ */
 const Header = ({ handleDrawerToggle, openMenu }: Props) => {
   const theme = useTheme();
   const colorMode: ColorModeContextType = React.useContext(ColorModeContext);

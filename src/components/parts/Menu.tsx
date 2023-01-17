@@ -27,6 +27,13 @@ import InfoIcon from '@mui/icons-material/Info';
 interface Props {
   setMobileOpen?: (open: boolean) => void;
 }
+
+/**
+ * メニュー部のJSX
+ * 
+ * @param param0 
+ * @returns 
+ */
 const Menu = ({ setMobileOpen }: Props) => {
   const doNottiong = (open: boolean) => {};
   const setOpen = setMobileOpen ?? doNottiong;
