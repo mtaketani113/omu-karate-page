@@ -28,7 +28,7 @@ const Place = () => {
         ></iframe>
       </Box>
       <h3 className="anchor" id="nakamozu">
-        中百舌鳥キャンパス 体育館剣道場
+        中百舌鳥キャンパス 体育館1F剣道場
       </h3>
       <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
         <iframe
