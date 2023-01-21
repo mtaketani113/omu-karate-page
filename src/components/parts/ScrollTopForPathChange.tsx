@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 /**
  * パス変更時にスクロール位置をトップに戻すためダミーJSX
- * 
+ *
  * @returns null
  */
 const ScrollTopForPathChange = () => {

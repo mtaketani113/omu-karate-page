@@ -4,8 +4,8 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 /**
  * スクロールトップへ戻すボタン
- * 
- * @returns 
+ *
+ * @returns
  */
 const ScrollTop = () => {
   const trigger = useScrollTrigger({
@@ -15,7 +15,7 @@ const ScrollTop = () => {
 
   /**
    * スクロールトップへ戻す関数
-   * @param event 
+   * @param event
    */
   const scrollToTop = (event: any) => {
     const anchor = (event.target.ownerDocument || document).querySelector('#top-anchor');

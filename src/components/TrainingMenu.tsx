@@ -111,34 +111,35 @@ const TrainingMenu = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isWide]);
 
-  const preAndNextButton = (isHead:boolean) => {
-    
-    return <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center">
-      {prePage != null && (
-        <Button
-          variant="contained"
-          color="success"
-          component={Link}
-          to={'/trainingMenu/' + prePage}
-          data-testid={isHead ? "pre_top_button" : "pre_bottom_button"}
-        >
-          &lt; {prePage}
-        </Button>
-      )}
-      {prePage == null && <div />}
+  const preAndNextButton = (isHead: boolean) => {
+    return (
+      <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center">
+        {prePage != null && (
+          <Button
+            variant="contained"
+            color="success"
+            component={Link}
+            to={'/trainingMenu/' + prePage}
+            data-testid={isHead ? 'pre_top_button' : 'pre_bottom_button'}
+          >
+            &lt; {prePage}
+          </Button>
+        )}
+        {prePage == null && <div />}
 
-      {nextPage != null && (
-        <Button
-          variant="contained"
-          color="primary"
-          component={Link}
-          to={'/trainingMenu/' + nextPage}
-          data-testid={isHead ? "next_top_button" : "next_bottom_button"}
-        >
-          {nextPage} &gt;
-        </Button>
-      )}
-    </Box>
+        {nextPage != null && (
+          <Button
+            variant="contained"
+            color="primary"
+            component={Link}
+            to={'/trainingMenu/' + nextPage}
+            data-testid={isHead ? 'next_top_button' : 'next_bottom_button'}
+          >
+            {nextPage} &gt;
+          </Button>
+        )}
+      </Box>
+    );
   };
 
   return (

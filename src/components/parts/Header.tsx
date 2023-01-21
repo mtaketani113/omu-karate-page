@@ -18,9 +18,9 @@ interface Props {
 }
 /**
  * ヘッダー部のJSX
- * 
- * @param param0 
- * @returns 
+ *
+ * @param param0
+ * @returns
  */
 const Header = ({ handleDrawerToggle, openMenu }: Props) => {
   const theme = useTheme();

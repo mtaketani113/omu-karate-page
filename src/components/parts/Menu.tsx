@@ -30,9 +30,9 @@ interface Props {
 
 /**
  * メニュー部のJSX
- * 
- * @param param0 
- * @returns 
+ *
+ * @param param0
+ * @returns
  */
 const Menu = ({ setMobileOpen }: Props) => {
   const doNottiong = (open: boolean) => {};

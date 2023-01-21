@@ -2,8 +2,8 @@ import usePageTracking from './useTracking';
 
 /**
  * Google　Analyticsを導入するためのダミーヘッダー
- * 
- * @returns 
+ *
+ * @returns
  */
 const DummyHeader = () => {
   usePageTracking();
