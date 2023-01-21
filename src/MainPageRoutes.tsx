@@ -31,6 +31,8 @@ const MainPageRoutes = () => {
       {/* 練習メニュー・風景 */}
       <Route path="/karatedo" element={<Karatedo />} />
       {/* 空手道部紹介 */}
+      <Route path="/*" element={<Home />} />
+      {/* その他のURLはHomeを遷移 */}
     </Routes>
   );
 };
