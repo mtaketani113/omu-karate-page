@@ -70,8 +70,17 @@ const TrainingMenu = () => {
   useEffect(() => {
     const trainings: any = Training;
     const training: any = date != null ? trainings[date] : {};
-    const menus: Array<any> = training.practice;
     let tmpRow: Array<ReactNode> = [];
+    if(training == null || training.length === 0){
+      tmpRow.push(<>
+        この日の情報はありません。
+        <Link to="/galleryLinks">練習メニュー・風景へ</Link>
+        </>
+      )
+      setRows(tmpRow);
+      return;
+    }
+    const menus: Array<any> = training.practice;
     for (let i = 0; i < menus.length; i++) {
       let menu = menus[i];
       tmpRow.push(
@@ -106,6 +115,9 @@ const TrainingMenu = () => {
   useEffect(() => {
     const trainings: any = Training;
     const training: any = date != null ? trainings[date] : {};
+    if(training == null || training.length === 0){
+      return;
+    }
     const videos: Array<any> = training.videos;
     setVideosFunc(videos);
     // eslint-disable-next-line react-hooks/exhaustive-deps
