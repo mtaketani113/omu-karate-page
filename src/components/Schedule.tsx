@@ -40,6 +40,7 @@ const Schedule = () => {
             locale="ja"
             events={Events}
             initialDate={initDate}
+            contentHeight={'auto'}
             headerToolbar={{
               start: 'title',
               end: 'dayGridMonth,timeGridWeek,timeGridDay today prev,next',
