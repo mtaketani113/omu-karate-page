@@ -88,8 +88,13 @@ function App(props: Props) {
       }),
     [mode],
   );
+
+  /**
+   * ダークモード、ライトモードの切り替え
+   */
   useEffect(() => {
     document.documentElement.setAttribute('theme', mode);
+    // クッキーの保存して、次回描画時に利用
     setCookie('react_mode', mode, { maxAge: 60 * 60 * 12 * 7, path: BASE_CONTEXT });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
