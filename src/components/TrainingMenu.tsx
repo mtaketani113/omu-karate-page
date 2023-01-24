@@ -71,12 +71,13 @@ const TrainingMenu = () => {
     const trainings: any = Training;
     const training: any = date != null ? trainings[date] : {};
     let tmpRow: Array<ReactNode> = [];
-    if(training == null || training.length === 0){
-      tmpRow.push(<>
-        この日の情報はありません。
-        <Link to="/galleryLinks">練習メニュー・風景へ</Link>
-        </>
-      )
+    if (training == null || training.length === 0) {
+      tmpRow.push(
+        <>
+          この日の情報はありません。
+          <Link to="/galleryLinks">練習メニュー・風景へ</Link>
+        </>,
+      );
       setRows(tmpRow);
       return;
     }
@@ -115,7 +116,7 @@ const TrainingMenu = () => {
   useEffect(() => {
     const trainings: any = Training;
     const training: any = date != null ? trainings[date] : {};
-    if(training == null || training.length === 0){
+    if (training == null || training.length === 0) {
       return;
     }
     const videos: Array<any> = training.videos;
