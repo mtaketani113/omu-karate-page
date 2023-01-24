@@ -53,10 +53,9 @@ const TrainingMenu = () => {
       tmpVideos.push(
         <Box key={i} display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
           <iframe
-            style={{ width: isWide ? '80%' : '100%', aspectRatio: '16/9' }}
+            style={{ width: isWide ? '80%' : '100%', aspectRatio: '16/9', border: '0' }}
             src={video}
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
