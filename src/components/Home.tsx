@@ -49,7 +49,7 @@ const Home = () => {
       </Typography>
       <Typography paragraph>
         <li>
-          <Link to="/schedule?initDate=2023-02-01">2月</Link>の中百舌鳥での練習日を記載しました。
+          <Link to="/schedule?initDate=2023-02-16">2月</Link>の中百舌鳥での練習日を記載しました。
         </li>
       </Typography>
       <Typography paragraph color="green">
