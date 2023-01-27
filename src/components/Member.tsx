@@ -30,12 +30,12 @@ const style = {
 
 const Member = () => {
   const [open, setOpen] = useState<boolean>(false);
-  const [image, setImage] = useState<any>('false');
+  const [image, setImage] = useState<string>('');
 
   const handleClose = () => {
     setOpen(false);
   };
-  const handleImage = (image: any) => {
+  const handleImage = (image: string) => {
     setImage(image);
     setOpen(true);
   };
@@ -45,7 +45,7 @@ const Member = () => {
     department: string,
     former: string,
     comment: string,
-    image: any,
+    image: string,
     imagePosition: string,
   ) {
     return { name, department, former, comment, image, imagePosition };
@@ -61,7 +61,7 @@ const Member = () => {
     position: string,
     name: string,
     comment: string,
-    image: any,
+    image: string,
     imagePosition: string,
   ) {
     return { position, name, comment, image, imagePosition };
