@@ -7,9 +7,12 @@ import { useLocation } from 'react-router-dom';
 import timeGridPlugin from '@fullcalendar/timegrid';
 
 const Schedule = () => {
-  //初期表示の日付をパラメータから取得
-  const initDate: string | Date =
-    new URLSearchParams(useLocation().search).get('initDate') ?? new Date();
+  // 初期表示の日付をパラメータから取得
+  const initParam: string = new URLSearchParams(useLocation().search).get('initDate') ?? '';
+
+  // 日付形式がおかしい場合は、現在日とする。
+  const initDate: Date =
+    new Date(initParam).toString() === 'Invalid Date' ? new Date() : new Date(initParam);
 
   return (
     <>
