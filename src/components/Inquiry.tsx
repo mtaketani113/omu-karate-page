@@ -1,10 +1,14 @@
 import { Table, TableBody, TableCell, TableRow } from '@mui/material';
-import React from 'react';
+import axios from 'axios';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ColorModeContext, ColorModeContextType } from '../App';
 
 const Inquiry = () => {
   const colorMode: ColorModeContextType = React.useContext(ColorModeContext);
+
+  const [chageLog, setChangeLog] = useState<any>(null);
+
   const titleStyle = {
     backgroundColor: colorMode.mode === 'dark' ? '#7d7d7d' : '#eeeeee',
     fontWeight: 'bold',
@@ -18,6 +22,27 @@ const Inquiry = () => {
     borderStyle: 'solid',
     borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
   };
+
+  useEffect(() => {
+    axios
+      .get('https://api.github.com/repos/mtaketani113/omu-karate-page/releases')
+      .then((response) => {
+        let data = response.data;
+        let rows: Array<ReactNode> = [];
+        for (let i = 0; i < data.length; i++) {
+          let row = data[i];
+          rows.push(
+            <TableRow key={row.tag_name}>
+              <TableCell style={titleStyle}>{row.tag_name}</TableCell>
+              <TableCell style={bodyStyle}>{row.name}</TableCell>
+            </TableRow>,
+          );
+        }
+
+        setChangeLog(rows);
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -62,6 +87,17 @@ const Inquiry = () => {
             </TableCell>
           </TableRow>
         </TableBody>
+      </Table>
+      <h1 data-testid="change_log_title">変更履歴</h1>
+      <Table
+        style={{
+          maxWidth: 500,
+          borderWidth: 1,
+          borderStyle: 'solid',
+          borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
+        }}
+      >
+        <TableBody>{chageLog}</TableBody>
       </Table>
     </>
   );
