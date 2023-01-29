@@ -67,6 +67,11 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
+  },
   "devDependencies": {
     "@types/react-helmet": "^6.1.5",
     "@types/react-image-gallery": "^1.2.0",
