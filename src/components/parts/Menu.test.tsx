@@ -3,6 +3,7 @@ import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import { Menu } from '../index';
 import userEvent from '@testing-library/user-event';
 import MainPageRoutes from '../../MainPageRoutes';
+import axios from 'axios';
 
 describe('Menu', () => {
   it('init', async () => {
@@ -76,6 +77,13 @@ describe('Menu', () => {
   });
 
   it('transition', async () => {
+    jest.spyOn(axios, 'get').mockResolvedValue({
+      data: [
+        { tag_name: '1.0.0', name: 'リリース' },
+        { tag_name: '1.0.1', name: '修正' },
+      ],
+    });
+
     const route = '/';
     render(
       <MemoryRouter initialEntries={[route]}>
@@ -102,6 +110,9 @@ describe('Menu', () => {
     // お問い合わせをクリック
     userEvent.click(screen.getByTestId('inquiry'));
     expect(screen.getByTestId('inquiry_title')).toBeInTheDocument();
+    expect(screen.getByTestId('change_log_title')).toBeInTheDocument();
+    expect(await screen.findByText('1.0.0')).toBeInTheDocument();
+    expect(await screen.findByText('1.0.1')).toBeInTheDocument();
 
     // プライバシーポリシー
     userEvent.click(screen.getByTestId('privacy_policy'));
