@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableRow } from '@mui/material';
+import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material';
 import axios from 'axios';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -7,7 +7,9 @@ import { ColorModeContext, ColorModeContextType } from '../App';
 const Inquiry = () => {
   const colorMode: ColorModeContextType = React.useContext(ColorModeContext);
 
-  const [chageLog, setChangeLog] = useState<any>(null);
+  const [changeLog, setChangeLog] = useState<Array<ReactNode>>([]);
+  const [page, setPage] = useState<number>(1);
+  const [next, setNext] = useState<boolean>(true);
 
   const titleStyle = {
     backgroundColor: colorMode.mode === 'dark' ? '#7d7d7d' : '#eeeeee',
@@ -23,12 +25,15 @@ const Inquiry = () => {
     borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
   };
 
-  useEffect(() => {
+  const getChangeLogs = () => {
     axios
-      .get('https://api.github.com/repos/mtaketani113/omu-karate-page/releases')
+      .get(
+        'https://api.github.com/repos/mtaketani113/omu-karate-page/releases?per_page=30&page=' +
+          page,
+      )
       .then((response) => {
         let data = response.data;
-        let rows: Array<ReactNode> = [];
+        const rows: Array<ReactNode> = [];
         for (let i = 0; i < data.length; i++) {
           let row = data[i];
           rows.push(
@@ -37,12 +42,22 @@ const Inquiry = () => {
               <TableCell style={bodyStyle}>{row.name}</TableCell>
             </TableRow>,
           );
+          if (row.tag_name === 'v1.0.0') {
+            setNext(false);
+          }
         }
-
-        setChangeLog(rows);
+        if (page === 1) {
+          setChangeLog(rows);
+        } else {
+          setChangeLog((prevState) => [...prevState, ...rows]);
+        }
       });
+  };
+
+  useEffect(() => {
+    getChangeLogs();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [page]);
 
   return (
     <>
@@ -97,8 +112,13 @@ const Inquiry = () => {
           borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
         }}
       >
-        <TableBody>{chageLog}</TableBody>
+        <TableBody>{changeLog}</TableBody>
       </Table>
+      {next && changeLog.length > 0 && (
+        <Button variant="text" onClick={() => setPage((prevState) => prevState + 1)}>
+          さらに表示
+        </Button>
+      )}
     </>
   );
 };
