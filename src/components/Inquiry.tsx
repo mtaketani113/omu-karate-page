@@ -25,11 +25,15 @@ const Inquiry = () => {
     borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
   };
 
-  const getChangeLogs = () => {
+  const getChangeLogs = (paramPageNum?: number) => {
+    let pageNum:number = page;
+    if(paramPageNum != null){
+      pageNum = paramPageNum;
+    }
     axios
       .get(
         'https://api.github.com/repos/mtaketani113/omu-karate-page/releases?per_page=30&page=' +
-          page,
+          pageNum,
       )
       .then((response) => {
         let data = response.data;
@@ -46,8 +50,12 @@ const Inquiry = () => {
             setNext(false);
           }
         }
-        if (page === 1) {
+        // モードを変更するとき強制的に1ページ目を表示するため、setNext,setPage,を初期化
+        if (pageNum === 1) {
+          // StrictModeの対応のためrowsを設定
           setChangeLog(rows);
+          setNext(true);
+          setPage(1);
         } else {
           setChangeLog((prevState) => [...prevState, ...rows]);
         }
@@ -58,6 +66,11 @@ const Inquiry = () => {
     getChangeLogs();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
+
+  useEffect(() => {
+    getChangeLogs(1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [colorMode]);
 
   return (
     <>
