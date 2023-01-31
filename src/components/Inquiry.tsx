@@ -26,8 +26,8 @@ const Inquiry = () => {
   };
 
   const getChangeLogs = (paramPageNum?: number) => {
-    let pageNum:number = page;
-    if(paramPageNum != null){
+    let pageNum: number = page;
+    if (paramPageNum != null) {
       pageNum = paramPageNum;
     }
     axios
