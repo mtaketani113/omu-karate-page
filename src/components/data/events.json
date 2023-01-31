@@ -88,6 +88,8 @@
     "backgroundColor": "blue"
   },
   { "title": "試験期間", "start": "2023-01-23", "end": "2023-02-04", "backgroundColor": "red" },
+  { "title": "杉本町", "start": "2023-02-11 09:30", "end": "2022-02-11 11:00" },
+  { "title": "幹部交代", "start": "2023-02-11 11:00", "backgroundColor": "orange" },
   {
     "title": "中百舌鳥",
     "start": "2023-02-16 14:00",
