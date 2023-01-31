@@ -1,4 +1,4 @@
-import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material';
+import { Button, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 import axios from 'axios';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -15,6 +15,21 @@ const Inquiry = () => {
     backgroundColor: colorMode.mode === 'dark' ? '#7d7d7d' : '#eeeeee',
     fontWeight: 'bold',
     width: 110,
+    borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
+  };
+
+  const headerStyle = {
+    backgroundColor: colorMode.mode === 'dark' ? '#7d7d7d' : '#eeeeee',
+    fontWeight: 'bold',
+    borderStyle: 'solid',
+    maxWidth: 110,
+    borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
+  };
+
+  const titleStyleForChangeLog = {
+    backgroundColor: colorMode.mode === 'dark' ? '#7d7d7d' : '#eeeeee',
+    fontWeight: 'bold',
+    maxWidth: 110,
     borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
   };
 
@@ -40,9 +55,15 @@ const Inquiry = () => {
         const rows: Array<ReactNode> = [];
         for (let i = 0; i < data.length; i++) {
           let row = data[i];
+          let dt = new Date(row.published_at);
+          let y = ('00' + dt.getFullYear()).slice(-2);
+          let m = ('00' + (dt.getMonth() + 1)).slice(-2);
+          let d = ('00' + dt.getDate()).slice(-2);
+          let publisedDate = y + '/' + m + '/' + d;
           rows.push(
             <TableRow key={row.tag_name}>
-              <TableCell style={titleStyle}>{row.tag_name}</TableCell>
+              <TableCell style={titleStyleForChangeLog}>{row.tag_name}</TableCell>
+              <TableCell style={bodyStyle}>{publisedDate}</TableCell>
               <TableCell style={bodyStyle}>{row.name}</TableCell>
             </TableRow>,
           );
@@ -125,6 +146,13 @@ const Inquiry = () => {
           borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
         }}
       >
+        <TableHead>
+          <TableRow>
+            <TableCell style={headerStyle}>Ver</TableCell>
+            <TableCell style={headerStyle}>変更日</TableCell>
+            <TableCell style={headerStyle}>変更内容</TableCell>
+          </TableRow>
+        </TableHead>
         <TableBody>{changeLog}</TableBody>
       </Table>
       {next && changeLog.length > 0 && (
