@@ -21,7 +21,7 @@ const KaratedoAbout = () => {
       <li style={answerStyle}>組手は寸止めで突きや蹴りでポイントを取り、競います。</li>
       <li style={answerStyle}>型は決められた演武で点数を競います。</li>
       <h4>大学の流派</h4>
-      糸東流
+      糸東流（<a href="https://ja.wikipedia.org/wiki/%E7%B3%B8%E6%9D%B1%E6%B5%81">Wikipediaへ</a>）
       <h4>大学の沿革</h4>
       <Timeline
         sx={{
