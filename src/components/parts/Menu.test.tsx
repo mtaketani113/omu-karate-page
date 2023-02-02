@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import { Menu } from '../index';
 import userEvent from '@testing-library/user-event';
@@ -68,12 +68,19 @@ describe('Menu', () => {
       </BrowserRouter>,
     );
 
-    // 空手道部紹介をクリックしたときにリンクが表示される
-    const karatedoButton = screen.getByTestId('karatedo');
-    userEvent.click(karatedoButton);
-    expect(screen.getByTestId('about')).toBeInTheDocument();
-    expect(screen.getByTestId('annualEvents')).toBeInTheDocument();
-    expect(screen.getByTestId('faq')).toBeInTheDocument();
+    jest.spyOn(axios, 'get').mockResolvedValue({
+      data: { extract: '糸東流説明' }
+    });
+
+    // 空手道部紹介をクリック
+    act(() => {
+      screen.getByTestId('karatedo').dispatchEvent(new MouseEvent('click', {bubbles: true})); ;
+    });
+    await waitFor(() => {
+      expect(screen.getByTestId('about')).toBeInTheDocument();
+    });
+      expect(screen.getByTestId('annualEvents')).toBeInTheDocument();
+      expect(screen.getByTestId('faq')).toBeInTheDocument();  
   });
 
   it('transition', async () => {
@@ -126,9 +133,17 @@ describe('Menu', () => {
     userEvent.click(screen.getByTestId('home'));
     expect(screen.getByTestId('event_title')).toBeInTheDocument();
 
+    jest.spyOn(axios, 'get').mockResolvedValue({
+      data: { extract: '糸東流説明' }
+    });
+
     // 空手道部紹介をクリック
-    userEvent.click(screen.getByTestId('karatedo'));
-    expect(screen.getByTestId('karatedo_title')).toBeInTheDocument();
+    act(() => {
+      screen.getByTestId('karatedo').dispatchEvent(new MouseEvent('click', {bubbles: true})); ;
+    });
+    await waitFor(() => {
+      expect(screen.getByTestId('karatedo_title')).toBeInTheDocument();          
+    })
     expect(screen.getByTestId('aboutDetails')).not.toBeVisible();
     expect(screen.getByTestId('annualEventsDetails')).not.toBeVisible();
     expect(screen.getByTestId('faqDetails')).not.toBeVisible();
