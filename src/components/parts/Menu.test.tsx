@@ -142,7 +142,7 @@ describe('Menu', () => {
       screen.getByTestId('karatedo').dispatchEvent(new MouseEvent('click', {bubbles: true})); ;
     });
     await waitFor(() => {
-      expect(screen.getByTestId('karatedo_title')).toBeInTheDocument();          
+      expect(screen.getByTestId('karatedo_title')).toBeInTheDocument();
     })
     expect(screen.getByTestId('aboutDetails')).not.toBeVisible();
     expect(screen.getByTestId('annualEventsDetails')).not.toBeVisible();
