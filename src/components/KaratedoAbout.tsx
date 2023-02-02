@@ -7,6 +7,9 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from '@mui/lab/TimelineOppositeContent';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Button, Tooltip } from '@mui/material';
 
 const KaratedoAbout = () => {
   const answerStyle = {
@@ -14,6 +17,17 @@ const KaratedoAbout = () => {
     textIndent: '-1em',
     paddingBottom: '1em',
   };
+
+  const [wikipedia, setWikipedia] = useState<any>(null);
+
+  useEffect(() => {
+    axios
+      .get('https://ja.wikipedia.org/api/rest_v1/page/summary/%E7%B3%B8%E6%9D%B1%E6%B5%81')
+      .then((response) => {
+        setWikipedia(response.data.extract);
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
       <h4>競技の種類</h4>
@@ -21,7 +35,9 @@ const KaratedoAbout = () => {
       <li style={answerStyle}>組手は寸止めで突きや蹴りでポイントを取り、競います。</li>
       <li style={answerStyle}>型は決められた演武で点数を競います。</li>
       <h4>大学の流派</h4>
-      糸東流（<a href="https://ja.wikipedia.org/wiki/%E7%B3%B8%E6%9D%B1%E6%B5%81">Wikipediaへ</a>）
+      <Tooltip title={wikipedia + 'Wikipediaより'} arrow>
+        <Button href="https://ja.wikipedia.org/wiki/%E7%B3%B8%E6%9D%B1%E6%B5%81">糸東流</Button>
+      </Tooltip>
       <h4>大学の沿革</h4>
       <Timeline
         sx={{
