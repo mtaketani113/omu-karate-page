@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Alert, Box, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useMedia } from 'react-use';
@@ -90,9 +90,9 @@ const Place = () => {
       <Typography paragraph>
         <li>木曜日・・・17:00~19:00 ※不定期</li>
       </Typography>
-      <Typography paragraph>
+      <Alert severity="error">
         【重要】不定期のため、<Link to={'/schedule'}>練習予定</Link>をご確認ください
-      </Typography>
+      </Alert>
     </>
   );
 };
