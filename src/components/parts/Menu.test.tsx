@@ -69,18 +69,18 @@ describe('Menu', () => {
     );
 
     jest.spyOn(axios, 'get').mockResolvedValue({
-      data: { extract: '糸東流説明' }
+      data: { extract: '糸東流説明' },
     });
 
     // 空手道部紹介をクリック
     act(() => {
-      screen.getByTestId('karatedo').dispatchEvent(new MouseEvent('click', {bubbles: true})); ;
+      screen.getByTestId('karatedo').dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
     await waitFor(() => {
       expect(screen.getByTestId('about')).toBeInTheDocument();
     });
-      expect(screen.getByTestId('annualEvents')).toBeInTheDocument();
-      expect(screen.getByTestId('faq')).toBeInTheDocument();  
+    expect(screen.getByTestId('annualEvents')).toBeInTheDocument();
+    expect(screen.getByTestId('faq')).toBeInTheDocument();
   });
 
   it('transition', async () => {
@@ -134,16 +134,16 @@ describe('Menu', () => {
     expect(screen.getByTestId('event_title')).toBeInTheDocument();
 
     jest.spyOn(axios, 'get').mockResolvedValue({
-      data: { extract: '糸東流説明' }
+      data: { extract: '糸東流説明' },
     });
 
     // 空手道部紹介をクリック
     act(() => {
-      screen.getByTestId('karatedo').dispatchEvent(new MouseEvent('click', {bubbles: true})); ;
+      screen.getByTestId('karatedo').dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
     await waitFor(() => {
       expect(screen.getByTestId('karatedo_title')).toBeInTheDocument();
-    })
+    });
     expect(screen.getByTestId('aboutDetails')).not.toBeVisible();
     expect(screen.getByTestId('annualEventsDetails')).not.toBeVisible();
     expect(screen.getByTestId('faqDetails')).not.toBeVisible();
