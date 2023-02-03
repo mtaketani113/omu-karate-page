@@ -5,6 +5,8 @@ import Events from './data/events.json';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import timeGridPlugin from '@fullcalendar/timegrid';
+import { useState } from 'react';
+import { Button } from '@mui/material';
 
 const Schedule = () => {
   // 初期表示の日付をパラメータから取得
@@ -13,6 +15,10 @@ const Schedule = () => {
   // 日付形式がおかしい場合は、現在日とする。
   const initDate: Date =
     new Date(initParam).toString() === 'Invalid Date' ? new Date() : new Date(initParam);
+
+  const [calenderView, setCalenderView] = useState<'dayGridMonth' | 'timeGridWeek' | 'timeGridDay'>(
+    'dayGridMonth',
+  );
 
   return (
     <>
@@ -35,6 +41,28 @@ const Schedule = () => {
           <div className="fc-daygrid-event-dot" style={{ borderColor: 'orange' }} />
           イベント
         </div>
+        <Button
+          id="mobileDayGridMonthButton"
+          variant="contained"
+          color={calenderView === 'dayGridMonth' ? 'success' : 'primary'}
+          onClick={() => {
+            setCalenderView('dayGridMonth');
+            (document.querySelector('.fc-dayGridMonth-button') as any).click();
+          }}
+        >
+          月
+        </Button>
+        <Button
+          id="mobileTimeGridDayButton"
+          variant="contained"
+          color={calenderView === 'timeGridDay' ? 'success' : 'primary'}
+          onClick={() => {
+            setCalenderView('timeGridDay');
+            (document.querySelector('.fc-timeGridDay-button') as any).click();
+          }}
+        >
+          日
+        </Button>
         <span id="fullCalendar">
           <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin]}
