@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, Typography, CardMedia, Grid, CardActionArea } from '@mui/material';
 import NoImage from './images/no_image_logo.png';
 
-const TrainingLink = () => {
+const GalleryLinks = () => {
   const traningDateList: Array<string> = Object.keys(Training);
   const [rows, setRows] = useState<ReactNode>([]);
   useEffect(() => {
@@ -61,4 +61,4 @@ const TrainingLink = () => {
   );
 };
 
-export default TrainingLink;
+export default GalleryLinks;
