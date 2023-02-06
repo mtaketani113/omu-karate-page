@@ -53,7 +53,7 @@ const Member = () => {
 
   const rows = [
     createData('Coming soon', '理学部', '', '杉本キャンパス', ImageComingSoon, '0% 50%'),
-    createData('Coming soon', '', '', '杉本キャンパス', ImageComingSoon, '0% 50%'),
+    createData('Coming soon', '生活科学部', '', '杉本キャンパス', ImageComingSoon, '0% 50%'),
     createData('Coming soon', '工学部', '', '中百舌鳥キャンパス', ImageComingSoon, '0% 50%'),
   ];
 
