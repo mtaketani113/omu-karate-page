@@ -51,15 +51,15 @@ const Inquiry = () => {
           pageNum,
       )
       .then((response) => {
-        let data = response.data;
+        const data = response.data;
         const rows: Array<ReactNode> = [];
         for (let i = 0; i < data.length; i++) {
-          let row = data[i];
-          let dt = new Date(row.published_at);
-          let y = ('00' + dt.getFullYear()).slice(-2);
-          let m = ('00' + (dt.getMonth() + 1)).slice(-2);
-          let d = ('00' + dt.getDate()).slice(-2);
-          let publisedDate = y + '/' + m + '/' + d;
+          const row = data[i];
+          const dt = new Date(row.published_at);
+          const y = ('00' + dt.getFullYear()).slice(-2);
+          const m = ('00' + (dt.getMonth() + 1)).slice(-2);
+          const d = ('00' + dt.getDate()).slice(-2);
+          const publisedDate = y + '/' + m + '/' + d;
           rows.push(
             <TableRow key={row.tag_name}>
               <TableCell style={titleStyleForChangeLog}>{row.tag_name}</TableCell>
