@@ -52,9 +52,30 @@ const Member = () => {
   }
 
   const rows = [
-    createData('主将', '理学部', '', '杉本キャンパス', ImageComingSoon, '0% 50%'),
-    createData('副主将', '工学部', '', '中百舌鳥キャンパス', ImageComingSoon, '0% 50%'),
-    createData('主務', '生活科学部', '', '杉本キャンパス', ImageComingSoon, '0% 50%'),
+    createData(
+      '主将',
+      '理学部',
+      '',
+      '杉本キャンパス',
+      'https://omu-karate-org.github.io/images/member/2022/hirose.jpg',
+      '0% 30%',
+    ),
+    createData(
+      '副主将',
+      '工学部',
+      '',
+      '中百舌鳥キャンパス',
+      'https://omu-karate-org.github.io/images/member/2022/yoshida.jpg',
+      '0% 30%',
+    ),
+    createData(
+      '主務',
+      '生活科学部',
+      '',
+      '杉本キャンパス',
+      'https://omu-karate-org.github.io/images/member/2022/hakumoto.jpg',
+      '0% 30%',
+    ),
   ];
 
   function createCoachData(
@@ -86,36 +107,8 @@ const Member = () => {
         </Helmet>
       </HelmetProvider>
       <h1 data-testid="player">現役紹介</h1>
-      <Typography paragraph>4回生1名、1回生3名で頑張っています。</Typography>
-      <Typography paragraph>↓作成中</Typography>
-      <h2>四回生</h2>
-      <Grid container spacing={4}>
-        <Grid item key="4" xs={12} sm={6} md={4}>
-          <CardActionArea onClick={(e) => handleImage(ImageComingSoon)}>
-            <Card sx={{ maxWidth: 445 }}>
-              <CardMedia
-                className="cardImage"
-                component="img"
-                height="140"
-                src={ImageComingSoon}
-                alt="Comming soon"
-                style={{ objectPosition: '0% 50%' }}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Coming soon
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div"></Typography>
-                <Typography gutterBottom variant="h6" component="div"></Typography>
-                <Typography variant="body2" color="text.secondary">
-                  杉本キャンパス
-                </Typography>
-              </CardContent>
-            </Card>
-          </CardActionArea>
-        </Grid>
-      </Grid>
-      <h2>一回生</h2>
+      <Typography paragraph>2回生3名で頑張っています。</Typography>
+      <h2>二回生</h2>
 
       <Grid container spacing={4}>
         {rows.map((row, i) => (
