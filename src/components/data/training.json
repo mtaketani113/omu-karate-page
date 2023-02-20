@@ -183,9 +183,9 @@
       { "title": "チューブ練習", "detail": "チューブを利用して突きの練習" }
     ],
     "images": [
+      "https://img.youtube.com/vi/8axZFkLunhc/0.jpg",
       "https://omu-karate-org.github.io/images/practice/20230216/hirose.jpg",
-      "https://omu-karate-org.github.io/images/practice/20230216/yoshida.jpg",
-      "https://img.youtube.com/vi/8axZFkLunhc/0.jpg"
+      "https://omu-karate-org.github.io/images/practice/20230216/yoshida.jpg"
     ],
     "videos": ["https://www.youtube.com/embed/8axZFkLunhc"],
     "pre": "2023-02-11",
