@@ -21,6 +21,7 @@ const Inquiry = () => {
   const headerStyle = {
     backgroundColor: colorMode.mode === 'dark' ? '#7d7d7d' : '#eeeeee',
     fontWeight: 'bold',
+    borderWidth: 1,
     borderStyle: 'solid',
     maxWidth: 110,
     borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
