@@ -2,9 +2,13 @@ import { Alert, Box, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useMedia } from 'react-use';
+import { useState } from 'react';
 
 const Place = () => {
   const isWide = useMedia('(min-width: 780px)');
+
+  const [pointerSugimoto, setPointerSugimoto] = useState<'none' | 'auto'>('none');
+  const [pointerNakamozu, setPointerNakamozu] = useState<'none' | 'auto'>('none');
 
   return (
     <>
@@ -27,7 +31,13 @@ const Place = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </Box>
-      <Box display="flex" justifyContent="center" alignItems="center">
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        onClick={() => setPointerSugimoto('auto')}
+        onMouseLeave={() => setPointerSugimoto('none')}
+      >
         <iframe
           title="新武道場"
           src="https://www.google.com/maps/embed?pb=!4v1674585794265!6m8!1m7!1ssQhrzJ92OTvUJ3GNeJzkrA!2m2!1d34.59225904310845!2d135.5082727023637!3f124.81933925752331!4f2.6208228333569394!5f0.7820865974627469"
@@ -35,7 +45,7 @@ const Place = () => {
             border: '0',
             width: isWide ? '90%' : '100%',
             aspectRatio: '16/9',
-            pointerEvents: 'none',
+            pointerEvents: pointerSugimoto,
           }}
           allowFullScreen={true}
           loading="lazy"
@@ -56,7 +66,14 @@ const Place = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </Box>
-      <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        marginBottom="10px"
+        onClick={() => setPointerNakamozu('auto')}
+        onMouseLeave={() => setPointerNakamozu('none')}
+      >
         <iframe
           title="中百舌鳥道場"
           src="https://www.google.com/maps/embed?pb=!4v1674586462994!6m8!1m7!1sDZJnsmbz_pvcp12rDwrbzw!2m2!1d34.54682802532402!2d135.5080555416765!3f174.89091687728776!4f6.528718394435714!5f0.7820865974627469"
@@ -64,7 +81,7 @@ const Place = () => {
             border: '0',
             width: isWide ? '90%' : '100%',
             aspectRatio: '16/9',
-            pointerEvents: 'none',
+            pointerEvents: pointerNakamozu,
           }}
           allowFullScreen={true}
           loading="lazy"
