@@ -62,7 +62,8 @@ const KaratedoAnnualEvents = () => {
         <TableRow>
           <TableCell style={titleStyle}>11月</TableCell>
           <TableCell style={bodyStyle}>
-            <a href="https://www.osakafu-u.ac.jp/news/nws20211221/">六公立戦</a><br />
+            <a href="https://www.osakafu-u.ac.jp/news/nws20211221/">六公立戦</a>
+            <br />
             <a href="https://www.weblio.jp/content/%E4%B8%89%E5%95%86%E6%88%A6">三商戦</a>
           </TableCell>
         </TableRow>
