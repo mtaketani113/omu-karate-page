@@ -1,4 +1,13 @@
-import { Button, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+} from '@mui/material';
 import axios from 'axios';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -139,26 +148,33 @@ const Inquiry = () => {
         </TableBody>
       </Table>
       <h1 data-testid="change_log_title">変更履歴</h1>
-      <Table
-        style={{
-          maxWidth: 500,
-          borderWidth: 1,
-          borderStyle: 'solid',
-          borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
-        }}
-      >
-        <TableHead>
-          <TableRow>
-            <TableCell style={headerStyle}>Ver</TableCell>
-            <TableCell style={headerStyle}>変更日</TableCell>
-            <TableCell style={headerStyle}>変更内容</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>{changeLog}</TableBody>
-      </Table>
+      {changeLog.length === 0 && (
+        <Box sx={{ display: 'flex' }}>
+          <CircularProgress />
+        </Box>
+      )}
+      {changeLog.length > 0 && (
+        <Table
+          style={{
+            maxWidth: 500,
+            borderWidth: 1,
+            borderStyle: 'solid',
+            borderColor: colorMode.mode === 'dark' ? 'white' : 'black',
+          }}
+        >
+          <TableHead>
+            <TableRow>
+              <TableCell style={headerStyle}>Ver</TableCell>
+              <TableCell style={headerStyle}>変更日</TableCell>
+              <TableCell style={headerStyle}>変更内容</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>{changeLog}</TableBody>
+        </Table>
+      )}
       {next && changeLog.length > 0 && (
         <Button variant="text" onClick={() => setPage((prevState) => prevState + 1)}>
-          さらに表示
+          さらに表示 &gt;
         </Button>
       )}
     </>
