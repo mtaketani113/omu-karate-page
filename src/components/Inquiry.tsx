@@ -148,12 +148,11 @@ const Inquiry = () => {
         </TableBody>
       </Table>
       <h1 data-testid="change_log_title">変更履歴</h1>
-      {changeLog.length === 0 && (
+      {changeLog.length === 0 ? (
         <Box sx={{ display: 'flex' }}>
           <CircularProgress />
         </Box>
-      )}
-      {changeLog.length > 0 && (
+      ) : (
         <Table
           style={{
             maxWidth: 500,
