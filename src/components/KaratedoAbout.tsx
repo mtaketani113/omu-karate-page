@@ -34,24 +34,24 @@ const KaratedoAbout = () => {
       伝統派や寸止めと言われている空手で、組手と型の競技があります。
       <li style={answerStyle}>組手は寸止めで突きや蹴りでポイントを取り、競います。</li>
       <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
-      <iframe
-            style={{ width:'90%', aspectRatio: '16/9', border: '0' }}
-            src="https://www.youtube.com/embed/rJO8TMbV_uI"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          </Box>
+        <iframe
+          style={{ width: '90%', aspectRatio: '16/9', border: '0' }}
+          src="https://www.youtube.com/embed/rJO8TMbV_uI"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </Box>
       <li style={answerStyle}>型は決められた演武で点数を競います。</li>
       <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
-      <iframe
-            style={{ width:'90%', aspectRatio: '16/9', border: '0' }}
-            src="https://www.youtube.com/embed/Vnea9lQLp0A"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          </Box>
+        <iframe
+          style={{ width: '90%', aspectRatio: '16/9', border: '0' }}
+          src="https://www.youtube.com/embed/Vnea9lQLp0A"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </Box>
       <h4>大学の流派</h4>
       <Tooltip title={wikipedia + 'Wikipediaより'} arrow>
         <Button href="https://ja.wikipedia.org/wiki/%E7%B3%B8%E6%9D%B1%E6%B5%81">糸東流</Button>
