@@ -126,7 +126,7 @@ const TrainingMenu = () => {
   const preAndNextButton = (isHead: boolean) => {
     return (
       <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center">
-        {prePage != null && (
+        {prePage != null ? (
           <Button
             variant="contained"
             color="success"
@@ -136,8 +136,7 @@ const TrainingMenu = () => {
           >
             &lt; {prePage}
           </Button>
-        )}
-        {prePage == null && <div />}
+        ) : <div/>}
 
         {nextPage != null && (
           <Button
