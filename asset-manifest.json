@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/omu-karate-page/static/css/main.b69ef990.css",
-    "main.js": "/omu-karate-page/static/js/main.1ae97978.js",
+    "main.js": "/omu-karate-page/static/js/main.71d14cab.js",
     "static/js/27.dd1f521b.chunk.js": "/omu-karate-page/static/js/27.dd1f521b.chunk.js",
     "static/media/pop_coming_soon.png": "/omu-karate-page/static/media/pop_coming_soon.471b58cbc8bf32872b07.png",
     "static/media/taketani.jpg": "/omu-karate-page/static/media/taketani.865d3941177ad1e3a759.jpg",
@@ -10,6 +10,6 @@
   },
   "entrypoints": [
     "static/css/main.b69ef990.css",
-    "static/js/main.1ae97978.js"
+    "static/js/main.71d14cab.js"
   ]
 }
