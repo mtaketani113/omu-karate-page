@@ -55,7 +55,7 @@ const Member = () => {
     createData(
       '主将',
       '理学部',
-      '',
+      '桃山学院高校',
       '杉本キャンパス',
       'https://omu-karate-org.github.io/images/member/2022/hirose.jpg',
       '0% 30%',
@@ -63,7 +63,7 @@ const Member = () => {
     createData(
       '副主将',
       '工学部',
-      '',
+      '大阪桐蔭高校',
       '中百舌鳥キャンパス',
       'https://omu-karate-org.github.io/images/member/2022/yoshida.jpg',
       '0% 30%',
@@ -71,7 +71,7 @@ const Member = () => {
     createData(
       '主務',
       '生活科学部',
-      '',
+      '桃山学院高校',
       '杉本キャンパス',
       'https://omu-karate-org.github.io/images/member/2022/hakumoto.jpg',
       '0% 30%',
