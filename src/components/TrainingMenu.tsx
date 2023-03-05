@@ -136,7 +136,9 @@ const TrainingMenu = () => {
           >
             &lt; {prePage}
           </Button>
-        ) : <div/>}
+        ) : (
+          <div />
+        )}
 
         {nextPage != null && (
           <Button
