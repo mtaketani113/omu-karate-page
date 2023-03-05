@@ -90,7 +90,13 @@ const Member = () => {
 
   const rowsCoach = [
     createCoachData('師範', '加藤 励', '', ImageComingSoon, '0% 50%'),
-    createCoachData('監督', '竹谷 匡玄', '平成18年 大阪府立大学卒業', ImageTaketani, '0% 15%'),
+    createCoachData(
+      '監督',
+      '竹谷 匡玄',
+      '平成18年 大阪府立大学卒業\n一応プログラマーの端くれです。',
+      ImageTaketani,
+      '0% 15%',
+    ),
   ];
 
   function createOBhData(name: string, comment: string, image: any, imagePosition: string) {
@@ -166,9 +172,12 @@ const Member = () => {
                   <Typography gutterBottom variant="h6" component="div">
                     {row.name}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {row.comment}
-                  </Typography>
+
+                  {row.comment.split('\n').map((line, key) => (
+                    <Typography key={key} variant="body2" color="text.secondary">
+                      {line}
+                    </Typography>
+                  ))}
                 </CardContent>
               </Card>
             </CardActionArea>
