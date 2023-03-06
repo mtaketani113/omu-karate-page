@@ -35,7 +35,7 @@ const KaratedoAbout = () => {
       <li style={answerStyle}>組手は寸止めで突きや蹴りでポイントを取り、競います。</li>
       <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
         <iframe
-          style={{ width: '90%', aspectRatio: '16/9', border: '0' }}
+          style={{ width: '100%', aspectRatio: '16/9', border: '0' }}
           src="https://www.youtube.com/embed/rJO8TMbV_uI"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -45,7 +45,7 @@ const KaratedoAbout = () => {
       <li style={answerStyle}>型は決められた演武で点数を競います。</li>
       <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
         <iframe
-          style={{ width: '90%', aspectRatio: '16/9', border: '0' }}
+          style={{ width: '100%', aspectRatio: '16/9', border: '0' }}
           src="https://www.youtube.com/embed/Vnea9lQLp0A"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
