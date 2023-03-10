@@ -142,7 +142,7 @@ const Inquiry = () => {
             </TableCell>
             <TableCell style={bodyStyle}>
               Githubの<a href="https://github.com/mtaketani113/omu-karate-page/issues/new">Issue</a>
-              にお願いします
+              にお願いします。
             </TableCell>
           </TableRow>
         </TableBody>
