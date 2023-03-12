@@ -214,6 +214,20 @@
     "images": [],
     "videos": [],
     "pre": "2023-02-23",
+    "next": "2023-03-11"
+  },
+  "2023-03-11": {
+    "description": "まださわりですが、三戦の練習をしました。",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "ミット打ち", "detail": "ミットに突き蹴りをしっかり打ち込み" },
+      { "title": "ルール変更の説明", "detail": "C1,C2のカテゴリー統合などのルール変更を説明" },
+      { "title": "打ち込み", "detail": "刻み、中段、ワンツーの練習" },
+      { "title": "型", "detail": "三戦の練習。順番をまず覚えました(*^^*)" }
+    ],
+    "images": ["https://img.youtube.com/vi/aRdHLftgxZk/0.jpg"],
+    "videos": [],
+    "pre": "2023-03-04",
     "next": null
   }
 }
