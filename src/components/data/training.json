@@ -225,8 +225,9 @@
       { "title": "打ち込み", "detail": "刻み、中段、ワンツーの練習" },
       { "title": "型", "detail": "三戦の練習。順番をまず覚えました(*^^*)" }
     ],
-    "images": ["https://img.youtube.com/vi/aRdHLftgxZk/0.jpg"],
-    "videos": [],
+    "images": ["https://img.youtube.com/vi/aRdHLftgxZk/0.jpg",
+    "https://omu-karate-org.github.io/images/practice/20230311/sanchin.jpg"],
+    "videos": ["https://www.youtube.com/embed/aRdHLftgxZk"],
     "pre": "2023-03-04",
     "next": null
   }
