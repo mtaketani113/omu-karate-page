@@ -25,6 +25,8 @@ const GalleryLinks = () => {
     let tmpRow: Array<ReactNode> = [];
     let tmpGrid: Array<ReactNode> = [];
     const keyLength = traningDateList.length;
+
+    let defaultOpenYear = traningDateList[keyLength - 1].substring(0, 4);
     for (let i = 0; i < keyLength; i++) {
       let date: string = traningDateList[keyLength - i - 1];
       let year: string = date.substring(0, 4);
@@ -63,7 +65,7 @@ const GalleryLinks = () => {
 
       if (nextYear !== year || traningDateList.length === i + 1) {
         tmpGrid.push(
-          <Accordion key={year} defaultExpanded={true}>
+          <Accordion key={year} defaultExpanded={year === defaultOpenYear}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
               <h2>{year}年</h2>
             </AccordionSummary>
