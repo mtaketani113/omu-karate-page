@@ -1,5 +1,5 @@
 import Training from './data/training.json';
-import { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
@@ -15,11 +15,16 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NoImage from './images/no_image_logo.png';
-import React from 'react';
+import { ColorModeContext, ColorModeContextType } from '../App';
 
 const GalleryLinks = () => {
   const traningDateList: Array<string> = Object.keys(Training);
   const [rows, setRows] = useState<ReactNode>([]);
+  const colorMode: ColorModeContextType = React.useContext(ColorModeContext);
+
+  const accordionSummaryStyle = {
+    backgroundColor: colorMode.mode === 'dark' ? 'rgba(255, 255, 255, .08)' : 'rgba(0, 0, 0, .08)',
+  };
 
   useEffect(() => {
     let tmpRow: Array<ReactNode> = [];
@@ -66,7 +71,11 @@ const GalleryLinks = () => {
       if (nextYear !== year || traningDateList.length === i + 1) {
         tmpGrid.push(
           <Accordion key={year} defaultExpanded={year === defaultOpenYear}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              style={accordionSummaryStyle}
+            >
               <h2>{year}年</h2>
             </AccordionSummary>
 
@@ -83,7 +92,7 @@ const GalleryLinks = () => {
     }
     setRows(tmpGrid);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [null, colorMode]);
 
   return (
     <>
