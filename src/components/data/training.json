@@ -241,7 +241,7 @@
       { "title": "一本組手", "detail": "中段、上段突きを受けての返し" },
       { "title": "組手の練習", "detail": "刻み、ワンツーの練習" }
     ],
-    "images": [],
+    "images": ["https://omu-karate-org.github.io/images/practice/20230316/kizami.jpg"],
     "videos": [],
     "pre": "2023-03-11",
     "next": null
