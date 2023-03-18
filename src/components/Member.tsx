@@ -14,7 +14,6 @@ import { useState } from 'react';
 import ImageTaketani from './images/taketani.jpg';
 import ImageShihan from './images/shihan.jpg';
 import ImageUmekage from './images/umekage.jpg';
-import ImageComingSoon from './images/pop_coming_soon.png';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const style = {
