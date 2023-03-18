@@ -153,7 +153,8 @@
     "backgroundColor": "green",
     "url": "/omu-karate-page/trainingMenu/2023-03-16"
   },
-  { "title": "杉本町", "start": "2023-03-18 13:00", "end": "2023-03-18 15:00" },
+  { "title": "杉本町", "start": "2023-03-18 13:00", "end": "2023-03-18 15:00",
+  "url": "/omu-karate-page/trainingMenu/2023-03-18" },
   {
     "title": "後期合格発表",
     "start": "2023-03-22",
