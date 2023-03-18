@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 import ImageTaketani from './images/taketani.jpg';
+import ImageShihan from './images/shihan.jpg';
 import ImageUmekage from './images/umekage.jpg';
 import ImageComingSoon from './images/pop_coming_soon.png';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -89,7 +90,7 @@ const Member = () => {
   }
 
   const rowsCoach = [
-    createCoachData('師範', '加藤 励', '', ImageComingSoon, '0% 50%'),
+    createCoachData('師範', '加藤 励', '', ImageShihan, '0% 20%'),
     createCoachData(
       '監督',
       '竹谷 匡玄',
