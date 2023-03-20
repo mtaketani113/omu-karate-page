@@ -151,7 +151,9 @@ const Member = () => {
       </Grid>
 
       <h2>一回生</h2>
-      <Typography paragraph>23年度、合格おめでとうございます!! 見学に来てくださいね(*^^*)</Typography>
+      <Typography paragraph>
+        23年度、合格おめでとうございます!! 見学に来てくださいね(*^^*)
+      </Typography>
 
       <h1 data-testid="coach">指導者紹介</h1>
 
