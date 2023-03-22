@@ -72,7 +72,11 @@ const Inquiry = () => {
           const publisedDate = y + '/' + m + '/' + d;
           rows.push(
             <TableRow key={row.tag_name}>
-              <TableCell style={titleStyleForChangeLog}>{row.tag_name}</TableCell>
+              <TableCell style={titleStyleForChangeLog}>
+                <a href={"https://github.com/mtaketani113/omu-karate-page/releases/tag/" + row.tag_name}>
+                  {row.tag_name}
+                </a>
+              </TableCell>
               <TableCell style={bodyStyle}>{publisedDate}</TableCell>
               <TableCell style={bodyStyle}>{row.name}</TableCell>
             </TableRow>,
