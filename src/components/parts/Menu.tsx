@@ -35,8 +35,8 @@ interface Props {
  * @returns
  */
 const Menu = ({ setMobileOpen }: Props) => {
-  const doNottiong = (open: boolean) => {};
-  const setOpen = setMobileOpen ?? doNottiong;
+  const doNothing = (open: boolean) => {};
+  const setOpen = setMobileOpen ?? doNothing;
 
   const [openPlace, setOpenPlace] = useState(false);
   const [openKaratedo, setOpenKaratedo] = useState(false);
