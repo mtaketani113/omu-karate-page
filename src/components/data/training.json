@@ -257,6 +257,19 @@
     "images": ["https://img.youtube.com/vi/n73nQz9gHCA/0.jpg"],
     "videos": ["https://www.youtube.com/embed/n73nQz9gHCA"],
     "pre": "2023-03-16",
+    "next": "2023-03-23"
+  },
+  "2023-03-23": {
+    "description": "今日から茶帯になりました。",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "鍛錬", "detail": "足腰の鍛錬" },
+      { "title": "組手の練習", "detail": "試合で使える技の練習" },
+      { "title": "移動練習", "detail": "組手の移動練習" }
+    ],
+    "images": [],
+    "videos": [],
+    "pre": "2023-03-18",
     "next": null
   }
 }
