@@ -73,7 +73,11 @@ const Inquiry = () => {
           rows.push(
             <TableRow key={row.tag_name}>
               <TableCell style={titleStyleForChangeLog}>
-                <a href={"https://github.com/mtaketani113/omu-karate-page/releases/tag/" + row.tag_name}>
+                <a
+                  href={
+                    'https://github.com/mtaketani113/omu-karate-page/releases/tag/' + row.tag_name
+                  }
+                >
                   {row.tag_name}
                 </a>
               </TableCell>
