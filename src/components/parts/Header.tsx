@@ -9,6 +9,7 @@ import { useTheme } from '@mui/material/styles';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { ColorModeContext, ColorModeContextType } from '../../App';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -45,7 +46,15 @@ const Header = ({ handleDrawerToggle, openMenu }: Props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography data-testid="title" variant="h6" noWrap component="div">
+          <Typography
+            data-testid="title"
+            variant="h6"
+            style={{ textDecoration: 'none' }}
+            color="inherit"
+            noWrap
+            component={Link}
+            to="/"
+          >
             大阪公立大学 空手道部
           </Typography>
           <div style={{ flexGrow: 1 }}></div>
