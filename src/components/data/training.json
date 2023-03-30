@@ -286,6 +286,29 @@
     "images": [],
     "videos": [],
     "pre": "2023-03-23",
+    "next": "2023-03-30"
+  },
+  "2023-03-30": {
+    "description": "市大の木下先生、前田先輩が中百舌鳥道場にいらしていただけました。",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "基本の移動練習", "detail": "順突き、逆突き、四股での移動" },
+      { "title": "組手の移動", "detail": "組手形式でスイッチなどをしながら移動" },
+      { "title": "打ち込み", "detail": "刻みや逆突きのバリエーションを練習" },
+      { "title": "試合形式", "detail": "試合形式で3分間組手" },
+      { "title": "型", "detail": "ピンアン二段の練習" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/4aZHe2P_a9Y/0.jpg",
+      "https://img.youtube.com/vi/_i3aHYW8Dp4/0.jpg",
+      "https://img.youtube.com/vi/pJYJFiWmrCU/0.jpg"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/4aZHe2P_a9Y",
+      "https://www.youtube.com/embed/_i3aHYW8Dp4",
+      "https://www.youtube.com/embed/pJYJFiWmrCU"
+    ],
+    "pre": "2023-03-25",
     "next": null
   }
 }
