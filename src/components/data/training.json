@@ -296,7 +296,8 @@
       { "title": "組手の移動", "detail": "組手形式でスイッチなどをしながら移動" },
       { "title": "打ち込み", "detail": "刻みや逆突きのバリエーションを練習" },
       { "title": "試合形式", "detail": "試合形式で3分間組手" },
-      { "title": "型", "detail": "ピンアン二段の練習" }
+      { "title": "型", "detail": "ピンアン二段の練習" },
+      { "title": "筋トレ", "detail": "足腰の鍛錬" }
     ],
     "images": [
       "https://img.youtube.com/vi/4aZHe2P_a9Y/0.jpg",
