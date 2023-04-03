@@ -67,42 +67,33 @@ const TrainingMenu = () => {
 
   // 初期表示、日付切り替え時に動作
   useEffect(() => {
-    const trainings: any = Training;
-    const training: any = date != null ? trainings[date] : {};
-    let tmpRow: Array<ReactNode> = [];
-    if (training == null || training.length === 0) {
-      tmpRow.push(
+    const training: any = date != null ? (Training as any)[date] : {};
+    if (training == null) {
+      setRows(
         <>
           この日の情報はありません。
           <Link to="/galleryLinks">練習メニュー・風景へ</Link>
         </>,
       );
-      setRows(tmpRow);
       return;
     }
     const menus: Array<any> = training.practice;
-    for (let i = 0; i < menus.length; i++) {
-      let menu = menus[i];
-      tmpRow.push(
-        <TableRow key={menu.title} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+    setRows(
+      menus.map((menu, i) => (
+        <TableRow key={i} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
           <TableCell component="th" scope="row" style={{ whiteSpace: 'nowrap' }}>
             {menu.title}
           </TableCell>
           <TableCell align="left">{menu.detail}</TableCell>
-        </TableRow>,
-      );
-    }
-    setRows(tmpRow);
-    const images: Array<any> = training.images;
-    let tmpGalleryImages: Array<any> = [];
-    for (let i = 0; i < images.length; i++) {
-      let image = images[i];
-      tmpGalleryImages.push({
+        </TableRow>
+      )),
+    );
+    setGrallyImages(
+      (training.images as Array<string>).map((image) => ({
         original: image,
         thumbnail: image,
-      });
-    }
-    setGrallyImages(tmpGalleryImages);
+      })),
+    );
 
     const videos: Array<any> = training.videos;
     setVideosFunc(videos);
