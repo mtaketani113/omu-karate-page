@@ -47,10 +47,8 @@ const TrainingMenu = () => {
    * @param videos
    */
   const setVideosFunc = (videos: Array<any>) => {
-    let tmpVideos: Array<ReactNode> = [];
-    for (let i = 0; i < videos.length; i++) {
-      let video = videos[i];
-      tmpVideos.push(
+    setVideos(
+      videos.map((video, i) => (
         <Box key={i} display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
           <iframe
             style={{ width: isWide ? '80%' : '100%', aspectRatio: '16/9', border: '0' }}
@@ -59,10 +57,9 @@ const TrainingMenu = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </Box>,
-      );
-    }
-    setVideos(tmpVideos);
+        </Box>
+      )),
+    );
   };
 
   // 初期表示、日付切り替え時に動作
