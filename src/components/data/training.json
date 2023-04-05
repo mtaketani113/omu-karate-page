@@ -321,12 +321,8 @@
       { "title": "打ち込み", "detail": "刻みやワンツーのバリエーションを練習" },
       { "title": "型", "detail": "ピンアン二段、三戦" }
     ],
-    "images": [
-      "https://img.youtube.com/vi/-s_xBUCFOfM/0.jpg"
-    ],
-    "videos": [
-      "https://www.youtube.com/embed/-s_xBUCFOfM"
-    ],
+    "images": ["https://img.youtube.com/vi/-s_xBUCFOfM/0.jpg"],
+    "videos": ["https://www.youtube.com/embed/-s_xBUCFOfM"],
     "pre": "2023-03-30",
     "next": null
   }
