@@ -105,6 +105,7 @@ const Place = () => {
       </Typography>
       <h3>中百舌鳥キャンパス</h3>
       <Typography paragraph>
+        <li>火曜日・・・17:00~19:00 ※不定期</li>
         <li>木曜日・・・17:00~19:00 ※不定期</li>
       </Typography>
       <Alert severity="error">
