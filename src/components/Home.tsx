@@ -45,6 +45,14 @@ const Home = () => {
 
       <h2 data-testid="event_title">イベント情報</h2>
       <Typography paragraph color="green">
+        23年4月7日 更新
+      </Typography>
+      <Typography paragraph>
+        <li>
+          <Link to="/schedule?initDate=2023-04-08">4月8日</Link>の土曜の練習日場所が中百舌鳥にかわりました。
+        </li>
+      </Typography>
+      <Typography paragraph color="green">
         23年3月17日 更新
       </Typography>
       <Typography paragraph>
