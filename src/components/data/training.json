@@ -313,7 +313,7 @@
     "next": "2023-04-01"
   },
   "2023-04-01": {
-    "description": "市大の木下先生、前田先輩が中百舌鳥道場にいらしていただけました。",
+    "description": "新年度初の練習です。",
     "practice": [
       { "title": "基本", "detail": "受け、突き、蹴りの練習" },
       { "title": "基本の移動練習", "detail": "順突き、逆突き、四股での移動" },
@@ -324,6 +324,27 @@
     "images": ["https://img.youtube.com/vi/-s_xBUCFOfM/0.jpg"],
     "videos": ["https://www.youtube.com/embed/-s_xBUCFOfM"],
     "pre": "2023-03-30",
+    "next": "2023-04-08"
+  },
+  "2023-04-08": {
+    "description": "一回性が見学に来てくれました",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "基本の移動練習", "detail": "順突き、逆突き、四股での移動" },
+      { "title": "ミット打ち", "detail": "刻み突き、中段突き、中段蹴りをミットに打ち込み" },
+      { "title": "打ち込み", "detail": "刻みやワンツーのバリエーションを練習" },
+      { "title": "試合形式", "detail": "試合形式で3分間組手" },
+      { "title": "反応の練習", "detail": "中段突きに対してカウンター" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/j9W7IA8Qv8I/0.jpg",
+      "https://img.youtube.com/vi/sQni98mX_4I/0.jpg"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/j9W7IA8Qv8I",
+      "https://www.youtube.com/embed/sQni98mX_4I"
+    ],
+    "pre": "2023-04-01",
     "next": null
   }
 }
