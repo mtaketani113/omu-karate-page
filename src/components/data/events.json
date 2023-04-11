@@ -216,9 +216,10 @@
     "backgroundColor": "green"
   },
   {
-    "title": "杉本町",
+    "title": "中百舌鳥",
     "start": "2023-04-15 13:00",
-    "end": "2023-04-15 15:00"
+    "end": "2023-04-15 15:00",
+    "backgroundColor": "green"
   },
   {
     "title": "中百舌鳥",
