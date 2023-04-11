@@ -345,6 +345,22 @@
       "https://www.youtube.com/embed/sQni98mX_4I"
     ],
     "pre": "2023-04-01",
+    "next": "2023-04-11"
+  },
+  "2023-04-11": {
+    "description": "一回性が見学に来てくれました",
+    "practice": [
+      { "title": "新歓準備", "detail": "看板作成" },
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "打ち込み", "detail": "刻み、中段のバリエーションを練習" },
+      { "title": "試合形式", "detail": "試合形式で3分間組手" }
+    ],
+    "images": [
+      "https://omu-karate-org.github.io/images/practice/20230411/kanban.jpg",
+      "https://omu-karate-org.github.io/images/practice/20230411/dogi.jpg"
+    ],
+    "videos": [],
+    "pre": "2023-04-08",
     "next": null
   }
 }
