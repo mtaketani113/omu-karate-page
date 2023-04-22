@@ -397,10 +397,20 @@
       { "title": "基本", "detail": "受け、突き、蹴りの練習" },
       { "title": "基本の移動練習", "detail": "順突き、逆突き、蹴りでの移動" },
       { "title": "組手の移動", "detail": "組手形式でスイッチなどをしながら移動" },
-      { "title": "打ち込み", "detail": "刻み、中段、ワンツーを練習" },
+      { "title": "打ち込み", "detail": "刻み、中段、ワンツーを練習" }
     ],
-    "images": [],
-    "videos": [],
+    "images": [
+      "https://img.youtube.com/vi/j_3DWKMnGQQ/0.jpg",
+      "https://img.youtube.com/vi/wotk2PexLek/0.jpg",
+      "https://img.youtube.com/vi/uyXs7Mcuh0c/0.jpg",
+      "https://img.youtube.com/vi/MpF6A9rDu_4/0.jpg"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/j_3DWKMnGQQ",
+      "https://www.youtube.com/embed/wotk2PexLek",
+      "https://www.youtube.com/embed/uyXs7Mcuh0c",
+      "https://www.youtube.com/embed/MpF6A9rDu_4"
+    ],
     "pre": "2023-04-18",
     "next": null
   }
