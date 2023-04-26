@@ -412,6 +412,19 @@
       "https://www.youtube.com/embed/MpF6A9rDu_4"
     ],
     "pre": "2023-04-18",
+    "next": "2023-04-25"
+  },
+  "2023-04-25": {
+    "description": "課題の蹴りを重点的に練習",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "蹴りの集中練習", "detail": "課題の蹴りを重点的に練習" },
+      { "title": "打ち込み", "detail": "刻み、中段、ワンツーを練習" },
+      { "title": "型の練習", "detail": "ピンアン三段を練習" }
+    ],
+    "images": [],
+    "videos": [],
+    "pre": "2023-04-22",
     "next": null
   }
 }
