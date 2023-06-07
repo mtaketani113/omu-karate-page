@@ -49,7 +49,8 @@ const Home = () => {
       </Typography>
       <Typography paragraph>
         <li>
-          <Link to="/schedule?initDate=2023-04-15">4月15日</Link>の土曜の練習日場所が中百舌鳥にかわりました。
+          <Link to="/schedule?initDate=2023-04-15">4月15日</Link>
+          の土曜の練習日場所が中百舌鳥にかわりました。
         </li>
       </Typography>
       <Typography paragraph color="green">
@@ -57,7 +58,8 @@ const Home = () => {
       </Typography>
       <Typography paragraph>
         <li>
-          <Link to="/schedule?initDate=2023-04-08">4月8日</Link>の土曜の練習日場所が中百舌鳥にかわりました。
+          <Link to="/schedule?initDate=2023-04-08">4月8日</Link>
+          の土曜の練習日場所が中百舌鳥にかわりました。
         </li>
       </Typography>
       <Typography paragraph color="green">
