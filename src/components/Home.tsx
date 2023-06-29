@@ -45,6 +45,18 @@ const Home = () => {
 
       <h2 data-testid="event_title">イベント情報</h2>
       <Typography paragraph color="green">
+        23年6月29日 更新
+      </Typography>
+      <Typography paragraph>
+        <li>
+          23年7月1日 東京都立大学 
+          <a href="https://www.tmu.ac.jp/campus_guide/map.html">
+            南大沢キャンパス
+          </a>
+          体育館剣道場にて都立戦
+        </li>
+      </Typography>
+      <Typography paragraph color="green">
         23年4月12日 更新
       </Typography>
       <Typography paragraph>
