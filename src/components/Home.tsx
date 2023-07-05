@@ -49,10 +49,8 @@ const Home = () => {
       </Typography>
       <Typography paragraph>
         <li>
-          23年7月1日 東京都立大学 
-          <a href="https://www.tmu.ac.jp/campus_guide/map.html">
-            南大沢キャンパス
-          </a>
+          23年7月1日 東京都立大学
+          <a href="https://www.tmu.ac.jp/campus_guide/map.html">南大沢キャンパス</a>
           体育館剣道場にて都立戦
         </li>
       </Typography>
