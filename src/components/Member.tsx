@@ -113,7 +113,7 @@ const Member = () => {
         </Helmet>
       </HelmetProvider>
       <h1 data-testid="player">現役紹介</h1>
-      <Typography paragraph>2回生3名で頑張っています。</Typography>
+      <Typography paragraph>2回生3名、1回生3名で頑張っています。</Typography>
       <h2>二回生</h2>
 
       <Grid container spacing={4}>
@@ -152,7 +152,7 @@ const Member = () => {
 
       <h2>一回生</h2>
       <Typography paragraph>
-        23年度、合格おめでとうございます!! 見学に来てくださいね(*^^*)
+        3名入部してくれました！！
       </Typography>
 
       <h1 data-testid="coach">指導者紹介</h1>
