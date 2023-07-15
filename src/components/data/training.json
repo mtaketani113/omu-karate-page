@@ -485,9 +485,53 @@
       { "title": "打ち込み", "detail": "刻み、中段、ワンツーの練習" },
       { "title": "組手", "detail": "都立とオープン戦" }
     ],
-    "images": [],
+    "images": [
+      "https://img.youtube.com/vi/tfJKz2HfTFo/0.jpg"
+    ],
     "videos": [],
     "pre": "2023-06-29",
+    "next": "2023-07-06"
+  },
+  "2023-07-06": {
+    "description": "新入生3名、入部してくれました！！",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "ミット打ち", "detail": "ミットで突き、蹴りの練習" },
+      { "title": "打ち込み", "detail": "刻み、中段の練習" }
+    ],
+    "images": [],
+    "videos": [],
+    "pre": "2023-07-01",
+    "next": "2023-07-11"
+  },
+  "2023-07-11": {
+    "description": "試験で、しばらくオフになるため、基本・移動をみっちり練習！！",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "移動", "detail": "突き蹴りの移動" },
+      { "title": "打ち込み", "detail": "刻み、中段、蹴りの練習" },
+      { "title": "型", "detail": "都立とオープン戦" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/fvKMYuDAzKY/0.jpg"
+    ],
+    "videos": [],
+    "pre": "2023-07-06",
+    "next": "2023-07-13"
+  },
+  "2023-07-13": {
+    "description": "さらに1名、見学に来てくれました！！",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "移動", "detail": "突き蹴りの移動" },
+      { "title": "ミット打ち", "detail": "刻み、中段、蹴りの練習" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/ZNFd6q0hjdg/0.jpg",
+      "https://img.youtube.com/vi/0a81wj_SjBA/0.jpg"
+    ],
+    "videos": [],
+    "pre": "2023-07-11",
     "next": null
   }
 }
