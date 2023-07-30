@@ -15,6 +15,7 @@ import ImageTaketani from './images/taketani.jpg';
 import ImageShihan from './images/shihan.jpg';
 import ImageUmekage from './images/umekage.jpg';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -235,6 +236,8 @@ const Member = () => {
           </Box>
         </Fade>
       </Modal>
+      <br/>
+      <Link to="/prefectureObList">府大OB</Link>
     </>
   );
 };
