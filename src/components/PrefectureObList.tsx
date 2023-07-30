@@ -34,7 +34,7 @@ const PrefectureObList = () => {
       let tmpCell: Array<ReactNode> = [];
       let thisYearObList: string[] = (jsonObList as any)[graduactionYearKeyList[i]];
       tmpCell.push(
-        <TableCell key={graduactionYearKeyList[i]} style={bodyStyle}>
+        <TableCell data-testid={graduactionYearKeyList[i]} key={graduactionYearKeyList[i]} style={bodyStyle}>
           {graduactionYearKeyList[i]}
         </TableCell>,
       );
@@ -62,7 +62,7 @@ const PrefectureObList = () => {
           <title>府大OB | 大阪公立大学空手道部 応援ページ</title>
         </Helmet>
       </HelmetProvider>
-      <h1 data-testid="player">府大OB</h1>
+      <h1 data-testid="ob_title">府大OB</h1>
       <Table
         style={{
           maxWidth: 500,
