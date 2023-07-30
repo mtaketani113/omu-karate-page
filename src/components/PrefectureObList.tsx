@@ -53,7 +53,7 @@ const PrefectureObList = () => {
     setObList(tmpRow);
     setMaxColSpan(tmpColSpan);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [null, colorMode]);
 
   return (
     <>
