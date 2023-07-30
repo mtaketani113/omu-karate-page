@@ -8,5 +8,4 @@ describe('PrefectureObList init', () => {
     expect(screen.getByTestId('ob_title')).toBeInTheDocument();
     expect(screen.getByTestId('S32年')).toBeInTheDocument();
   });
-
 });

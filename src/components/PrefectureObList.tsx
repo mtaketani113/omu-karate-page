@@ -34,7 +34,11 @@ const PrefectureObList = () => {
       let tmpCell: Array<ReactNode> = [];
       let thisYearObList: string[] = (jsonObList as any)[graduactionYearKeyList[i]];
       tmpCell.push(
-        <TableCell data-testid={graduactionYearKeyList[i]} key={graduactionYearKeyList[i]} style={bodyStyle}>
+        <TableCell
+          data-testid={graduactionYearKeyList[i]}
+          key={graduactionYearKeyList[i]}
+          style={bodyStyle}
+        >
           {graduactionYearKeyList[i]}
         </TableCell>,
       );

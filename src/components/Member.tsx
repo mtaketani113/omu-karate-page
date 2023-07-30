@@ -236,7 +236,7 @@ const Member = () => {
           </Box>
         </Fade>
       </Modal>
-      <br/>
+      <br />
       <Link to="/prefectureObList">府大OB</Link>
     </>
   );
