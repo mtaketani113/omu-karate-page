@@ -11,6 +11,7 @@ import {
   TrainingMenu,
   GalleryLinks,
   Karatedo,
+  PrefectureObList,
 } from './components/index';
 
 const MainPageRoutes = () => {
@@ -30,6 +31,8 @@ const MainPageRoutes = () => {
       <Route path="/galleryLinks" element={<GalleryLinks />} />
       {/* 練習メニュー・風景 */}
       <Route path="/karatedo" element={<Karatedo />} />
+      {/* 空手道部紹介 */}
+      <Route path="/prefectureObList" element={<PrefectureObList />} />
       {/* 空手道部紹介 */}
       <Route path="/*" element={<Home />} />
       {/* その他のURLはHomeを遷移 */}

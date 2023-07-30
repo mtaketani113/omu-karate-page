@@ -14,3 +14,4 @@ export { default as Inquiry } from './Inquiry';
 export { default as ScrollTopForPathChange } from './parts/ScrollTopForPathChange';
 export { default as ShareButton } from './parts/ShareButton';
 export { default as Karatedo } from './Karatedo';
+export { default as PrefectureObList } from './PrefectureObList';
