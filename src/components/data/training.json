@@ -528,6 +528,21 @@
     ],
     "videos": [],
     "pre": "2023-07-11",
+    "next": "2023-08-12"
+  },
+  "2023-08-12": {
+    "description": "8月最初で最後の練習です。次は9月！",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "型", "detail": "審査に向けてピンアン三段の練習" },
+      { "title": "打ち込み", "detail": "プレッシャーをかけて中段カウンターの練習" },
+      { "title": "一本組手", "detail": "順突きに対して下段払い→中段突き" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/GzPXoVDzyc0/0.jpg"
+    ],
+    "videos": [],
+    "pre": "2023-07-13",
     "next": null
   }
 }
