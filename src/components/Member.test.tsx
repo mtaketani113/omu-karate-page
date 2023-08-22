@@ -30,7 +30,6 @@ describe('Member init', () => {
         </Routes>
       </MemoryRouter>,
     );
-    
 
     // 開くボタンを押した場合にモーダルが表示されるかを確認
     userEvent.click(screen.getByTestId('open_coach0'));
@@ -51,10 +50,9 @@ describe('Member init', () => {
         </Routes>
       </MemoryRouter>,
     );
-    
+
     // 府大OBリストをクリックしたときに遷移することを確認
     userEvent.click(screen.getByTestId('prefectureObListLink'));
     expect(screen.getByTestId('ob_title')).toBeInTheDocument();
-
   });
 });

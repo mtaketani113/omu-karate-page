@@ -538,9 +538,7 @@
       { "title": "打ち込み", "detail": "プレッシャーをかけて中段カウンターの練習" },
       { "title": "一本組手", "detail": "順突きに対して下段払い→中段突き" }
     ],
-    "images": [
-      "https://img.youtube.com/vi/GzPXoVDzyc0/0.jpg"
-    ],
+    "images": ["https://img.youtube.com/vi/GzPXoVDzyc0/0.jpg"],
     "videos": [],
     "pre": "2023-07-13",
     "next": null

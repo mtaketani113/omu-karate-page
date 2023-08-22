@@ -237,7 +237,9 @@ const Member = () => {
         </Fade>
       </Modal>
       <br />
-      <Link data-testid="prefectureObListLink" to="/prefectureObList">府大OB</Link>
+      <Link data-testid="prefectureObListLink" to="/prefectureObList">
+        府大OB
+      </Link>
     </>
   );
 };
