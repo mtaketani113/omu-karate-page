@@ -333,5 +333,28 @@
     "end": "2023-09-12 19:30",
     "backgroundColor": "green",
     "url": "/omu-karate-page/trainingMenu/2023-09-12"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-10-17 18:30",
+    "end": "2023-10-17 20:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-10-19 16:45",
+    "end": "2023-10-19 18:45",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-10-26 16:45",
+    "end": "2023-10-26 18:45",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-10-28 13:00",
+    "end": "2023-10-28 15:00"
   }
 ]
