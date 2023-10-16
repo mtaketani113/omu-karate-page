@@ -76,6 +76,12 @@ const Menu = ({ setMobileOpen }: Props) => {
       icon: CollectionsIcon,
       testid: 'galleryLinks',
     },
+    {
+      text: '試合結果',
+      pathname: '/result',
+      icon: CollectionsIcon,
+      testid: 'resultLinks',
+    },
   ];
 
   return (
