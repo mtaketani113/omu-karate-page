@@ -359,6 +359,40 @@
     "backgroundColor": "green"
   },
   {
+    "title": "中百舌鳥",
+    "start": "2023-11-07 18:30",
+    "end": "2023-11-07 20:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-11-09 17:00",
+    "end": "2023-11-09 19:00",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "審査会",
+    "start": "2023-11-11 13:00",
+    "end": "2023-11-11 15:30"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-11-14 18:30",
+    "end": "2023-11-14 20:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-11-16 17:00",
+    "end": "2023-11-16 19:00",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "杉本町",
+    "start": "2023-11-18 13:00",
+    "end": "2023-11-18 15:30"
+  },
+  {
     "title": "三商戦 一橋大学",
     "start": "2023-12-09",
     "backgroundColor": "orange"
