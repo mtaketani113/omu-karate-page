@@ -598,6 +598,19 @@
       "https://www.youtube.com/embed/Iney9PQJvQQ"
     ],
     "pre": "2023-09-12",
+    "next": "2023-10-28"
+  },
+  "2023-10-28": {
+    "description": "大矢先輩がいらっしゃいました",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "移動", "detail": "順突き、逆突き、下段払いからの逆突きなど" },
+      { "title": "打ち込み", "detail": "刻み突き、中段突きを練習" },
+      { "title": "型", "detail": "審査に向けて基本型の練習" }
+    ],
+    "images": [],
+    "videos": [],
+    "pre": "2023-10-17",
     "next": null
   }
 }
