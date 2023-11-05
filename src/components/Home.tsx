@@ -49,7 +49,7 @@ const Home = () => {
       </Typography>
       <Typography paragraph>
         <li>
-          23年11月11日 杉本町で13時から審査会
+          23年11月11日 杉本町で13時から昇級審査
         </li>
         <li>
           23年12月9日 一橋大学で三商戦
