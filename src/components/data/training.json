@@ -611,6 +611,26 @@
     "images": [],
     "videos": [],
     "pre": "2023-10-17",
-    "next": null
+    "next": "2023-11-09"
+  },
+  "2023-11-09": {
+    "description": "1回生の仲間が増えました！！",
+    "practice": [
+      { "title": "基本", "detail": "受け、突き、蹴りの練習" },
+      { "title": "型", "detail": "審査に向けて基本型の練習" },
+      { "title": "打ち込み", "detail": "刻み突き、中段突きを練習" }
+    ],
+    "images": [
+      "https://img.youtube.com/vi/b0CWZGscrDY/0.jpg",
+      "https://img.youtube.com/vi/O5iT_Xyn8XA/0.jpg",
+      "https://img.youtube.com/vi/rA5_FDzFUSU/0.jpg"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/b0CWZGscrDY",
+      "https://www.youtube.com/embed/O5iT_Xyn8XA",
+      "https://www.youtube.com/embed/rA5_FDzFUSU"
+    ],
+    "pre": "2023-10-17",
+    "next": "2023-10-28"
   }
 }
