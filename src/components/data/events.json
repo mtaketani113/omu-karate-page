@@ -390,9 +390,37 @@
     "backgroundColor": "green"
   },
   {
+    "title": "加藤師範参加",
+    "start": "2023-11-16",
+    "backgroundColor": "blue"
+  },
+  {
     "title": "杉本町",
     "start": "2023-11-18 13:00",
     "end": "2023-11-18 15:30"
+  },
+  {
+    "title": "竹谷参加",
+    "start": "2023-11-18",
+    "backgroundColor": "blue"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-11-21 18:30",
+    "end": "2023-11-21 20:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-11-23 18:30",
+    "end": "2023-11-23 20:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-11-28 17:00",
+    "end": "2023-11-28 19:00",
+    "backgroundColor": "green"
   },
   {
     "title": "三商戦 一橋大学",
