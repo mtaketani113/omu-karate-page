@@ -434,6 +434,29 @@
     "backgroundColor": "green"
   },
   {
+    "title": "中百舌鳥",
+    "start": "2023-11-30 17:30",
+    "end": "2023-11-30 20:00",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "杉本町",
+    "start": "2023-12-02 13:00",
+    "end": "2023-12-02 15:00"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-12-05 17:30",
+    "end": "2023-12-05 19:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-12-07 17:30",
+    "end": "2023-12-07 19:30",
+    "backgroundColor": "green"
+  },
+  {
     "title": "三商戦 一橋大学",
     "start": "2023-12-09",
     "backgroundColor": "orange"
@@ -442,5 +465,39 @@
     "title": "竹谷参加",
     "start": "2023-12-09",
     "backgroundColor": "blue"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-12-12 17:30",
+    "end": "2023-12-12 19:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-12-14 17:30",
+    "end": "2023-12-14 19:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "杉本町",
+    "start": "2023-12-16 13:00",
+    "end": "2023-12-16 15:00"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-12-19 17:30",
+    "end": "2023-12-19 19:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "中百舌鳥",
+    "start": "2023-12-21 17:30",
+    "end": "2023-12-21 19:30",
+    "backgroundColor": "green"
+  },
+  {
+    "title": "杉本町",
+    "start": "2023-12-23 13:00",
+    "end": "2023-12-23 15:00"
   }
 ]
