@@ -547,10 +547,25 @@
     "end": "2024-03-09 15:00"
   },
   {
+    "title": "監督参加",
+    "start": "2024-03-09",
+    "backgroundColor": "blue"
+  },
+  {
     "title": "中百舌鳥",
     "start": "2024-03-14 16:30",
     "end": "2024-03-14 20:00",
     "backgroundColor": "green"
+  },
+  {
+    "title": "杉本町",
+    "start": "2024-03-16 13:00",
+    "end": "2024-03-16 15:00"
+  },
+  {
+    "title": "監督参加",
+    "start": "2024-03-16",
+    "backgroundColor": "blue"
   },
   {
     "title": "中百舌鳥",
