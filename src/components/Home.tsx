@@ -48,12 +48,8 @@ const Home = () => {
         23年11月5日 更新
       </Typography>
       <Typography paragraph>
-        <li>
-          23年11月11日 杉本町で10時から昇級審査
-        </li>
-        <li>
-          23年12月9日 一橋大学で三商戦
-        </li>
+        <li>23年11月11日 杉本町で10時から昇級審査</li>
+        <li>23年12月9日 一橋大学で三商戦</li>
       </Typography>
       <Typography paragraph color="green">
         23年6月29日 更新
