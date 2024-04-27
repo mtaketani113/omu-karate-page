@@ -16,6 +16,7 @@ import ImageShihan from './images/shihan.jpg';
 import ImageUmekage from './images/umekage.jpg';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import NoImage from './images/no_image_logo.png';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -79,6 +80,41 @@ const Member = () => {
     ),
   ];
 
+  const rowsSecond = [
+    createData(
+      '',
+      '農学部',
+      '',
+      '杉本キャンパス',
+      NoImage,
+      '0% 30%',
+    ),
+    createData(
+      '',
+      '農学部',
+      '',
+      '中百舌鳥キャンパス',
+      NoImage,
+      '0% 30%',
+    ),
+    createData(
+      '',
+      '農学部',
+      '',
+      '中百舌鳥キャンパス',
+      NoImage,
+      '0% 30%',
+    ),
+    createData(
+      '',
+      '理学部',
+      '',
+      '杉本キャンパス',
+      NoImage,
+      '0% 30%',
+    ),
+  ];
+
   function createCoachData(
     position: string,
     name: string,
@@ -115,7 +151,7 @@ const Member = () => {
       </HelmetProvider>
       <h1 data-testid="player">現役紹介</h1>
       <Typography paragraph>2回生3名、1回生3名で頑張っています。</Typography>
-      <h2>二回生</h2>
+      <h2>三回生</h2>
 
       <Grid container spacing={4}>
         {rows.map((row, i) => (
@@ -151,8 +187,37 @@ const Member = () => {
         ;
       </Grid>
 
+      <h2>二回生</h2>
+      <Grid container spacing={4}>
+        {rowsSecond.map((row, i) => (
+          <Grid item key={row.name + i} xs={12} sm={6} md={4}>
+            <CardActionArea onClick={(e) => handleImage(row.image)}>
+              <Card sx={{ maxWidth: 445 }}>
+                <CardMedia
+                  className="cardImage"
+                  component="img"
+                  height="140"
+                  src={row.image}
+                  alt={row.name}
+                  style={{ objectPosition: row.imagePosition }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h6" component="div">
+                    学部：{row.department}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {row.comment}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </CardActionArea>
+          </Grid>
+        ))}
+        ;
+      </Grid>
+
       <h2>一回生</h2>
-      <Typography paragraph>4名入部してくれました！！</Typography>
+      <Typography paragraph>現在2名入部してくれました！！</Typography>
 
       <h1 data-testid="coach">指導者紹介</h1>
 
