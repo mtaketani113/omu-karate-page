@@ -104,6 +104,10 @@ const GalleryLinks = () => {
       <h1 data-testid="practice_title">練習メニュー・風景</h1>
 
       {rows}
+      <Typography paragraph>
+        24年以降は
+          <a href="https://omu-karate-org.github.io/blog/list/1">こちら</a>
+      </Typography>
     </>
   );
 };

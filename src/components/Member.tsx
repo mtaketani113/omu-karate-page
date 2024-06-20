@@ -217,7 +217,7 @@ const Member = () => {
       </Grid>
 
       <h2>一回生</h2>
-      <Typography paragraph>現在2名入部してくれました！！</Typography>
+      <Typography paragraph>現在5名入部してくれました！！</Typography>
 
       <h1 data-testid="coach">指導者紹介</h1>
 
