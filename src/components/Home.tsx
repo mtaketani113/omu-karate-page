@@ -45,7 +45,7 @@ const Home = () => {
 
       <h2 data-testid="event_title">イベント情報</h2>
       <Typography paragraph color="green">
-        23年6月30日 更新
+        25年6月30日 更新
       </Typography>
       <Typography paragraph>
         <li>
