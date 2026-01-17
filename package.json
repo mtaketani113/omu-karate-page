@@ -29,7 +29,6 @@
     "react-image-gallery": "^1.2.11",
     "react-router-dom": "^6.4.3",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "5.0.1",
     "react-share": "^4.4.1",
     "react-twitter-embed": "^4.0.4",
     "react-use": "^17.4.0",
@@ -37,8 +36,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "set GENERATE_SOURCEMAP=false && react-scripts build",
+    "start": "vite",
+    "build": "tsc --noEmit && vite build",
     "test": "jest",
     "eject": "react-scripts eject",
     "format": "prettier --check ./src",
@@ -72,9 +71,15 @@
     },
     "preset": "ts-jest",
     "testEnvironment": "jest-environment-jsdom",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(axios|@fullcalendar)/)"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.ts"
-    ]
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "ts-jest"
+    }
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
@@ -82,10 +87,12 @@
     "@types/react-helmet": "^6.1.5",
     "@types/react-image-gallery": "^1.2.0",
     "@types/react-router-hash-link": "^2.4.5",
+    "@vitejs/plugin-react": "^5.1.2",
     "gh-pages": "^6.3.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
     "prettier": "^2.7.1",
-    "ts-jest": "^29.4.6"
+    "ts-jest": "^29.4.6",
+    "vite": "^7.3.1"
   }
 }

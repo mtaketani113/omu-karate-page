@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import { BrowserRouter } from 'react-router-dom';
@@ -19,6 +18,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import MainPageRoutes from './MainPageRoutes';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Box from '@mui/material/Box';
 import { useCookies } from 'react-cookie';
 
 // AppContext が保持する値の型
