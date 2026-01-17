@@ -72,10 +72,15 @@
     },
     "preset": "ts-jest",
     "testEnvironment": "jest-environment-jsdom",
+    "transformIgnorePatterns": ["node_modules/(?!(axios|@fullcalendar)/)"],
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.ts"
-    ]
-  },
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "ts-jest"
+    }
+  }, 
+  
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
     "@types/node": "^25.0.9",
