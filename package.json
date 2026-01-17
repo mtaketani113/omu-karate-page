@@ -37,8 +37,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "set GENERATE_SOURCEMAP=false && react-scripts build",
+	  "start": "vite",
+	  "build": "tsc --noEmit && vite build && cp dist/index.html dist/404.html",
     "test": "jest",
     "eject": "react-scripts eject",
     "format": "prettier --check ./src",
@@ -82,10 +82,12 @@
     "@types/react-helmet": "^6.1.5",
     "@types/react-image-gallery": "^1.2.0",
     "@types/react-router-hash-link": "^2.4.5",
+    "@vitejs/plugin-react": "^5.1.2",
     "gh-pages": "^6.3.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
     "prettier": "^2.7.1",
-    "ts-jest": "^29.4.6"
+    "ts-jest": "^29.4.6",
+    "vite": "^7.3.1"
   }
 }
