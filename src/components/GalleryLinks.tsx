@@ -106,7 +106,7 @@ const GalleryLinks = () => {
       {rows}
       <Typography paragraph>
         24年以降は
-          <a href="https://omu-karate-org.github.io/blog/list/1">こちら</a>
+        <a href="https://omu-karate-org.github.io/blog/list/1">こちら</a>
       </Typography>
     </>
   );
