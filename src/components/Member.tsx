@@ -81,38 +81,10 @@ const Member = () => {
   ];
 
   const rowsSecond = [
-    createData(
-      '',
-      '農学部',
-      '',
-      '杉本キャンパス',
-      NoImage,
-      '0% 30%',
-    ),
-    createData(
-      '',
-      '農学部',
-      '',
-      '中百舌鳥キャンパス',
-      NoImage,
-      '0% 30%',
-    ),
-    createData(
-      '',
-      '農学部',
-      '',
-      '中百舌鳥キャンパス',
-      NoImage,
-      '0% 30%',
-    ),
-    createData(
-      '',
-      '理学部',
-      '',
-      '杉本キャンパス',
-      NoImage,
-      '0% 30%',
-    ),
+    createData('', '農学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
+    createData('', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
+    createData('', '理学部', '', '杉本キャンパス', NoImage, '0% 30%'),
   ];
 
   function createCoachData(
