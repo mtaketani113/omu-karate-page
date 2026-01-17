@@ -38,7 +38,7 @@
   },
   "scripts": {
 	  "start": "vite",
-	  "build": "tsc --noEmit && vite build && cp dist/index.html dist/404.html",
+	  "build": "tsc --noEmit && vite build",
     "test": "jest",
     "eject": "react-scripts eject",
     "format": "prettier --check ./src",
