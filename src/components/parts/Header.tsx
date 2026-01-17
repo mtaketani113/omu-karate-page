@@ -1,4 +1,3 @@
-import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
