@@ -36,7 +36,7 @@ const KaratedoAbout = () => {
       <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
         <iframe
           style={{ width: '100%', aspectRatio: '16/9', border: '0' }}
-          src="https://www.youtube.com/embed/rJO8TMbV_uI"
+          src="https://www.youtube.com/embed/6M1UaIsXnXc"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -46,7 +46,7 @@ const KaratedoAbout = () => {
       <Box display="flex" justifyContent="center" alignItems="center" marginBottom="10px">
         <iframe
           style={{ width: '100%', aspectRatio: '16/9', border: '0' }}
-          src="https://www.youtube.com/embed/Vnea9lQLp0A"
+          src="https://www.youtube.com/embed/6L6rH_8BgU8"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
