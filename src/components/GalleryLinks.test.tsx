@@ -36,7 +36,7 @@ describe('GalleryLinks init', () => {
     );
 
     // 開くボタンを押した場合にトレーニングメニューに遷移すること
-    userEvent.click(screen.getByTestId('open_training_menu0'));
+    await userEvent.click(screen.getByTestId('open_training_menu0'));
     expect(screen.queryByTestId('open_training_menu0')).not.toBeInTheDocument();
     expect(screen.getByTestId('breadcrumbs')).toBeInTheDocument();
     // 最新の練習を開いているため、前へのリンクはあるが次へのリンクはない。

@@ -46,7 +46,7 @@ describe('Menu', () => {
     );
     // 練習場所をクリックすると練習場所と時間のリンクが表示される
     const placeButton = screen.getByTestId('place');
-    userEvent.click(placeButton);
+    await userEvent.click(placeButton);
     expect(screen.getByTestId('sugimoto')).toBeInTheDocument();
     expect(screen.getByTestId('nakamozu')).toBeInTheDocument();
     expect(screen.getByTestId('time')).toBeInTheDocument();
@@ -99,38 +99,38 @@ describe('Menu', () => {
       </MemoryRouter>,
     );
     // 部員紹介をクリック
-    userEvent.click(screen.getByTestId('member'));
+    await userEvent.click(screen.getByTestId('member'));
     expect(screen.getByTestId('player')).toBeInTheDocument();
 
     // 練習予定をクリック
-    userEvent.click(screen.getByTestId('schedule'));
+    await userEvent.click(screen.getByTestId('schedule'));
     expect(screen.getByTestId('schedule_title')).toBeInTheDocument();
 
     // 練習場所・時間をクリック
-    userEvent.click(screen.getByTestId('place'));
+    await userEvent.click(screen.getByTestId('place'));
     expect(screen.getByTestId('place_title')).toBeInTheDocument();
 
     // リンク集をクリック
-    userEvent.click(screen.getByTestId('links'));
+    await userEvent.click(screen.getByTestId('links'));
     expect(screen.getByTestId('omu_karate_twitter')).toBeInTheDocument();
 
     // お問い合わせをクリック
-    userEvent.click(screen.getByTestId('inquiry'));
+    await userEvent.click(screen.getByTestId('inquiry'));
     expect(screen.getByTestId('inquiry_title')).toBeInTheDocument();
     expect(screen.getByTestId('change_log_title')).toBeInTheDocument();
     expect(await screen.findByText('1.0.0')).toBeInTheDocument();
     expect(await screen.findByText('1.0.1')).toBeInTheDocument();
 
     // プライバシーポリシー
-    userEvent.click(screen.getByTestId('privacy_policy'));
+    await userEvent.click(screen.getByTestId('privacy_policy'));
     expect(screen.getByTestId('privacy_policy_title')).toBeInTheDocument();
 
     // 練習メニュー・風景をクリック
-    userEvent.click(screen.getByTestId('galleryLinks'));
+    await userEvent.click(screen.getByTestId('galleryLinks'));
     expect(screen.getByTestId('practice_title')).toBeInTheDocument();
 
     // ホームをクリック
-    userEvent.click(screen.getByTestId('home'));
+    await userEvent.click(screen.getByTestId('home'));
     expect(screen.getByTestId('event_title')).toBeInTheDocument();
 
     jest.spyOn(axios, 'get').mockResolvedValue({
@@ -149,17 +149,17 @@ describe('Menu', () => {
     expect(screen.getByTestId('faqDetails')).not.toBeVisible();
 
     // 空手道部についてをクリック
-    userEvent.click(screen.getByTestId('about'));
+    await userEvent.click(screen.getByTestId('about'));
     expect(screen.getByTestId('aboutDetails')).toBeVisible();
     expect(screen.getByTestId('annualEventsDetails')).not.toBeVisible();
     expect(screen.getByTestId('faqDetails')).not.toBeVisible();
 
     // 年間行事をクリック
-    userEvent.click(screen.getByTestId('annualEvents'));
+    await userEvent.click(screen.getByTestId('annualEvents'));
     expect(screen.getByTestId('annualEventsDetails')).toBeVisible();
 
     // FAQをクリック
-    userEvent.click(screen.getByTestId('faq'));
+    await userEvent.click(screen.getByTestId('faq'));
     expect(screen.getByTestId('faqDetails')).toBeVisible();
   });
 });

@@ -42,10 +42,10 @@ describe('TrainingMenu init', () => {
     );
 
     const preTopButton = screen.getByTestId('pre_top_button');
-    userEvent.click(preTopButton);
+    await userEvent.click(preTopButton);
     expect(screen.getByTestId('breadcrumbs')).toHaveTextContent('2022-12-08');
     const preBottomButton = screen.getByTestId('pre_bottom_button');
-    userEvent.click(preBottomButton);
+    await userEvent.click(preBottomButton);
     expect(screen.getByTestId('breadcrumbs')).toHaveTextContent('2022-12-03');
   });
 
@@ -58,10 +58,10 @@ describe('TrainingMenu init', () => {
     );
 
     const nextTopButton = screen.getByTestId('next_top_button');
-    userEvent.click(nextTopButton);
+    await userEvent.click(nextTopButton);
     expect(screen.getByTestId('breadcrumbs')).toHaveTextContent('2022-12-15');
     const nextBottomButton = screen.getByTestId('next_bottom_button');
-    userEvent.click(nextBottomButton);
+    await userEvent.click(nextBottomButton);
     expect(screen.getByTestId('breadcrumbs')).toHaveTextContent('2022-12-17');
   });
 });

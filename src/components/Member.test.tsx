@@ -32,11 +32,11 @@ describe('Member init', () => {
     );
 
     // 開くボタンを押した場合にモーダルが表示されるかを確認
-    userEvent.click(screen.getByTestId('open_coach0'));
+    await userEvent.click(screen.getByTestId('open_coach0'));
     expect(screen.getByTestId('open_image')).toBeInTheDocument();
 
     // 閉じるボタンを押した場合にモーダルが非表示になることを確認
-    userEvent.click(screen.getByTestId('close'));
+    await userEvent.click(screen.getByTestId('close'));
     expect(screen.getByTestId('open_image')).not.toBeVisible();
   });
 
@@ -52,7 +52,7 @@ describe('Member init', () => {
     );
 
     // 府大OBリストをクリックしたときに遷移することを確認
-    userEvent.click(screen.getByTestId('prefectureObListLink'));
+    await userEvent.click(screen.getByTestId('prefectureObListLink'));
     expect(screen.getByTestId('ob_title')).toBeInTheDocument();
   });
 });
