@@ -127,7 +127,7 @@ const Member = () => {
 
       <Grid container spacing={4}>
         {rows.map((row, i) => (
-          <Grid item key={row.name + i} xs={12} sm={6} md={4}>
+          <Grid key={row.name + i} size={{ xs: 12, sm: 6, md: 4 }}>
             <CardActionArea onClick={(e) => handleImage(row.image)}>
               <Card sx={{ maxWidth: 445 }}>
                 <CardMedia
@@ -162,7 +162,7 @@ const Member = () => {
       <h2>二回生</h2>
       <Grid container spacing={4}>
         {rowsSecond.map((row, i) => (
-          <Grid item key={row.name + i} xs={12} sm={6} md={4}>
+          <Grid key={row.name + i} size={{ xs: 12, sm: 6, md: 4 }}>
             <CardActionArea onClick={(e) => handleImage(row.image)}>
               <Card sx={{ maxWidth: 445 }}>
                 <CardMedia
@@ -195,7 +195,7 @@ const Member = () => {
 
       <Grid container spacing={4}>
         {rowsCoach.map((row, i) => (
-          <Grid item key={row.name + i} xs={12} sm={6} md={4}>
+          <Grid key={row.name + i} size={{ xs: 12, sm: 6, md: 4 }}>
             <CardActionArea onClick={(e) => handleImage(row.image)} data-testid={'open_coach' + i}>
               <Card sx={{ maxWidth: 445 }}>
                 <CardMedia
@@ -232,7 +232,7 @@ const Member = () => {
 
       <Grid container spacing={4}>
         {rowsOB.map((row, i) => (
-          <Grid item key={row.name + i} xs={12} sm={6} md={4}>
+          <Grid key={row.name + i} size={{ xs: 12, sm: 6, md: 4 }}>
             <CardActionArea onClick={(e) => handleImage(row.image)}>
               <Card sx={{ maxWidth: 445 }}>
                 <CardMedia

@@ -41,7 +41,7 @@ const GalleryLinks = () => {
       let imagePath = training[date].images.length > 0 ? training[date].images[0] : NoImage;
 
       tmpRow.push(
-        <Grid item key={date} xs={12} sm={6} md={4}>
+        <Grid key={date} size={{ xs: 12, sm: 6, md: 4 }}>
           <Card sx={{ maxWidth: 445 }}>
             <CardActionArea
               component={Link}
