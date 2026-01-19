@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { XEmbed, InstagramEmbed } from 'react-social-media-embed';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
@@ -156,10 +156,11 @@ const Home = () => {
         </li>
       </Typography>
 
-      <TwitterTimelineEmbed
-        sourceType="profile"
-        screenName="omu_karatedo"
-        options={{ height: 600 }}
+      <XEmbed
+        url={"https://x.com/omu_karatedo"}
+      />
+      <InstagramEmbed
+        url={"https://www.instagram.com/omu_karatedo/"}
       />
     </>
   );

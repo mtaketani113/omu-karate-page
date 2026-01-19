@@ -1,5 +1,4 @@
-import '@fullcalendar/react/dist/vdom';
-import FullCalendar, { DayCellContentArg } from '@fullcalendar/react';
+import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import jaLocale from '@fullcalendar/core/locales/ja';
 import Events from './data/events.json';
@@ -77,7 +76,7 @@ const Schedule = () => {
               start: 'title',
               end: 'dayGridMonth,timeGridWeek,timeGridDay today prev,next',
             }}
-            dayCellContent={(event: DayCellContentArg) =>
+            dayCellContent={(event: any) =>
               (event.dayNumberText = event.dayNumberText.replace('日', ''))
             }
           />
