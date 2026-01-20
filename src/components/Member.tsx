@@ -53,9 +53,9 @@ const Member = () => {
     return { name, department, former, comment, image, imagePosition };
   }
 
-  const rows = [
+  const rowsFourth = [
     createData(
-      '主将',
+      '',
       '理学部',
       '桃山学院高校',
       '杉本キャンパス',
@@ -63,7 +63,7 @@ const Member = () => {
       '0% 30%',
     ),
     createData(
-      '副主将',
+      '',
       '工学部',
       '大阪桐蔭高校',
       '中百舌鳥キャンパス',
@@ -71,7 +71,7 @@ const Member = () => {
       '0% 30%',
     ),
     createData(
-      '主務',
+      '',
       '生活科学部',
       '桃山学院高校',
       '杉本キャンパス',
@@ -80,11 +80,21 @@ const Member = () => {
     ),
   ];
 
+  const rowsThird = [
+    createData('主将', '理学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('副主将', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
+    createData('', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
+  ];
+
   const rowsSecond = [
-    createData('', '農学部', '', '杉本キャンパス', NoImage, '0% 30%'),
-    createData('', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
-    createData('', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
-    createData('', '理学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('', '法学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('', '法学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('', '工学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('', '', '', '杉本キャンパス', NoImage, '0% 30%'),
+  ];
+
+  const rowsFirst = [
+    createData('', '', '', '杉本キャンパス', NoImage, '0% 30%'),
   ];
 
   function createCoachData(
@@ -122,11 +132,43 @@ const Member = () => {
         </Helmet>
       </HelmetProvider>
       <h1 data-testid="player">現役紹介</h1>
-      <Typography paragraph>2回生3名、1回生3名で頑張っています。</Typography>
-      <h2>三回生</h2>
+      <Typography paragraph>4回生3名、3回生3名、2回生4名、1回生1名で頑張っています。</Typography>
+      <h2>四回生</h2>
 
       <Grid container spacing={4}>
-        {rows.map((row, i) => (
+        {rowsFourth.map((row, i) => (
+          <Grid key={row.name + i} size={{ xs: 12, sm: 6, md: 4 }}>
+            <CardActionArea onClick={(e) => handleImage(row.image)}>
+              <Card sx={{ maxWidth: 445 }}>
+                <CardMedia
+                  className="cardImage"
+                  component="img"
+                  height="140"
+                  src={row.image}
+                  alt={row.name}
+                  style={{ objectPosition: row.imagePosition }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h6" component="div">
+                    学部：{row.department}
+                  </Typography>
+                  <Typography gutterBottom variant="h6" component="div">
+                    出身校：{row.former}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {row.comment}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </CardActionArea>
+          </Grid>
+        ))}
+        ;
+      </Grid>
+
+      <h2>三回生</h2>
+      <Grid container spacing={4}>
+        {rowsThird.map((row, i) => (
           <Grid key={row.name + i} size={{ xs: 12, sm: 6, md: 4 }}>
             <CardActionArea onClick={(e) => handleImage(row.image)}>
               <Card sx={{ maxWidth: 445 }}>
@@ -144,9 +186,6 @@ const Member = () => {
                   </Typography>
                   <Typography gutterBottom variant="h6" component="div">
                     学部：{row.department}
-                  </Typography>
-                  <Typography gutterBottom variant="h6" component="div">
-                    出身校：{row.former}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     {row.comment}
@@ -189,7 +228,33 @@ const Member = () => {
       </Grid>
 
       <h2>一回生</h2>
-      <Typography paragraph>現在5名入部してくれました！！</Typography>
+      <Grid container spacing={4}>
+        {rowsFirst.map((row, i) => (
+          <Grid key={row.name + i} size={{ xs: 12, sm: 6, md: 4 }}>
+            <CardActionArea onClick={(e) => handleImage(row.image)}>
+              <Card sx={{ maxWidth: 445 }}>
+                <CardMedia
+                  className="cardImage"
+                  component="img"
+                  height="140"
+                  src={row.image}
+                  alt={row.name}
+                  style={{ objectPosition: row.imagePosition }}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h6" component="div">
+                    学部：{row.department}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {row.comment}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </CardActionArea>
+          </Grid>
+        ))}
+        ;
+      </Grid>
 
       <h1 data-testid="coach">指導者紹介</h1>
 
