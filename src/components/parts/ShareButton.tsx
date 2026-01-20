@@ -5,7 +5,7 @@ import {
   TwitterShareButton,
   FacebookIcon,
   LineIcon,
-  TwitterIcon,
+  XIcon,
 } from 'react-share';
 import { useLocation } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -33,7 +33,7 @@ const ShareButton = () => {
       </Grid>
       <Grid size={{ xs: 2, lg: 1 }}>
         <TwitterShareButton url={URL + location.pathname} title={QUOTE}>
-          <TwitterIcon size={48} round />
+          <XIcon size={48} round />
         </TwitterShareButton>
       </Grid>
       <Grid size={{ xs: 2, lg: 1 }}>

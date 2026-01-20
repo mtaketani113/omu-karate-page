@@ -48,9 +48,7 @@ const Home = () => {
         26年1月20日 更新
       </Typography>
       <Typography paragraph>
-        <li>
-          26年1月31日 13時30分 杉本キャンパスで追い出し戦＋幹部交代式
-        </li>
+        <li>26年1月31日 13時30分 杉本キャンパスで追い出し戦＋幹部交代式</li>
       </Typography>
 
       <h2>Xの投稿</h2>
