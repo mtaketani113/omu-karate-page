@@ -156,12 +156,8 @@ const Home = () => {
         </li>
       </Typography>
 
-      <XEmbed
-        url={"https://x.com/omu_karatedo/status/1998559620303040628"}
-      />
-      <InstagramEmbed
-        url={"https://www.instagram.com/omu_karatedo/"}
-      />
+      <XEmbed url={'https://x.com/omu_karatedo/status/1998559620303040628'} />
+      <InstagramEmbed url={'https://www.instagram.com/omu_karatedo/'} />
     </>
   );
 };

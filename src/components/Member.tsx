@@ -93,9 +93,7 @@ const Member = () => {
     createData('', '', '', '杉本キャンパス', NoImage, '0% 30%'),
   ];
 
-  const rowsFirst = [
-    createData('', '', '', '杉本キャンパス', NoImage, '0% 30%'),
-  ];
+  const rowsFirst = [createData('', '', '', '杉本キャンパス', NoImage, '0% 30%')];
 
   function createCoachData(
     position: string,
