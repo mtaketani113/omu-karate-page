@@ -33,16 +33,16 @@ const Home = () => {
           slideInterval={5000}
         />
       </div>
-      <Typography paragraph>
+      <Typography component="p">
         大阪府立大学、大阪市立大学が合併し大阪公立大学(大公大)となりました。
       </Typography>
-      <Typography paragraph>そんな大阪公立大学の空手道部を応援するページです。</Typography>
+      <Typography component="p">そんな大阪公立大学の空手道部を応援するページです。</Typography>
 
       <h2 data-testid="event_title">イベント情報</h2>
-      <Typography paragraph color="green">
+      <Typography component="p" color="green">
         26年1月20日 更新
       </Typography>
-      <Typography paragraph>
+      <Typography component="p">
         <li>26年1月31日 13時30分 杉本キャンパスで追い出し戦＋幹部交代式</li>
       </Typography>
 

@@ -128,7 +128,7 @@ const Member = () => {
     <>
       <title>部員紹介 | {PAGE_MAIN_TITLE}</title>
       <h1 data-testid="player">現役紹介</h1>
-      <Typography paragraph>4回生3名、3回生3名、2回生4名、1回生1名で頑張っています。</Typography>
+      <Typography component="p">4回生3名、3回生3名、2回生4名、1回生1名で頑張っています。</Typography>
       <h2>四回生</h2>
 
       <Grid container spacing={4}>
@@ -289,7 +289,7 @@ const Member = () => {
       </Grid>
 
       <h1 data-testid="ob">OB紹介</h1>
-      <Typography paragraph>よく来ていただいてるOBを紹介します。</Typography>
+      <Typography component="p">よく来ていただいてるOBを紹介します。</Typography>
 
       <Grid container spacing={4}>
         {rowsOB.map((row, i) => (
