@@ -1,18 +1,12 @@
 import Typography from '@mui/material/Typography';
 import { XEmbed, InstagramEmbed } from 'react-social-media-embed';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
 const Home = () => {
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>大阪公立大学空手道部 応援ページ</title>
       <div id="homeHeaderImages">
         <ImageGallery
           items={[

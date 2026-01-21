@@ -6,6 +6,21 @@ import MainPageRoutes from '../../MainPageRoutes';
 import axios from 'axios';
 
 describe('Menu', () => {
+  beforeAll(() => {
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(), // Deprecated
+        removeListener: jest.fn(), // Deprecated
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
+  });
   it('init', async () => {
     render(
       <BrowserRouter>
@@ -30,15 +45,6 @@ describe('Menu', () => {
   });
 
   it('open places', async () => {
-    window.matchMedia =
-      window.matchMedia ||
-      function () {
-        return {
-          matches: false,
-          addListener: function () {},
-          removeListener: function () {},
-        };
-      };
     render(
       <BrowserRouter>
         <Menu />
@@ -53,15 +59,6 @@ describe('Menu', () => {
   });
 
   it('open introduction', async () => {
-    window.matchMedia =
-      window.matchMedia ||
-      function () {
-        return {
-          matches: false,
-          addListener: function () {},
-          removeListener: function () {},
-        };
-      };
     render(
       <BrowserRouter>
         <Menu />

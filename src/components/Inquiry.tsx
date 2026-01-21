@@ -10,7 +10,6 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import React, { ReactNode, useEffect, useState } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ColorModeContext, ColorModeContextType } from '../App';
 
 const Inquiry = () => {
@@ -113,11 +112,7 @@ const Inquiry = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>お問い合わせ | 大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>お問い合わせ | 大阪公立大学空手道部 応援ページ</title>
       <h1 data-testid="inquiry_title">お問い合わせ</h1>
       <Table
         style={{

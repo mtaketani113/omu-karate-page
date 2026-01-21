@@ -1,13 +1,7 @@
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-
 const Links = () => {
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>リンク集 | 大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>リンク集 | 大阪公立大学空手道部 応援ページ</title>
       <h2 data-testid="omu_karate_twitter">Twitter</h2>
       <li>
         <a href="https://twitter.com/omu_karatedo">大阪公立大学のTwitter</a>

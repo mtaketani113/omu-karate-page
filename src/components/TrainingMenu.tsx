@@ -11,7 +11,6 @@ import {
   TableContainer,
   TableRow,
 } from '@mui/material';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ImageGallery from 'react-image-gallery';
 import { useMedia } from 'react-use';
 import 'react-image-gallery/styles/css/image-gallery.css';
@@ -145,11 +144,7 @@ const TrainingMenu = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>練習メニュー | 大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>練習メニュー | 大阪公立大学空手道部 応援ページ</title>
       <h3 data-testid="breadcrumbs">
         <Link to="/galleryLinks">練習メニュー・風景</Link>&nbsp; &gt; &nbsp; {date}
       </h3>

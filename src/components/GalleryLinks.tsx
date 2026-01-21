@@ -1,6 +1,5 @@
 import Training from './data/training.json';
 import React, { ReactNode, useEffect, useState } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   Card,
@@ -96,11 +95,7 @@ const GalleryLinks = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>練習メニュー・風景 | 大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>練習メニュー・風景 | 大阪公立大学空手道部 応援ページ</title>
       <h1 data-testid="practice_title">練習メニュー・風景</h1>
 
       {rows}
