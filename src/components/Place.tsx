@@ -1,8 +1,8 @@
 import { Alert, Box, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useMedia } from 'react-use';
 import { useState } from 'react';
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 const Place = () => {
   const isWide = useMedia('(min-width: 780px)');
@@ -12,11 +12,7 @@ const Place = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>練習場所・時間 | 大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>練習場所・時間 | {PAGE_MAIN_TITLE}</title>
       <h2 data-testid="place_title">練習場所</h2>
       <h3 className="anchor" id="sugimoto">
         杉本キャンパス 新武道場

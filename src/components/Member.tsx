@@ -14,9 +14,9 @@ import { useState } from 'react';
 import ImageTaketani from './images/taketani.jpg';
 import ImageShihan from './images/shihan.jpg';
 import ImageUmekage from './images/umekage.jpg';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import NoImage from './images/no_image_logo.png';
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -29,6 +29,8 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
+
+type NonEmptyString = Exclude<string, ''>;
 
 const Member = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -47,7 +49,7 @@ const Member = () => {
     department: string,
     former: string,
     comment: string,
-    image: string,
+    image: NonEmptyString,
     imagePosition: string,
   ) {
     return { name, department, former, comment, image, imagePosition };
@@ -124,11 +126,7 @@ const Member = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>部員紹介 | 大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>部員紹介 | {PAGE_MAIN_TITLE}</title>
       <h1 data-testid="player">現役紹介</h1>
       <Typography paragraph>4回生3名、3回生3名、2回生4名、1回生1名で頑張っています。</Typography>
       <h2>四回生</h2>

@@ -3,12 +3,12 @@ import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import KaratedoAbout from './KaratedoAbout';
 import KaratedoAnnualEvents from './KaratedoAnnualEvents';
 import KaratedoFaq from './KaratedoFaq';
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 const Karatedo = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
@@ -46,11 +46,7 @@ const Karatedo = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>空手道部紹介 | 大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>空手道部紹介 | {PAGE_MAIN_TITLE}</title>
       <h2 data-testid="karatedo_title">空手道部紹介</h2>
       <Accordion expanded={expanded === 'about'} onChange={handleChange('about')}>
         <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">

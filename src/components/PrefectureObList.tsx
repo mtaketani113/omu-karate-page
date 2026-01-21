@@ -1,8 +1,8 @@
 import { Table, TableBody, TableHead, TableCell, TableRow } from '@mui/material';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 import jsonObList from './data/prefectureObList.json';
 import { ColorModeContext, ColorModeContextType } from '../App';
 import React, { ReactNode, useEffect, useState } from 'react';
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 const PrefectureObList = () => {
   const colorMode: ColorModeContextType = React.useContext(ColorModeContext);
@@ -61,11 +61,7 @@ const PrefectureObList = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>府大OB | 大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>府大OB | {PAGE_MAIN_TITLE}</title>
       <h1 data-testid="ob_title">府大OB</h1>
       <Table
         style={{

@@ -1,18 +1,13 @@
 import Typography from '@mui/material/Typography';
-import { XEmbed, InstagramEmbed } from 'react-social-media-embed';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import { PAGE_MAIN_TITLE } from './parts/constants';
+import { Tweet } from 'react-tweet';
 
 const Home = () => {
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>大阪公立大学空手道部 応援ページ</title>
-        </Helmet>
-      </HelmetProvider>
+      <title>{PAGE_MAIN_TITLE}</title>
       <div id="homeHeaderImages">
         <ImageGallery
           items={[
@@ -52,10 +47,9 @@ const Home = () => {
       </Typography>
 
       <h2>Xの投稿</h2>
-      <XEmbed url={'https://x.com/omu_karatedo/status/2012084003185230301'} />
-      <XEmbed url={'https://x.com/omu_karatedo/status/1998559620303040628'} />
-      <h2>Instagramの投稿</h2>
-      <InstagramEmbed url={'https://www.instagram.com/omu_karatedo/'} />
+      <Tweet id="2012084003185230301" />
+      <Tweet id="1998559620303040628" />
+      <Tweet id="1990084943964217637" />      
     </>
   );
 };

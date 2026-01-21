@@ -5,6 +5,21 @@ import GalleryLinks from './GalleryLinks';
 import TrainingMenu from './TrainingMenu';
 
 describe('GalleryLinks init', () => {
+  beforeAll(() => {
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(), // Deprecated
+        removeListener: jest.fn(), // Deprecated
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
+  });
   it('init', async () => {
     render(
       <BrowserRouter>
@@ -16,15 +31,6 @@ describe('GalleryLinks init', () => {
   });
 
   it('open training menu', async () => {
-    window.matchMedia =
-      window.matchMedia ||
-      function () {
-        return {
-          matches: false,
-          addListener: function () {},
-          removeListener: function () {},
-        };
-      };
     const route = '/galleryLinks';
     render(
       <MemoryRouter initialEntries={[route]}>
