@@ -95,12 +95,12 @@ const Place = () => {
         練習時間
       </h2>
       <h3>杉本キャンパス</h3>
-      <Typography paragraph>
+      <Typography component="p">
         <li>水曜日・・・17:00~19:00 ※不定期</li>
         <li>土曜日・・・10:00~12:00 ※不定期</li>
       </Typography>
       <h3>中百舌鳥キャンパス</h3>
-      <Typography paragraph>
+      <Typography component="p">
         <li>火曜日・・・18:30~20:30 ※不定期</li>
       </Typography>
       <Alert severity="error">
