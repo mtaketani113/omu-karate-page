@@ -14,6 +14,7 @@ import {
 import ImageGallery from 'react-image-gallery';
 import { useMedia } from 'react-use';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 /**
  * 練習メニュー・風景の画面
@@ -144,7 +145,7 @@ const TrainingMenu = () => {
 
   return (
     <>
-      <title>練習メニュー | 大阪公立大学空手道部 応援ページ</title>
+      <title>練習メニュー | {PAGE_MAIN_TITLE}</title>
       <h3 data-testid="breadcrumbs">
         <Link to="/galleryLinks">練習メニュー・風景</Link>&nbsp; &gt; &nbsp; {date}
       </h3>

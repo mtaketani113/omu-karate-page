@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import { useState } from 'react';
 import { Button } from '@mui/material';
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 const Schedule = () => {
   // 初期表示の日付をパラメータから取得
@@ -21,7 +22,7 @@ const Schedule = () => {
 
   return (
     <>
-      <title>練習予定 | 大阪公立大学空手道部 応援ページ</title>
+      <title>練習予定 | {PAGE_MAIN_TITLE}</title>
       <div>
         <h2 data-testid="schedule_title">練習予定</h2>
         <div className="fc-daygrid-event fc-daygrid-dot-event fc-event fc-event-start fc-event-end fc-event-future">

@@ -16,6 +16,7 @@ import ImageShihan from './images/shihan.jpg';
 import ImageUmekage from './images/umekage.jpg';
 import { Link } from 'react-router-dom';
 import NoImage from './images/no_image_logo.png';
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -125,7 +126,7 @@ const Member = () => {
 
   return (
     <>
-      <title>部員紹介 | 大阪公立大学空手道部 応援ページ</title>
+      <title>部員紹介 | {PAGE_MAIN_TITLE}</title>
       <h1 data-testid="player">現役紹介</h1>
       <Typography paragraph>4回生3名、3回生3名、2回生4名、1回生1名で頑張っています。</Typography>
       <h2>四回生</h2>
