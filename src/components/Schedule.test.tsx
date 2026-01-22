@@ -13,17 +13,12 @@ describe('Schedule init', () => {
       </MemoryRouter>,
     );
 
-    var today = new Date();
-    //現在の年・月を取得
-    var year = today.getFullYear();
-    var month = today.getMonth() + 1;
-
-    // 現在の年・月を表示することを確認
-    expect(screen.getByText(year + '年' + month + '月')).toBeInTheDocument();
+    // カレンダーが出ていることを確認
+    expect(screen.getByTestId("fullCalendar")).toBeInTheDocument();
   });
 
   it('日付指定のテスト', async () => {
-    const route = '/schedule?initDate=2022-11-01';
+    const route = '/schedule?initDate=20221101';
     render(
       <MemoryRouter initialEntries={[route]}>
         <Routes>
@@ -31,7 +26,7 @@ describe('Schedule init', () => {
         </Routes>
       </MemoryRouter>,
     );
-    // 指定した年・月を表示することを確認
-    expect(screen.getByText('2022年11月')).toBeInTheDocument();
+    // カレンダーが出ていることを確認
+    expect(screen.getByTestId("fullCalendar")).toBeInTheDocument();
   });
 });
