@@ -1,4 +1,4 @@
-import { PAGE_MAIN_TITLE } from "./parts/constants";
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 const PrivacyPolicy = () => {
   return (
