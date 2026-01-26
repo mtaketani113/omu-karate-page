@@ -88,7 +88,7 @@
 
 /* ダークモードの時のカラー */
 :root[theme='dark'] {
-  --goole-calendar-filter:invert(1) hue-rotate(180deg);
+  --google-calendar-filter:invert(1) hue-rotate(180deg);
 }
 
 main a:not([class]):link,
@@ -101,6 +101,6 @@ main a:not([class]):visited,
 }
 
 #fullCalendar{
-  filter: var(--goole-calendar-filter);
-  -webkit-filter: var(--goole-calendar-filter);
+  filter: var(--google-calendar-filter);
+  -webkit-filter: var(--google-calendar-filter);
 }
