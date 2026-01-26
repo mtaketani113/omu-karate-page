@@ -14,7 +14,7 @@ describe('Schedule init', () => {
     );
 
     // カレンダーが出ていることを確認
-    expect(screen.getByTestId("fullCalendar")).toBeInTheDocument();
+    expect(screen.getByTestId('fullCalendar')).toBeInTheDocument();
   });
 
   it('日付指定のテスト', async () => {
@@ -27,6 +27,6 @@ describe('Schedule init', () => {
       </MemoryRouter>,
     );
     // カレンダーが出ていることを確認
-    expect(screen.getByTestId("fullCalendar")).toBeInTheDocument();
+    expect(screen.getByTestId('fullCalendar')).toBeInTheDocument();
   });
 });
