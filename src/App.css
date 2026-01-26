@@ -86,33 +86,9 @@
   margin-top: -20px !important;
 }
 
-/* ライトモードの時のカラー */
-:root {
-  --sat-color: blue;
-  --sun-color: red;
-  --a-link-color: #0000ee;
-  --a-link-visited: #551b8c;
-  --fullCalendar-sat: #eaf4ff;
-  --fullCalendar-sun: #ffeaea;
-}
 /* ダークモードの時のカラー */
 :root[theme='dark'] {
-  --sat-color: #6964fa;
-  --sun-color: #fa6964;
-  --a-link-color: #0bd;
-  --a-link-visited: #3399ff;
-  --fullCalendar-sat: inherit;
-  --fullCalendar-sun: inherit;
-}
-
-td.fc-day-sat,
-th.fc-day-sat {
-  color: var(--sat-color);
-}
-
-td.fc-day-sun,
-th.fc-day-sun {
-  color: var(--sun-color);
+  --goole-calendar-filter:invert(1) hue-rotate(180deg);
 }
 
 main a:not([class]):link,
@@ -124,9 +100,7 @@ main a:not([class]):visited,
   color: var(--a-link-visited);
 }
 
-td.fc-day-sat {
-  background-color: var(--fullCalendar-sat);
-}
-td.fc-day-sun {
-  background-color: var(--fullCalendar-sun);
+#fullCalendar{
+  filter: var(--goole-calendar-filter);
+  -webkit-filter: var(--goole-calendar-filter);
 }
