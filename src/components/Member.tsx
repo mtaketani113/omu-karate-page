@@ -161,7 +161,6 @@ const Member = () => {
             </CardActionArea>
           </Grid>
         ))}
-        ;
       </Grid>
 
       <h2>三回生</h2>
@@ -193,7 +192,6 @@ const Member = () => {
             </CardActionArea>
           </Grid>
         ))}
-        ;
       </Grid>
 
       <h2>二回生</h2>
@@ -222,7 +220,6 @@ const Member = () => {
             </CardActionArea>
           </Grid>
         ))}
-        ;
       </Grid>
 
       <h2>一回生</h2>
@@ -251,7 +248,6 @@ const Member = () => {
             </CardActionArea>
           </Grid>
         ))}
-        ;
       </Grid>
 
       <h1 data-testid="coach">指導者紹介</h1>
@@ -287,7 +283,6 @@ const Member = () => {
             </CardActionArea>
           </Grid>
         ))}
-        ;
       </Grid>
 
       <h1 data-testid="ob">OB紹介</h1>
@@ -318,7 +313,6 @@ const Member = () => {
             </CardActionArea>
           </Grid>
         ))}
-        ;
       </Grid>
 
       <Modal
