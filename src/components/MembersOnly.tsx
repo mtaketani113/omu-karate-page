@@ -20,14 +20,16 @@ const SignIn = () => {
 
   return (
     <>
-    <p>
-      <Button variant="text" onClick={signInWithGooglePopup}>
-        Googleでサインイン（PC）
-      </Button></p>
       <p>
-      <Button variant="text" onClick={signInWithGoogleRedirect}>
-        Googleでサインイン（スマホ）
-      </Button></p>
+        <Button variant="text" onClick={signInWithGooglePopup}>
+          Googleでサインイン（PC）
+        </Button>
+      </p>
+      <p>
+        <Button variant="text" onClick={signInWithGoogleRedirect}>
+          Googleでサインイン（スマホ）
+        </Button>
+      </p>
     </>
   );
 };
