@@ -10,6 +10,7 @@ import LinkIcon from '@mui/icons-material/Link';
 import RoomIcon from '@mui/icons-material/Room';
 import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
 import EmailIcon from '@mui/icons-material/Email';
+import GroupsIcon from '@mui/icons-material/Groups';
 import { Link, useLocation } from 'react-router-dom';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
@@ -202,6 +203,19 @@ const Menu = ({ setMobileOpen }: Props) => {
             </ListItemButton>
           </List>
         </Collapse>
+
+        <ListItemButton
+          key="membersOnly"
+          component={Link}
+          to={'/membersOnly'}
+          selected={location.pathname === '/membersOnly'}
+          data-testid="membersOnly"
+        >
+          <ListItemIcon sx={{ minWidth: 40 }}>
+            <GroupsIcon />
+          </ListItemIcon>
+          <ListItemText primary="限定公開" />
+        </ListItemButton>
 
         <Divider />
         <span onClick={() => setOpen(false)}>

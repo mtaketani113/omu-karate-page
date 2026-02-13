@@ -10,6 +10,9 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { ColorModeContext, ColorModeContextType } from '../../App';
 import { Link } from 'react-router-dom';
+import { auth } from '../firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const drawerWidth = 240;
 
@@ -26,6 +29,7 @@ interface Props {
 const Header = ({ handleDrawerToggle, openMenu }: Props) => {
   const theme = useTheme();
   const colorMode: ColorModeContextType = React.useContext(ColorModeContext);
+  const [user] = useAuthState(auth);
   return (
     <>
       <CssBaseline />
@@ -61,6 +65,20 @@ const Header = ({ handleDrawerToggle, openMenu }: Props) => {
           <IconButton sx={{ ml: 1 }} onClick={colorMode.colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
+          {user ? (
+            <>
+              <img
+                src={auth.currentUser?.photoURL as any}
+                style={{ borderRadius: 50, width: 30, height: 30 }}
+                alt=""
+              />
+              <IconButton sx={{ ml: 1 }} onClick={() => auth.signOut()} color="inherit">
+                <LogoutIcon />
+              </IconButton>
+            </>
+          ) : (
+            <></>
+          )}
         </Toolbar>
       </AppBar>
     </>

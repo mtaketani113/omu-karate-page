@@ -15,3 +15,4 @@ export { default as ScrollTopForPathChange } from './parts/ScrollTopForPathChang
 export { default as ShareButton } from './parts/ShareButton';
 export { default as Karatedo } from './Karatedo';
 export { default as PrefectureObList } from './PrefectureObList';
+export { default as MembersOnly } from './MembersOnly';
