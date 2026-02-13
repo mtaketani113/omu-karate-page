@@ -2,11 +2,17 @@ import { signInWithPopup, signInWithRedirect } from 'firebase/auth';
 import { auth, googleProvider } from './firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Box, Button } from '@mui/material';
+import { PAGE_MAIN_TITLE } from './parts/constants';
 
 const MembersOnly = () => {
   const [user] = useAuthState(auth);
 
-  return <>{user ? <Contents /> : <SignIn />}</>;
+  return (
+    <>
+      <title>限定公開 | {PAGE_MAIN_TITLE}</title>
+      {user ? <Contents /> : <SignIn />}
+    </>
+  );
 };
 
 const SignIn = () => {
