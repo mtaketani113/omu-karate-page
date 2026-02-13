@@ -23,7 +23,7 @@ const SignIn = () => {
   return (
     <p>
       <Button variant="text" onClick={signInWithGooglePopup}>
-        Googleでサインイン（PC）
+        Googleでサインイン
       </Button>
     </p>
   );
