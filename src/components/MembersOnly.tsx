@@ -1,4 +1,4 @@
-import { signInWithPopup, signInWithRedirect } from 'firebase/auth';
+import { signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from './firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Box, Button } from '@mui/material';
@@ -20,23 +20,12 @@ const SignIn = () => {
     signInWithPopup(auth, googleProvider);
   };
 
-  const signInWithGoogleRedirect = () => {
-    signInWithRedirect(auth, googleProvider);
-  };
-
   return (
-    <>
-      <p>
-        <Button variant="text" onClick={signInWithGooglePopup}>
-          Googleでサインイン（PC）
-        </Button>
-      </p>
-      <p>
-        <Button variant="text" onClick={signInWithGoogleRedirect}>
-          Googleでサインイン（スマホ）
-        </Button>
-      </p>
-    </>
+    <p>
+      <Button variant="text" onClick={signInWithGooglePopup}>
+        Googleでサインイン（PC）
+      </Button>
+    </p>
   );
 };
 
