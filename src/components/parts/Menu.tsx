@@ -208,6 +208,7 @@ const Menu = ({ setMobileOpen }: Props) => {
           key="membersOnly"
           component={Link}
           to={'/membersOnly'}
+          onClick={() => setOpen(false)}
           selected={location.pathname === '/membersOnly'}
           data-testid="membersOnly"
         >
