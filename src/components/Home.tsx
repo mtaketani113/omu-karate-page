@@ -2,7 +2,7 @@ import Typography from '@mui/material/Typography';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import { PAGE_MAIN_TITLE } from './parts/constants';
-import { Tweet } from 'react-tweet';
+// import { Tweet } from 'react-tweet';
 
 const Home = () => {
   return (
@@ -46,10 +46,10 @@ const Home = () => {
         <li>26年1月31日 13時30分 杉本キャンパスで追い出し戦＋幹部交代式</li>
       </Typography>
 
-      <h2>Xの投稿</h2>
+      {/* <h2>Xの投稿</h2>
       <Tweet id="2012084003185230301" />
       <Tweet id="1998559620303040628" />
-      <Tweet id="1990084943964217637" />
+      <Tweet id="1990084943964217637" /> */}
     </>
   );
 };
