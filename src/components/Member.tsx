@@ -56,46 +56,33 @@ const Member = () => {
   }
 
   const rowsFourth = [
-    createData(
-      '',
-      '理学部',
-      '桃山学院高校',
-      '杉本キャンパス',
-      'https://omu-karate-org.github.io/images/member/2022/hirose.jpg',
-      '0% 30%',
-    ),
-    createData(
-      '',
-      '工学部',
-      '大阪桐蔭高校',
-      '中百舌鳥キャンパス',
-      'https://omu-karate-org.github.io/images/member/2022/yoshida.jpg',
-      '0% 30%',
-    ),
-    createData(
-      '',
-      '生活科学部',
-      '桃山学院高校',
-      '杉本キャンパス',
-      'https://omu-karate-org.github.io/images/member/2022/hakumoto.jpg',
-      '0% 30%',
-    ),
-  ];
-
-  const rowsThird = [
-    createData('主将', '理学部', '', '杉本キャンパス', NoImage, '0% 30%'),
-    createData('副主将', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
+    createData('', '理学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
     createData('', '農学部', '', '中百舌鳥キャンパス', NoImage, '0% 30%'),
   ];
 
+  const rowsThird = [
+    createData('主将', '法学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('副主将', '', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('主務', '法学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('会計', '工学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+  ];
+
   const rowsSecond = [
-    createData('', '法学部', '', '杉本キャンパス', NoImage, '0% 30%'),
-    createData('', '法学部', '', '杉本キャンパス', NoImage, '0% 30%'),
-    createData('', '工学部', '', '杉本キャンパス', NoImage, '0% 30%'),
+    createData('', '', '', '杉本キャンパス', NoImage, '0% 30%'),
     createData('', '', '', '杉本キャンパス', NoImage, '0% 30%'),
   ];
 
-  const rowsFirst = [createData('', '', '', '杉本キャンパス', NoImage, '0% 30%')];
+  const rowsFirst = [
+    createData('', '', '', '森ノ宮キャンパス', NoImage, '0% 30%'),
+    createData('', '', '', '森ノ宮キャンパス', NoImage, '0% 30%'),
+    createData('', '', '', '森ノ宮キャンパス', NoImage, '0% 30%'),
+    createData('', '', '', '森ノ宮キャンパス', NoImage, '0% 30%'),
+    createData('', '', '', '森ノ宮キャンパス', NoImage, '0% 30%'),
+    createData('', '', '', '森ノ宮キャンパス', NoImage, '0% 30%'),
+    createData('', '', '', '森ノ宮キャンパス', NoImage, '0% 30%'),
+    createData('マネージャー', '', '', '森ノ宮キャンパス', NoImage, '0% 30%'),
+  ];
 
   function createCoachData(
     position: string,
@@ -112,7 +99,11 @@ const Member = () => {
     createCoachData(
       '監督',
       '竹谷 匡玄',
-      '平成18年 大阪府立大学卒業\n一応プログラマーの端くれです。',
+      '平成18年 大阪府立大学卒業\n一応プログラマーの端くれです。\n' +
+        '資格\n' +
+        '段位：全空連5段 糸東会5段 学連5段\n' +
+        '指導者：コーチ2\n' +
+        '審判：地区組手審判 県型審判',
       ImageTaketani,
       '0% 15%',
     ),
