@@ -120,7 +120,7 @@ const Member = () => {
       <title>部員紹介 | {PAGE_MAIN_TITLE}</title>
       <h1 data-testid="player">現役紹介</h1>
       <Typography component="p">
-        4回生3名、3回生3名、2回生4名、1回生1名で頑張っています。
+        4回生3名、3回生4名、2回生2名、1回生8名で頑張っています。
       </Typography>
       <h2>四回生</h2>
 
