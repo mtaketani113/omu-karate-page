@@ -12,6 +12,9 @@ const Home = () => {
         <ImageGallery
           items={[
             {
+              original: 'https://omu-karate-org.github.io/images/practice/20261011/award.jpg',
+            },
+            {
               original: 'https://omu-karate-org.github.io/images/header/movingPractice.jpg',
             },
             {
@@ -40,10 +43,10 @@ const Home = () => {
 
       <h2 data-testid="event_title">イベント情報</h2>
       <Typography component="p" color="green">
-        26年1月20日 更新
+        26年10月16日 更新
       </Typography>
       <Typography component="p">
-        <li>26年1月31日 13時30分 杉本キャンパスで追い出し戦＋幹部交代式</li>
+        <li>26年10月11日 第67回全関西大学空手道選手権大会にて3位入賞し、1部昇格しました🎉</li>
       </Typography>
 
       {/* <h2>Xの投稿</h2>
